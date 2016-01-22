@@ -29,12 +29,7 @@ public class TestInvoiceHeaders extends WebServiceTest{
 	public void beforeGroups(){
 		setup();
 	}
-	
-	@AfterGroups(groups = { "2.4.1.0" })
-	public void afterGroups(){
-		afterMethod(result);
-	}
-	
+		
 	@BeforeTest
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
@@ -52,12 +47,6 @@ public class TestInvoiceHeaders extends WebServiceTest{
 		
 		request.setInvoiceNumber(createInvoiceRequest.getInvoiceNumber());
 	}
-	
-	@AfterMethod
-	public void afterMethod(ITestResult result) {
-	  Util.after(result);
-	}
-	
 		
 	@Test(groups = { "2.4.1.0" })
 	public void testInvoiceHeaders(){

@@ -1,518 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="2" total="49" passed="45">
+<testng-results skipped="1" failed="0" total="49" passed="48">
   <reporter-output>
   </reporter-output>
-  <suite name="DevTesting of 2.4.1.0 features" duration-ms="175047" started-at="2016-01-22T10:12:58Z" finished-at="2016-01-22T10:15:53Z">
+  <suite name="DevTesting of 2.4.1.0 features" duration-ms="137760" started-at="2016-01-22T10:54:02Z" finished-at="2016-01-22T10:56:20Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortal.testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="testExternalInvoice" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1339" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1408()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1408" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1442()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1442" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1455()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1455" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1458()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1458" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1466()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1466" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1479()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1479" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1483()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1483" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1498()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1498" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1499()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1499" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1503()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1503" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_1" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_10()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_10" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_11()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_11" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_12()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_12" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_13" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_14()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_14" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_2" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_3" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_4" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_5" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_6" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_7" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_8" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_9()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_9" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1549()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1549" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestInvoiceHeaders.testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="testInvoiceHeaders" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1368" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1432" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1411" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1424" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1432" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1433" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1446" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1448_1436" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1449" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456_2" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456_3" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1484" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1489" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1509" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1463" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1467" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1485" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1492" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5e025e70]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
+        <method signature="TestExtInvSupPortal.testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="testExternalInvoice" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1339" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1408()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1408" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1442()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1442" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1455()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1455" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1458()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1458" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1466()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1466" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1479()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1479" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1483()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1483" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1498()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1498" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1499()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1499" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1503()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1503" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_1" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_10()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_10" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_11()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_11" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_12()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_12" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_13" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_14()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_14" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_2" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_3" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_4" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_5" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_6" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_7" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_8" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_9()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_9" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1549()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1549" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestInvoiceHeaders.testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="testInvoiceHeaders" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1368" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1432" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1411" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1424" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1432" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1433" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1446" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1448_1436" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1449" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456_2" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456_3" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1484" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1489" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1509" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1463" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1467" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1485" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1492" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4563e9ab]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="2.4.1.0" duration-ms="175047" started-at="2016-01-22T10:12:58Z" finished-at="2016-01-22T10:15:53Z">
+    <test name="2.4.1.0" duration-ms="137760" started-at="2016-01-22T10:54:02Z" finished-at="2016-01-22T10:56:20Z">
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
-        <test-method status="PASS" signature="test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1411" duration-ms="507" started-at="2016-01-22T12:15:29Z" finished-at="2016-01-22T12:15:30Z">
+        <test-method status="PASS" signature="test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1411" duration-ms="825" started-at="2016-01-22T12:55:49Z" finished-at="2016-01-22T12:55:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1411 -->
-        <test-method status="PASS" signature="test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1424" duration-ms="344" started-at="2016-01-22T12:15:30Z" finished-at="2016-01-22T12:15:30Z">
+        <test-method status="PASS" signature="test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1424" duration-ms="983" started-at="2016-01-22T12:55:50Z" finished-at="2016-01-22T12:55:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1424 -->
-        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1432" duration-ms="467" started-at="2016-01-22T12:15:30Z" finished-at="2016-01-22T12:15:31Z">
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1432" duration-ms="942" started-at="2016-01-22T12:55:51Z" finished-at="2016-01-22T12:55:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1432 -->
-        <test-method status="PASS" signature="test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1433" duration-ms="255" started-at="2016-01-22T12:15:31Z" finished-at="2016-01-22T12:15:31Z">
+        <test-method status="PASS" signature="test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1433" duration-ms="1104" started-at="2016-01-22T12:55:52Z" finished-at="2016-01-22T12:55:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1433 -->
-        <test-method status="PASS" signature="test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1446" duration-ms="236" started-at="2016-01-22T12:15:31Z" finished-at="2016-01-22T12:15:31Z">
+        <test-method status="PASS" signature="test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1446" duration-ms="838" started-at="2016-01-22T12:55:53Z" finished-at="2016-01-22T12:55:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1446 -->
-        <test-method status="PASS" signature="test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1448_1436" duration-ms="1098" started-at="2016-01-22T12:15:31Z" finished-at="2016-01-22T12:15:32Z">
+        <test-method status="PASS" signature="test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1448_1436" duration-ms="1346" started-at="2016-01-22T12:55:53Z" finished-at="2016-01-22T12:55:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1448_1436 -->
-        <test-method status="PASS" signature="test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1449" duration-ms="487" started-at="2016-01-22T12:15:32Z" finished-at="2016-01-22T12:15:33Z">
+        <test-method status="PASS" signature="test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1449" duration-ms="1261" started-at="2016-01-22T12:55:55Z" finished-at="2016-01-22T12:55:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1449 -->
-        <test-method status="PASS" signature="test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456" duration-ms="485" started-at="2016-01-22T12:15:33Z" finished-at="2016-01-22T12:15:33Z">
+        <test-method status="PASS" signature="test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456" duration-ms="658" started-at="2016-01-22T12:55:56Z" finished-at="2016-01-22T12:55:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1456 -->
-        <test-method status="PASS" signature="test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456_2" duration-ms="448" started-at="2016-01-22T12:15:33Z" finished-at="2016-01-22T12:15:34Z">
+        <test-method status="PASS" signature="test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456_2" duration-ms="1100" started-at="2016-01-22T12:55:57Z" finished-at="2016-01-22T12:55:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1456_2 -->
-        <test-method status="PASS" signature="test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1456_3" duration-ms="509" started-at="2016-01-22T12:15:34Z" finished-at="2016-01-22T12:15:34Z">
+        <test-method status="PASS" signature="test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1456_3" duration-ms="698" started-at="2016-01-22T12:55:58Z" finished-at="2016-01-22T12:55:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1456_3 -->
-        <test-method status="PASS" signature="test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1484" duration-ms="460" started-at="2016-01-22T12:15:34Z" finished-at="2016-01-22T12:15:35Z">
+        <test-method status="PASS" signature="test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1484" duration-ms="1077" started-at="2016-01-22T12:55:59Z" finished-at="2016-01-22T12:56:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1484 -->
-        <test-method status="PASS" signature="test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1489" duration-ms="3919" started-at="2016-01-22T12:15:35Z" finished-at="2016-01-22T12:15:38Z">
+        <test-method status="PASS" signature="test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1489" duration-ms="4864" started-at="2016-01-22T12:56:00Z" finished-at="2016-01-22T12:56:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1489 -->
-        <test-method status="SKIP" signature="test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="test_1509" duration-ms="190" started-at="2016-01-22T12:15:38Z" finished-at="2016-01-22T12:15:39Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipping Test: Test is skipped because there is no invoices with Cancelled status]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipping Test: Test is skipped because there is no invoices with Cancelled status
-	at tests.TestInvoiceHeaders_NoInvoiceCreation.test_1509(TestInvoiceHeaders_NoInvoiceCreation.java:354)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="test_1509" duration-ms="786" started-at="2016-01-22T12:56:04Z" finished-at="2016-01-22T12:56:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1509 -->
       </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
       <class name="tests.TestExtInvSupPortal">
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="beforeGroups" is-config="true" duration-ms="215" started-at="2016-01-22T12:12:58Z" finished-at="2016-01-22T12:12:58Z">
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="beforeGroups" is-config="true" duration-ms="212" started-at="2016-01-22T12:54:02Z" finished-at="2016-01-22T12:54:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="beforeGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:12:58Z" finished-at="2016-01-22T12:12:58Z">
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5a01ccaa]" name="beforeGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:54:02Z" finished-at="2016-01-22T12:54:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="beforeGroups" is-config="true" duration-ms="6622" started-at="2016-01-22T12:12:58Z" finished-at="2016-01-22T12:13:05Z">
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="beforeGroups" is-config="true" duration-ms="4053" started-at="2016-01-22T12:54:02Z" finished-at="2016-01-22T12:54:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="beforeGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:13:05Z" finished-at="2016-01-22T12:13:05Z">
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="beforeGroups" is-config="true" duration-ms="1" started-at="2016-01-22T12:54:06Z" finished-at="2016-01-22T12:54:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5e025e70]" name="beforeGroups" is-config="true" duration-ms="1" started-at="2016-01-22T12:13:05Z" finished-at="2016-01-22T12:13:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="testExternalInvoice" duration-ms="4154" started-at="2016-01-22T12:13:05Z" finished-at="2016-01-22T12:13:09Z">
+        <test-method status="PASS" signature="testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="testExternalInvoice" duration-ms="3611" started-at="2016-01-22T12:54:06Z" finished-at="2016-01-22T12:54:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExternalInvoice -->
-        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1339" duration-ms="6006" started-at="2016-01-22T12:13:09Z" finished-at="2016-01-22T12:13:15Z">
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4563e9ab]" name="beforeGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:54:06Z" finished-at="2016-01-22T12:54:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeGroups -->
+        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1339" duration-ms="4088" started-at="2016-01-22T12:54:10Z" finished-at="2016-01-22T12:54:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1339 -->
-        <test-method status="PASS" signature="test_1408()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1408" duration-ms="36822" started-at="2016-01-22T12:13:15Z" finished-at="2016-01-22T12:13:52Z">
+        <test-method status="PASS" signature="test_1408()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1408" duration-ms="476" started-at="2016-01-22T12:54:14Z" finished-at="2016-01-22T12:54:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1408 -->
-        <test-method status="PASS" signature="test_1442()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1442" duration-ms="986" started-at="2016-01-22T12:13:52Z" finished-at="2016-01-22T12:13:53Z">
+        <test-method status="PASS" signature="test_1442()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1442" duration-ms="623" started-at="2016-01-22T12:54:15Z" finished-at="2016-01-22T12:54:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1442 -->
-        <test-method status="PASS" signature="test_1455()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1455" duration-ms="4496" started-at="2016-01-22T12:13:53Z" finished-at="2016-01-22T12:13:57Z">
+        <test-method status="PASS" signature="test_1455()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1455" duration-ms="3918" started-at="2016-01-22T12:54:15Z" finished-at="2016-01-22T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1455 -->
-        <test-method status="PASS" signature="test_1458()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1458" duration-ms="4717" started-at="2016-01-22T12:13:57Z" finished-at="2016-01-22T12:14:02Z">
+        <test-method status="PASS" signature="test_1458()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1458" duration-ms="3932" started-at="2016-01-22T12:54:19Z" finished-at="2016-01-22T12:54:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1458 -->
-        <test-method status="FAIL" signature="test_1466()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1466" duration-ms="3463" started-at="2016-01-22T12:14:02Z" finished-at="2016-01-22T12:14:05Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at tests.TestExtInvSupPortal.test_1466(TestExtInvSupPortal.java:249)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="test_1466()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1466" duration-ms="3486" started-at="2016-01-22T12:54:23Z" finished-at="2016-01-22T12:54:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1466 -->
-        <test-method status="PASS" signature="test_1479()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1479" duration-ms="2042" started-at="2016-01-22T12:14:05Z" finished-at="2016-01-22T12:14:07Z">
+        <test-method status="PASS" signature="test_1479()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1479" duration-ms="1832" started-at="2016-01-22T12:54:27Z" finished-at="2016-01-22T12:54:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1479 -->
-        <test-method status="PASS" signature="test_1483()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1483" duration-ms="3797" started-at="2016-01-22T12:14:07Z" finished-at="2016-01-22T12:14:11Z">
+        <test-method status="PASS" signature="test_1483()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1483" duration-ms="4004" started-at="2016-01-22T12:54:28Z" finished-at="2016-01-22T12:54:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1483 -->
-        <test-method status="PASS" signature="test_1498()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1498" duration-ms="3347" started-at="2016-01-22T12:14:11Z" finished-at="2016-01-22T12:14:14Z">
+        <test-method status="PASS" signature="test_1498()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1498" duration-ms="3780" started-at="2016-01-22T12:54:32Z" finished-at="2016-01-22T12:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1498 -->
-        <test-method status="PASS" signature="test_1499()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1499" duration-ms="5657" started-at="2016-01-22T12:14:14Z" finished-at="2016-01-22T12:14:20Z">
+        <test-method status="PASS" signature="test_1499()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1499" duration-ms="4886" started-at="2016-01-22T12:54:36Z" finished-at="2016-01-22T12:54:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1499 -->
-        <test-method status="PASS" signature="test_1503()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1503" duration-ms="4717" started-at="2016-01-22T12:14:20Z" finished-at="2016-01-22T12:14:25Z">
+        <test-method status="PASS" signature="test_1503()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1503" duration-ms="4306" started-at="2016-01-22T12:54:41Z" finished-at="2016-01-22T12:54:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1503 -->
-        <test-method status="PASS" signature="test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_1" duration-ms="4346" started-at="2016-01-22T12:14:25Z" finished-at="2016-01-22T12:14:29Z">
+        <test-method status="PASS" signature="test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_1" duration-ms="3578" started-at="2016-01-22T12:54:45Z" finished-at="2016-01-22T12:54:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_1 -->
-        <test-method status="PASS" signature="test_1506_10()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_10" duration-ms="3532" started-at="2016-01-22T12:14:29Z" finished-at="2016-01-22T12:14:33Z">
+        <test-method status="PASS" signature="test_1506_10()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_10" duration-ms="4538" started-at="2016-01-22T12:54:49Z" finished-at="2016-01-22T12:54:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_10 -->
-        <test-method status="PASS" signature="test_1506_11()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_11" duration-ms="3929" started-at="2016-01-22T12:14:33Z" finished-at="2016-01-22T12:14:37Z">
+        <test-method status="PASS" signature="test_1506_11()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_11" duration-ms="5187" started-at="2016-01-22T12:54:54Z" finished-at="2016-01-22T12:54:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_11 -->
-        <test-method status="PASS" signature="test_1506_12()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_12" duration-ms="3766" started-at="2016-01-22T12:14:37Z" finished-at="2016-01-22T12:14:40Z">
+        <test-method status="PASS" signature="test_1506_12()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_12" duration-ms="5106" started-at="2016-01-22T12:54:59Z" finished-at="2016-01-22T12:55:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_12 -->
-        <test-method status="PASS" signature="test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_13" duration-ms="3735" started-at="2016-01-22T12:14:40Z" finished-at="2016-01-22T12:14:44Z">
+        <test-method status="PASS" signature="test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_13" duration-ms="4976" started-at="2016-01-22T12:55:04Z" finished-at="2016-01-22T12:55:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_13 -->
-        <test-method status="PASS" signature="test_1506_14()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_14" duration-ms="3743" started-at="2016-01-22T12:14:44Z" finished-at="2016-01-22T12:14:48Z">
+        <test-method status="PASS" signature="test_1506_14()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_14" duration-ms="4443" started-at="2016-01-22T12:55:09Z" finished-at="2016-01-22T12:55:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_14 -->
-        <test-method status="FAIL" signature="test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_2" duration-ms="4973" started-at="2016-01-22T12:14:48Z" finished-at="2016-01-22T12:14:53Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at tests.TestExtInvSupPortal.checkFileExtension(TestExtInvSupPortal.java:496)
-	at tests.TestExtInvSupPortal.test_1506_2(TestExtInvSupPortal.java:530)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_2" duration-ms="3579" started-at="2016-01-22T12:55:13Z" finished-at="2016-01-22T12:55:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_2 -->
-        <test-method status="PASS" signature="test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_3" duration-ms="5826" started-at="2016-01-22T12:14:53Z" finished-at="2016-01-22T12:14:59Z">
+        <test-method status="PASS" signature="test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_3" duration-ms="5360" started-at="2016-01-22T12:55:17Z" finished-at="2016-01-22T12:55:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_3 -->
-        <test-method status="PASS" signature="test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_4" duration-ms="4829" started-at="2016-01-22T12:14:59Z" finished-at="2016-01-22T12:15:03Z">
+        <test-method status="PASS" signature="test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_4" duration-ms="3791" started-at="2016-01-22T12:55:22Z" finished-at="2016-01-22T12:55:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_4 -->
-        <test-method status="PASS" signature="test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_5" duration-ms="4561" started-at="2016-01-22T12:15:03Z" finished-at="2016-01-22T12:15:08Z">
+        <test-method status="PASS" signature="test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_5" duration-ms="3540" started-at="2016-01-22T12:55:26Z" finished-at="2016-01-22T12:55:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_5 -->
-        <test-method status="PASS" signature="test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_6" duration-ms="3954" started-at="2016-01-22T12:15:08Z" finished-at="2016-01-22T12:15:12Z">
+        <test-method status="PASS" signature="test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_6" duration-ms="3408" started-at="2016-01-22T12:55:30Z" finished-at="2016-01-22T12:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_6 -->
-        <test-method status="PASS" signature="test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_7" duration-ms="4356" started-at="2016-01-22T12:15:12Z" finished-at="2016-01-22T12:15:16Z">
+        <test-method status="PASS" signature="test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_7" duration-ms="3308" started-at="2016-01-22T12:55:33Z" finished-at="2016-01-22T12:55:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_7 -->
-        <test-method status="PASS" signature="test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_8" duration-ms="4079" started-at="2016-01-22T12:15:16Z" finished-at="2016-01-22T12:15:20Z">
+        <test-method status="PASS" signature="test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_8" duration-ms="3991" started-at="2016-01-22T12:55:36Z" finished-at="2016-01-22T12:55:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_8 -->
-        <test-method status="PASS" signature="test_1506_9()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1506_9" duration-ms="4117" started-at="2016-01-22T12:15:20Z" finished-at="2016-01-22T12:15:25Z">
+        <test-method status="PASS" signature="test_1506_9()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1506_9" duration-ms="3757" started-at="2016-01-22T12:55:40Z" finished-at="2016-01-22T12:55:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1506_9 -->
-        <test-method status="PASS" signature="test_1549()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="test_1549" duration-ms="4658" started-at="2016-01-22T12:15:25Z" finished-at="2016-01-22T12:15:29Z">
+        <test-method status="PASS" signature="test_1549()[pri:0, instance:tests.TestExtInvSupPortal@47f37ef1]" name="test_1549" duration-ms="4757" started-at="2016-01-22T12:55:44Z" finished-at="2016-01-22T12:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1549 -->
-        <test-method status="FAIL" signature="afterGroups()[pri:0, instance:tests.TestExtInvSupPortal@71c7db30]" name="afterGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:15:53Z" finished-at="2016-01-22T12:15:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at utils.Util.after(Util.java:20)
-	at tests.TestExtInvSupPortal.afterMethod(TestExtInvSupPortal.java:53)
-	at tests.TestExtInvSupPortal.afterGroups(TestExtInvSupPortal.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.Invoker.invokeAfterGroupsConfigurations(Invoker.java:921)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:718)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterGroups -->
-        <test-method status="FAIL" signature="afterGroups()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="afterGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:15:53Z" finished-at="2016-01-22T12:15:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at utils.Util.after(Util.java:20)
-	at tests.TestInvoiceHeaders.afterMethod(TestInvoiceHeaders.java:58)
-	at tests.TestInvoiceHeaders.afterGroups(TestInvoiceHeaders.java:35)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.Invoker.invokeAfterGroupsConfigurations(Invoker.java:921)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:718)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterGroups -->
-        <test-method status="FAIL" signature="afterGroups()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@19bb089b]" name="afterGroups" is-config="true" duration-ms="0" started-at="2016-01-22T12:15:53Z" finished-at="2016-01-22T12:15:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at utils.Util.after(Util.java:20)
-	at tests.TestInvoiceHeaders_NoInvoiceCreation.afterMethod(TestInvoiceHeaders_NoInvoiceCreation.java:48)
-	at tests.TestInvoiceHeaders_NoInvoiceCreation.afterGroups(TestInvoiceHeaders_NoInvoiceCreation.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.internal.Invoker.invokeAfterGroupsConfigurations(Invoker.java:921)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:718)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterGroups -->
       </class> <!-- tests.TestExtInvSupPortal -->
       <class name="tests.TestRetrieveMeasurementsUnits">
-        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5e025e70]" name="checkRetrieveMeasurementsUnits" duration-ms="321" started-at="2016-01-22T12:15:52Z" finished-at="2016-01-22T12:15:53Z">
+        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4563e9ab]" name="checkRetrieveMeasurementsUnits" duration-ms="392" started-at="2016-01-22T12:56:20Z" finished-at="2016-01-22T12:56:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveMeasurementsUnits -->
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
       <class name="tests.TestInvoiceHeaders">
-        <test-method status="PASS" signature="testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="testInvoiceHeaders" duration-ms="222" started-at="2016-01-22T12:15:39Z" finished-at="2016-01-22T12:15:39Z">
+        <test-method status="PASS" signature="testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="testInvoiceHeaders" duration-ms="359" started-at="2016-01-22T12:56:05Z" finished-at="2016-01-22T12:56:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvoiceHeaders -->
-        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1368" duration-ms="211" started-at="2016-01-22T12:15:39Z" finished-at="2016-01-22T12:15:39Z">
+        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1368" duration-ms="277" started-at="2016-01-22T12:56:06Z" finished-at="2016-01-22T12:56:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1368 -->
-        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1413_1427" duration-ms="223" started-at="2016-01-22T12:15:39Z" finished-at="2016-01-22T12:15:39Z">
+        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1413_1427" duration-ms="311" started-at="2016-01-22T12:56:06Z" finished-at="2016-01-22T12:56:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1413_1427 -->
-        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@4563e9ab]" name="test_1432" duration-ms="250" started-at="2016-01-22T12:15:39Z" finished-at="2016-01-22T12:15:40Z">
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@71c7db30]" name="test_1432" duration-ms="265" started-at="2016-01-22T12:56:06Z" finished-at="2016-01-22T12:56:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1432 -->
       </class> <!-- tests.TestInvoiceHeaders -->
       <class name="tests.TestRetrieveInvoiceInfo">
-        <test-method status="PASS" signature="test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1463" duration-ms="4663" started-at="2016-01-22T12:15:40Z" finished-at="2016-01-22T12:15:44Z">
+        <test-method status="PASS" signature="test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1463" duration-ms="4719" started-at="2016-01-22T12:56:06Z" finished-at="2016-01-22T12:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1463 -->
-        <test-method status="PASS" signature="test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1467" duration-ms="4084" started-at="2016-01-22T12:15:44Z" finished-at="2016-01-22T12:15:48Z">
+        <test-method status="PASS" signature="test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1467" duration-ms="3430" started-at="2016-01-22T12:56:11Z" finished-at="2016-01-22T12:56:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1467 -->
-        <test-method status="PASS" signature="test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1485" duration-ms="4142" started-at="2016-01-22T12:15:48Z" finished-at="2016-01-22T12:15:52Z">
+        <test-method status="PASS" signature="test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1485" duration-ms="4926" started-at="2016-01-22T12:56:15Z" finished-at="2016-01-22T12:56:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1485 -->
-        <test-method status="SKIP" signature="test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@11531931]" name="test_1492" duration-ms="1" started-at="2016-01-22T12:15:52Z" finished-at="2016-01-22T12:15:52Z">
+        <test-method status="SKIP" signature="test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@19bb089b]" name="test_1492" duration-ms="1" started-at="2016-01-22T12:56:20Z" finished-at="2016-01-22T12:56:20Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Feature is in dev]]>

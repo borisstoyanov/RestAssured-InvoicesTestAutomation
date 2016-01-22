@@ -38,21 +38,11 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		setup();
 	}
 	
-	@AfterGroups(groups = { "2.4.1.0" })
-	public void afterGroups(){
-		afterMethod(result);
-	}
-	
 	@BeforeTest
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
+	}
 
-	}
-	@AfterMethod
-	public void afterMethod(ITestResult result) {
-	  Util.after(result);
-	}
-	
 	private String getInvoiceID(ExtInvoiceSupPortRequest req){
 		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
 		Response resp = given().request()
@@ -244,7 +234,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
 		resp = getInvoiceInfo(invoiceID);
-
+		String asstr = resp.asString();
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description - A full description</ns0:Description>"));
 		
@@ -527,7 +517,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1506_2(){
 		String invoiceID = createInvoiceWithFileExtension("image/jpeg");
-		checkFileExtension(invoiceID, ".jpeg");
+		checkFileExtension(invoiceID, ".jpg");
 	}
 	
 	@Test(groups = { "2.4.1.0" })

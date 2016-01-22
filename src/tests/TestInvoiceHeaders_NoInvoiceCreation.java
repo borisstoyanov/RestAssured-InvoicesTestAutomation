@@ -33,21 +33,11 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		setup();
 	}
 	
-	@AfterGroups(groups = { "2.4.1.0" })
-	public void afterGroups(){
-		afterMethod(result);
-	}
-	
 	@BeforeClass
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName(); 
 	}
-		
-	@AfterMethod
-	public void afterMethod(ITestResult result) {
-	  Util.after(result);
-	}
-	
+
 	@Test(groups = { "2.4.1.0"})
 	public void test_1411(){
 		request = new RetrieveInvoiceHeaderRequest();

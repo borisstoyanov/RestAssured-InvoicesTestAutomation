@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="2.4.1.0">
+    <groups>
+      <run>
+        <include name="2.4.1.1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.MyTestClass1"/>
+    </classes>
+  </test> <!-- 2.4.1.0 -->
+</suite> <!-- Failed suite [Suite] -->

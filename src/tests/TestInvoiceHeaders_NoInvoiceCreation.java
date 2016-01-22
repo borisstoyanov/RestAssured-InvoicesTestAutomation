@@ -5,10 +5,7 @@ import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.SkipException;
-import org.testng.annotations.AfterGroups;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;

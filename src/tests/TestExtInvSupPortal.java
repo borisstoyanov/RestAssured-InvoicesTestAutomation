@@ -7,10 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.SkipException;
-import org.testng.annotations.AfterGroups;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -234,7 +231,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
 		resp = getInvoiceInfo(invoiceID);
-		String asstr = resp.asString();
+//		String asstr = resp.asString();
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description - A full description</ns0:Description>"));
 		

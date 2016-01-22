@@ -4,9 +4,6 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterGroups;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,7 +15,6 @@ import enums.Users;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
 import utils.TestInstance;
-import utils.Util;
 import utils.WebServiceTest;
 
 public class TestInvoiceHeaders extends WebServiceTest{

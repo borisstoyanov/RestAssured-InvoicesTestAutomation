@@ -25,6 +25,7 @@
       <class name="tests.TestExtInvSupPortal">
         <methods>
           <include name="beforeGroups"/>
+          <include name="test_1466"/>
         </methods>
       </class> <!-- tests.TestExtInvSupPortal -->
       <class name="tests.TestInvoiceHeaders">
@@ -35,6 +36,7 @@
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
         <methods>
           <include name="beforeGroups"/>
+          <include name="test_1509"/>
         </methods>
       </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
       <class name="tests.TestRetrieveInvoiceInfo">

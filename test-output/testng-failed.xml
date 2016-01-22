@@ -1,53 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [DevTesting of 2.4.1.0 features]">
-  <test name="2.4.1.0">
-    <groups>
-      <run>
-        <include name="2.4.1.0"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="tests.TestExtInvSupPortal"/>
-      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-      <class name="tests.TestInvoiceHeaders"/>
-      <class name="tests.TestRetrieveInvoiceInfo"/>
-      <class name="tests.TestRetrieveMeasurementsUnits"/>
-    </classes>
-  </test> <!-- 2.4.1.0 -->
-  <test name="2.4.1.0(failed)">
-    <groups>
-      <run>
-        <include name="2.4.1.0"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
-      <class name="tests.TestInvoiceHeaders">
-        <methods>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestInvoiceHeaders -->
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
         <methods>
-          <include name="beforeGroups"/>
+          <include name="test_1509"/>
         </methods>
       </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
-      <class name="tests.TestRetrieveInvoiceInfo">
-        <methods>
-          <include name="beforeGroups"/>
-          <include name="test_1492"/>
-        </methods>
-      </class> <!-- tests.TestRetrieveInvoiceInfo -->
-      <class name="tests.TestRetrieveMeasurementsUnits">
-        <methods>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestRetrieveMeasurementsUnits -->
     </classes>
-  </test> <!-- 2.4.1.0(failed) -->
-</suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->
+  </test> <!-- Default test -->
+</suite> <!-- Failed suite [Default suite] -->

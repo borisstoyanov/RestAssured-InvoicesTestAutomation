@@ -13,6 +13,9 @@ import org.testng.annotations.Test;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 
+import enums.Pass;
+import enums.Users;
+import requests.CancelInvoiceRequest;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
 import utils.DatabaseUtil;
@@ -50,6 +53,20 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			
 	}
 
+	private String getInvoiceID(ExtInvoiceSupPortRequest req){
+		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
+		Response resp = given().request()
+			.contentType(retrReq.contentType).body(retrReq.setInvoiceNumber(req.getInvoiceNumber()).done())
+			
+		.when()
+			.post(retrReq.endpoint);
+
+		Assert.assertTrue(resp.getStatusCode() == 200);		
+		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
+		return invoiceID;
+		
+	}
+	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1424(){
 		request = new RetrieveInvoiceHeaderRequest();
@@ -295,12 +312,11 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		ExtInvoiceSupPortRequest crInv = new ExtInvoiceSupPortRequest();
 		String createInvoiceReq = crInv.setInvoiceDate(incrementedDate).done();
 		
-		Response creteInvoiceResponse = given().request()
+		Response creteInvoiceResponse = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 			.contentType(crInv.contentType).body(createInvoiceReq)
 				
 			.when()
 				.post(crInv.endpoint);
-		
 		creteInvoiceResponse.then().statusCode(200);
 		creteInvoiceResponse.then().body(hasXPath("//responseMessage", containsString("Success")));
 		//End of invoice Creation
@@ -327,6 +343,34 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1509(){
+		
+		ExtInvoiceSupPortRequest crInv = new ExtInvoiceSupPortRequest();
+		String createInvoiceReq = crInv.done();
+		
+		Response creteInvoiceResponse = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+			.contentType(crInv.contentType).body(createInvoiceReq)
+				
+			.when()
+				.post(crInv.endpoint);
+		String respAsString = creteInvoiceResponse.asString();
+		creteInvoiceResponse.then().statusCode(200);
+		creteInvoiceResponse.then().body(hasXPath("//responseMessage", containsString("Success")));
+		
+		String invoiceID = getInvoiceID(crInv);
+		
+		CancelInvoiceRequest cancelInvoice = new CancelInvoiceRequest();
+		String cancelBody = cancelInvoice.setInvoiceID(invoiceID).done();
+		Response cancelResponse = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.header("Content-Type", "text/xml; charset=UTF-8;")
+			.body(cancelBody)
+		.when()
+			.post(cancelInvoice.endpoint);
+		
+		respAsString = cancelResponse.asString();
+		cancelResponse.then().statusCode(200);
+		Assert.assertTrue(respAsString.contains("cancelInvoiceResponse"));
+
+		
 		request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setInvoiceStatus("Cancelled")
 				.done();
@@ -341,7 +385,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			throw new SkipException ("Skipping Test: Test is skipped because there is no invoices with Cancelled status");
 		}
 		
-		String respAsString = resp.asString();
+		respAsString = resp.asString();
 
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 

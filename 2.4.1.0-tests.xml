@@ -3,8 +3,14 @@
 
 <suite name="DevTesting of 2.4.1.0 features">
 	<test name="2.4.1.0">
+		<groups>
+			<run>
+				<include name="2.4.1.0" />
+			</run>
+		</groups>
 		<classes>
 			<class name="tests.TestExtInvSupPortal" />
+			<class name="tests.TestExtInvSupPortalDef" />
 			<class name="tests.TestInvoiceHeaders_NoInvoiceCreation" />
 			<class name="tests.TestInvoiceHeaders" />
 			<class name="tests.TestRetrieveInvoiceInfo" />

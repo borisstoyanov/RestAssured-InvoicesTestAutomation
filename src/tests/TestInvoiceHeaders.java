@@ -4,10 +4,12 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Response;
 
 import enums.Pass;
 import enums.Users;
@@ -20,7 +22,7 @@ public class TestInvoiceHeaders extends WebServiceTest{
 
 	RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 		
@@ -37,61 +39,74 @@ public class TestInvoiceHeaders extends WebServiceTest{
 		
 		request.setInvoiceNumber(createInvoiceRequest.getInvoiceNumber());
 		
+		
 	}
 		
-	@Test(groups = { "2.4.1.0" })
+	@Test(groups = { "2.4.1.0"})
 	public void testInvoiceHeaders(){
-
-		given().request()
+		Response resp = given().request()
 			.contentType(request.contentType).body(request.done())
 		
 		.when()
-			.post(request.endpoint)
+			.post(request.endpoint);
 		
-		.then()
+		resp.then()
 			.body(hasToString(containsString("<ns2:TotalRegistries>1</ns2:TotalRegistries>")))
 			.body(hasToString(containsString(request.getInvoiceNumber())));
+		
+		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>1</ns2:TotalRegistries>")
+				, "Response does not contain one record");	
+		Assert.assertTrue(resp.asString().contains(request.getInvoiceNumber())
+				, "Response does not contain InvoiceNumber");
 	}
+
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1368(){
 		
-		given().request()
+		Response resp = given().request()
 			.contentType(request.contentType).body(request.done())
 		
 		.when()
-			.post(request.endpoint)
+			.post(request.endpoint);
 		
-		.then()
+		resp.then()
 			.body(hasToString(containsString("<ns0:SupplierCreatorId>estafetdev3</ns0:SupplierCreatorId>")))
 			.body(hasToString(containsString("<ns0:InvoiceCreationType>SPortal Invoice</ns0:InvoiceCreationType>")))
 			.body(hasToString(containsString("<ns2:TotalRegistries>1</ns2:TotalRegistries>")));
-	}
+		Assert.assertTrue(resp.asString().contains("<ns0:InvoiceCreationType>SPortal Invoice</ns0:InvoiceCreationType>")
+				, "Response does not contain CreationType");		
+		Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>estafetdev3</ns0:SupplierCreatorId>")
+				, "Response does not contain SupplierCreatorID");
+		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>1</ns2:TotalRegistries>")
+				, "Response does not contain one record");
+		}
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1413_1427(){
 		
-		given().request()
+		Response resp = given().request()
 			.contentType(request.contentType).body(request.done())
 		
 		.when()
-			.post(request.endpoint)
+			.post(request.endpoint);
 		
-		.then()
-			.body(hasToString(containsString("<ns0:SapClearingDate xsi:nil=\"true\"/>")));
+		Assert.assertTrue(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>")
+				, "Response does not contain one SapClearingDate");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1432(){
 		
-		given().request()
+		Response resp = given().request()
 			.contentType(request.contentType).body(request.setDocumentType("KR").done())
 		
 		.when()
-			.post(request.endpoint)
-		
-		.then()
-			.body(hasToString(containsString("<ns0:DocumentType>KR</ns0:DocumentType>")));
+			.post(request.endpoint);
+
+		Assert.assertTrue(resp.asString().contains("<ns0:DocumentType>KR</ns0:DocumentType>")
+				, "Response does not contain KR as DocType");
+
 	}
 
 }

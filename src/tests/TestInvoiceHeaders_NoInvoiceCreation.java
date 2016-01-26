@@ -1,7 +1,6 @@
 package tests;
 import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
@@ -25,7 +24,7 @@ import utils.WebServiceTest;
 public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	RetrieveInvoiceHeaderRequest request;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName(); 
 	}
@@ -40,7 +39,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			.post(request.endpoint);
 
 		Assert.assertTrue(resp.getStatusCode() == 200);			
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"), "No registries were returned");
 
 			
 	}
@@ -74,21 +73,22 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
-		Assert.assertFalse(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>"));
+		Assert.assertFalse(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>"), "SapClearingDate has null");
 			
 	}
 	@Test(groups = { "2.4.1.0" })
 	public void test_1432(){
 		request = new RetrieveInvoiceHeaderRequest();
-		given().request()
+		Response resp = given().request()
 			.contentType(request.contentType).body(request.setDocumentType("KR").done())
 		
 		.when()
-			.post(request.endpoint)
+			.post(request.endpoint);
 		
-		.then()
-			.statusCode(200)
-			.body(hasToString(containsString("<ns0:DocumentType>KR</ns0:DocumentType>")));
+		resp.then()
+			.statusCode(200);
+			Assert.assertTrue(resp.asString().contains("<ns0:DocumentType>KR</ns0:DocumentType>")
+					, "response does not contain 'KR' as a document type");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -113,10 +113,10 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Approved</ns0:InvoiceStatus>"));
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>New</ns0:InvoiceStatus>"));
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Cancelled</ns0:InvoiceStatus>"));
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"));
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Approved</ns0:InvoiceStatus>"), "Response contains 'Approved'");
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>New</ns0:InvoiceStatus>"), "Response contains 'New'");
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Cancelled</ns0:InvoiceStatus>"), "Response contains 'Cancelled'");
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"), "Response contains 'Under Approval'");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -130,7 +130,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 			
-		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"), "Response contains records");
 			
 	}
 	
@@ -145,7 +145,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			.post(request.endpoint);
 				
 		Assert.assertTrue(resp.getStatusCode() == 200);			
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"), "Response does not contains records");
 		
 		String query = "select count(*) from ("
 				+ "SELECT InvoiceEnt.BARCODE, "
@@ -200,7 +200,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
-		Assert.assertTrue(totalRegistriesFromWebservice.equals(totalRegistriesFromDB));			
+		Assert.assertTrue(totalRegistriesFromWebservice.equals(totalRegistriesFromDB)
+				, "registries from Service is not equal to registries from DB");			
 		
 	}
 	
@@ -216,7 +217,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");
 			
 	}
 	
@@ -230,8 +232,10 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			.post(request.endpoint);
 
 		Assert.assertTrue(resp.getStatusCode() == 200);			
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
-		Assert.assertFalse(resp.asString().contains("<env:Fault>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");
+		Assert.assertFalse(resp.asString().contains("<env:Fault>")
+				, "There's a Fault in the reposnse");
 	
 	}
 	
@@ -246,8 +250,10 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			.post(request.endpoint);
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
-		Assert.assertFalse(resp.asString().contains("<env:Fault>"));
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");
+		Assert.assertFalse(resp.asString().contains("<env:Fault>")
+				, "There's a Fault in the reposnse");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -261,8 +267,10 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 			.post(request.endpoint);
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
-		Assert.assertFalse(resp.asString().contains("<env:Fault>"));
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");
+		Assert.assertFalse(resp.asString().contains("<env:Fault>")
+				, "There's a Fault in the reposnse");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -277,8 +285,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 			
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
-	}
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");	}
 	
 	
 	@Test(groups = { "2.4.1.0" }) 
@@ -327,10 +335,11 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		splittedResp = respAsString.split("</ns0:InvoiceNumber>")[0];
 		String invoiceNumber = splittedResp.split("<ns0:InvoiceNumber>")[1];
 		
-		Assert.assertTrue(invoiceNumber.equals(crInv.getInvoiceNumber()));
+		Assert.assertTrue(invoiceNumber.equals(crInv.getInvoiceNumber())
+				, "Invoice number from service is not equal from invNumber from request");
 		resp.then().statusCode(200);			
-		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"));
-	
+		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
+				, "Response contains records");	
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -381,9 +390,9 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Approved</ns0:InvoiceStatus>"));
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>New</ns0:InvoiceStatus>"));
-		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"));
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Approved</ns0:InvoiceStatus>"), "Invoice contains Status 'Approved'");
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>New</ns0:InvoiceStatus>"), "Invoice contains Status 'New'");
+		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"), "Invoice contains Status 'Under Approval'");
 	}
 	
 }

@@ -31,7 +31,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 	}
@@ -60,21 +60,6 @@ public class TestExtInvSupPortal extends WebServiceTest{
 			.post(retrInfoReq.endpoint);		
 		return resp;
 	}
-		
-	@Test(groups = { "2.4.1.0" })
-	public void testExternalInvoice(){
-		request = new ExtInvoiceSupPortRequest();
-
-		given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(request.done())
-		
-		.when().post(request.endpoint).then().
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-	}
-	
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1408(){
@@ -88,47 +73,14 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		.when().post(request.endpoint);
 		
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("ERROR_INPUT_011"))).
-			body(hasXPath("//responseMessage", containsString("The provided workOrderId is not valid! ")));
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
+				, "ErrorCode did not matched.");
+		Assert.assertTrue(resp.asString().contains("The provided workOrderId is not valid")
+				, "ErrorMessage did not matched.");
+		
 	}
 	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1339(){
-		
-		//Check if fields are created in the DB
-		String query = "SELECT creator_name, invoice_creator FROM INVOICE";
-		if(DatabaseUtil.executeQuery(query).equals(null)){
-			Assert.fail("Test Failed: creator_name, invoice_creator are not available in INVOICE table.");
-		}
-		
-		
-		//Execute an external invoice supplier portal request
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-		
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//Execute retrieve invoice headers request 
-		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
-		resp = given().request()
-				.contentType(retrReq.contentType).body(retrReq.setInvoiceNumber(request.getInvoiceNumber()).done())
-			
-			.when()
-				.post(retrReq.endpoint);
-
-			Assert.assertTrue(resp.getStatusCode() == 200);		
-			Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>" + request.getSupplierCreatorID() + "</ns0:SupplierCreatorId>"));
-	}
+	
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1442(){
@@ -145,63 +97,13 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		resp.then().statusCode(200).
 			body(hasXPath("//code", containsString("ERROR_INPUT_016"))).
 			body(hasXPath("//responseMessage", containsString("Invalid Currency")));
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_016")
+					, "ErrorCode did not matched.");
+		Assert.assertTrue(resp.asString().contains("Invalid Currency")
+				, "ErrorMessage did not matched.");
 	}
 	
 	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1455(){
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-				
-		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		resp = getInvoiceInfo(invoiceID);
-
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>" + request.getSupplierCreatorID() + "</ns0:SupplierCreatorId>"));
-	}
-	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1458(){
-		
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-				
-		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		resp = getInvoiceInfo(invoiceID);
-
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:Username>" + request.getAuthor() + "</ns0:Username>"));
-	}
 	
 	
 	@Test(groups = { "2.4.1.0" })
@@ -227,8 +129,10 @@ public class TestExtInvSupPortal extends WebServiceTest{
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
 		resp = getInvoiceInfo(invoiceID);
+		//String s = resp.asString();
 		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description - A full description</ns0:Description>"));
+		Assert.assertTrue(resp.asString().contains("<ns0:ItemDescription>A description - A full description</ns0:ItemDescription>")
+				, "ItemDescription did not matched");
 		
 		//RetrieveInvoiceInfoSPRequest with to see descriptions appear separately
 		RetrieveInvoiceInfoSPRequest retrInfoReq = new RetrieveInvoiceInfoSPRequest();
@@ -238,8 +142,13 @@ public class TestExtInvSupPortal extends WebServiceTest{
 				
 		.when()
 			.post(retrInfoReq.endpoint);	
-		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description</ns0:Description>"));
-		Assert.assertTrue(resp.asString().contains("<ns0:FullDescription>A full description</ns0:FullDescription>"));
+		//s = resp.asString();
+		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description</ns0:Description>")
+				, "Description did not matched");
+		Assert.assertTrue(resp.asString().contains("<ns0:ItemDescription xsi:nil=\"true\"/>")
+				, "ItemDescription did not matched");
+		Assert.assertTrue(resp.asString().contains("<ns0:FullDescription>A full description</ns0:FullDescription>")
+				, "FullDescription did not matched");
 		
 	}
 	
@@ -255,9 +164,10 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		.when().post(request.endpoint);
 
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("ERROR_INPUT_017"))).
-			body(hasXPath("//responseMessage", containsString("Invalid DocumentTypeFlag")));
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_017")
+				, "ErrorCode is not presented");
+		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
+				, "ErrorMessage is not presented");
 		
 		//Type 'E'
 		req = request.setDocumentTypeFlag("E").done();
@@ -267,10 +177,11 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("ERROR_INPUT_017"))).
-			body(hasXPath("//responseMessage", containsString("Invalid DocumentTypeFlag")));
+		
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_017")
+				, "ErrorCode is not presented");
+		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
+				, "ErrorMessage is not presented");
 		
 		//Type '#'
 		req = request.setDocumentTypeFlag("#").done();
@@ -281,201 +192,21 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		.when().post(request.endpoint);
 
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("ERROR_INPUT_017"))).
-			body(hasXPath("//responseMessage", containsString("Invalid DocumentTypeFlag")));
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_017")
+				, "ErrorCode is not presented");
+		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
+				, "ErrorMessage is not presented");
 	}
 	
 	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1483(){
-		
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-		
-		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		resp = getInvoiceInfo(invoiceID);
-		
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:UploadedBy>" + request.getAuthor() + "</ns0:UploadedBy>"));
-		Assert.assertTrue(resp.asString().contains("<ns0:TotalAmount>" + request.getLineItemTotalAmount() + "</ns0:TotalAmount>"));
-	}
 	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1498(){
-		
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-		
-		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		resp = getInvoiceInfo(invoiceID);
-		
-		String periodOfCost = Util.getValueFromResponse(resp.asString(), "ns0:ItemDate");
-		
-		periodOfCost = Util.formatDate(periodOfCost, "MM/yyyy");
-		
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:PeriodOfCost>" + periodOfCost + "</ns0:PeriodOfCost>"));
-	}
-	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1499(){
-		
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-		
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-		
-		String query = "select action_type from invoice_action_log where invoice_id = " + invoiceID;
-		
-		ResultSet rs = DatabaseUtil.executeQuery(query);
-		
-		try {
-			Assert.assertTrue(rs.getString("ACTION_TYPE").contains("54"));
-		} catch (SQLException e) {
-			Assert.fail("SQL Exception during evaluating query");
-			e.printStackTrace();
-		}
-		
-		query = "select source from invoice_comment where invoice_id = " + invoiceID;
-		
-		rs = DatabaseUtil.executeQuery(query);
-		
-		try {
-			Assert.assertTrue(rs.getString("SOURCE").contains("SP"));
-		} catch (SQLException e) {
-			Assert.fail("SQL Exception during evaluating query");
-			e.printStackTrace();
-		}
-		
-		query = "select source from invoice_attachment where invoice_id = " + invoiceID;
-		
-		rs = DatabaseUtil.executeQuery(query);
-		
-		try {
-			Assert.assertTrue(rs.getString("SOURCE").contains("SP"));
-		} catch (SQLException e) {
-			Assert.fail("SQL Exception during evaluating query");
-			e.printStackTrace();
-		}
-	}
-	
-	@Test(groups = { "2.4.1.0" })
-	public void test_1549(){
-				
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		
-		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
-		String invoiceID = getInvoiceID(request);
-		
-		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		resp = getInvoiceInfo(invoiceID);
-	
-		String query = "select * from einvoice_description_mapping"
-				+ " where LINE_ITEM_DESCRIPTION = '" + request.getDescription() + "'"
-				+ " and ENTITY = " + request.getEntity()
-				+ " and VENDOR = " + request.getVendor();
-		
-		ResultSet rs = DatabaseUtil.executeQuery(query);
-	
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		
-		try {
-			Assert.assertTrue(resp.asString().contains("<ns0:GlAccount>" + rs.getString("GL_ACCOUNT_ID") + "</ns0:GlAccount>"));
-			Assert.assertTrue(resp.asString().contains("<ns0:CostCenter>" + rs.getString("COST_CENTRE_ID") + "</ns0:CostCenter>"));
-			Assert.assertTrue(resp.asString().contains("<ns0:ServiceTypeId>" + rs.getString("SERVICE_TYPE_ID") + "</ns0:ServiceTypeId>"));
-		} catch (SQLException e) {
-			Assert.fail("Line Item attributes are not the same as with the DB");
-			e.printStackTrace();
-		}
-	}
-
-	@Test(groups = { "2.4.1.0" })
-	public void test_1503(){
-		
-		request = new ExtInvoiceSupPortRequest();
-		String req = request.done();
-		
-		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
-		
-		.when().post(request.endpoint);
-
-		resp.then().statusCode(200).
-			body(hasXPath("//code", containsString("0"))).
-			body(hasXPath("//responseMessage", containsString("Success")));
-		
-		String invoiceID = getInvoiceID(request);
-		
-		checkFileExtension(invoiceID, ".pdf");
-		
-		
-	}
 	private void checkFileExtension(String invoiceID, String fileExtension) {
 		String query = "select * from invoice_attachment where invoice_id = "+ invoiceID +""; 
 		ResultSet rs = DatabaseUtil.executeQuery(query);
 		try {
 			rs.next();
 			String q = rs.getString("DESCRIPTION");
-			Assert.assertTrue(q.contains(fileExtension));
+			Assert.assertTrue(q.contains(fileExtension), "File Extension did not match");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new SkipException("SQL Exception");

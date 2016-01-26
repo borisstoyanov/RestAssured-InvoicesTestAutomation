@@ -5,7 +5,6 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
-import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -54,7 +53,7 @@ public class TestRetrieveInvoiceInfo {
 		return invoiceID;
 	}
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName(); 
 		retrInvInfoReq = new RetrieveInvoiceInfoRequest();
@@ -92,8 +91,40 @@ public class TestRetrieveInvoiceInfo {
 	@Test(groups = { "2.4.1.0" })
 	public void test_1492(){
 		
-		throw new SkipException("Feature is in dev");
+		createInvoiceReq = new ExtInvoiceSupPortRequest();
+		Response resp = given().request()
+		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
+		
+		.when().post(createInvoiceReq.endpoint);
+		
+		resp.then().
+			body(hasXPath("//code", containsString("0"))).
+			body(hasXPath("//responseMessage", containsString("Success")));
+		
+		
+		retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
+		resp = given().request()
+			.contentType(retrInvHeaderReq.contentType).body(retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done())
+			
+		.when()
+			.post(retrInvHeaderReq.endpoint);
 
+		Assert.assertTrue(resp.getStatusCode() == 200);		
+		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
+		
+		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
+		
+		resp = given().request()
+				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
+				
+		.when()
+			.post(retrInfoReq.endpoint);
+		
+		resp.then().statusCode(200);
+		Assert.assertTrue(resp.asString().contains("<ns0:ItemDescription>A description - A full description</ns0:ItemDescription>")
+				, "Item Description is not available in the response");
+		Assert.assertFalse(resp.asString().contains("SupplierDescription"), "Supplier Description is not displayed in the response");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
@@ -130,7 +161,7 @@ public class TestRetrieveInvoiceInfo {
 			.post(retrInfoReq.endpoint);
 		
 		resp.then().statusCode(200);
-		Assert.assertFalse(resp.asString().contains("line"));
+		Assert.assertFalse(resp.asString().contains("line"), "RetrieveInvoiceInfo service should return Line Items which have amount > 0");
 		
 		
 	}
@@ -149,7 +180,7 @@ public class TestRetrieveInvoiceInfo {
 			.post(retrSPInfoReq.endpoint);
 		
 		resp.then().statusCode(200);
-		Assert.assertFalse(resp.asString().contains("TestAutomationComment"));
+		Assert.assertFalse(resp.asString().contains("TestAutomationComment"), "Comment is visible");
 		
 		//Check visible through RetrieveInvoiceInfo
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
@@ -160,7 +191,7 @@ public class TestRetrieveInvoiceInfo {
 			.post(retrInfoReq.endpoint);
 		
 		resp.then().statusCode(200);
-		Assert.assertTrue(resp.asString().contains("TestAutomationComment"));
+		Assert.assertTrue(resp.asString().contains("TestAutomationComment"), "Comment is not visible");
 		
 	}
 	

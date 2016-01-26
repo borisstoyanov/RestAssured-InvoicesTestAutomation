@@ -10,15 +10,4 @@
       </class> <!-- tests.TestExtInvSupPortal -->
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="testExternalInvoice"/>
-          <include name="setup"/>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

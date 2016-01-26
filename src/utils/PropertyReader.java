@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -8,17 +7,17 @@ import java.util.Properties;
 public class PropertyReader {
 
 	static Properties prop = new Properties();
-	static InputStream input = null;
+	InputStream input;
 	 
 
-	public static String getProperty(String property) {
+	public String getProperty(String property) {
 		String p = "";
 
 		try {
-			input = new FileInputStream("./config.properties");
+			input = getClass().getResourceAsStream("/config.properties");
 
 			// load a properties file
-			prop.load(input);
+			prop.load(input); 
 
 			// get the property value and print it out
 			p = prop.getProperty(property);

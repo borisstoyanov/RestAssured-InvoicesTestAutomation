@@ -67,5 +67,13 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/</directory>
+				<includes>
+					<include>config.properties</include>
+				</includes>
+			</resource>
+			</resources>
 	</build>
 </project>

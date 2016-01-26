@@ -12,8 +12,9 @@ public class TestInstance {
 	}
 
 	public static String getServerName() {
-
-		String serverName = PropertyReader.getProperty("customProp");
+		PropertyReader prop  = new PropertyReader();
+		
+		String serverName = prop.getProperty("customProp");
 
 		switch (serverName) {
 		case "UAT":
@@ -43,8 +44,9 @@ public class TestInstance {
 	}
 
 	public static Map<String, String> getDBConString() {
-		String testEnv = PropertyReader.getProperty("customProp");
+		PropertyReader prop  = new PropertyReader();
 		
+		String testEnv = prop.getProperty("customProp");		
 		Map<String, String> conDetails = new HashMap<>();
 		
 		

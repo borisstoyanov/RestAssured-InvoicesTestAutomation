@@ -8,8 +8,7 @@ import java.sql.SQLException;
 
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -30,12 +29,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 
 	ExtInvoiceSupPortRequest request;
 	
-	@BeforeGroups(groups = { "2.4.1.0" })
-	public void beforeGroups(){
-		setup();
-	}
+
 	
-	@BeforeTest
+	@BeforeClass
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 	}

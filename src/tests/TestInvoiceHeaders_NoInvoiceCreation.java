@@ -7,7 +7,6 @@ import static org.hamcrest.Matchers.hasXPath;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -25,13 +24,6 @@ import utils.WebServiceTest;
 
 public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	RetrieveInvoiceHeaderRequest request;
-	
-
-	
-	@BeforeGroups(groups = { "2.4.1.0" })
-	public void beforeGroups(){
-		setup();
-	}
 	
 	@BeforeClass
 	public void setup(){

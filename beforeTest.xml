@@ -3,12 +3,15 @@
 
 <suite name="DevTesting of 2.4.1.0 features">
 	<test name="2.4.1.0">
+
+
 		<classes>
-			<class name="tests.TestExtInvSupPortal" />
-			<class name="tests.TestInvoiceHeaders_NoInvoiceCreation" />
+<!-- 			<class name="tests.TestExtInvSupPortal" /> -->
+<!-- 			<class name="tests.TestInvoiceHeaders_NoInvoiceCreation" /> -->
 			<class name="tests.TestInvoiceHeaders" />
-			<class name="tests.TestRetrieveInvoiceInfo" />
-			<class name="tests.TestRetrieveMeasurementsUnits" />
+<!-- 			<class name="tests.TestRetrieveInvoiceInfo" /> -->
+<!-- 			<class name="tests.TestRetrieveMeasurementsUnits" /> -->
 		</classes>
+
 	</test>
 </suite>

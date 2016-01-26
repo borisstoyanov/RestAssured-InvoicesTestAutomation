@@ -4,8 +4,7 @@ import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasToString;
 
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -17,13 +16,8 @@ import utils.TestInstance;
 
 public class TestRetrieveMeasurementsUnits {
 	RetrieveMeasurementsUnitsRequest request;
-	
-	@BeforeGroups(groups = { "2.4.1.0" })
-	public void beforeGroups(){
-		setup();
-	}
 
-	@BeforeMethod
+	@BeforeClass
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName(); 
 		request = new RetrieveMeasurementsUnitsRequest();

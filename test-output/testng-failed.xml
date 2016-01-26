@@ -3,11 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="testExternalInvoice"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
+      <class name="tests.TestInvoiceHeaders"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->

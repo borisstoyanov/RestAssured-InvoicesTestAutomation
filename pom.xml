@@ -74,6 +74,6 @@
 					<include>config.properties</include>
 				</includes>
 			</resource>
-			</resources>
+		</resources>
 	</build>
 </project>

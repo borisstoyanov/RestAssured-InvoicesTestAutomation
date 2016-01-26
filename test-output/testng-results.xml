@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56718" started-at="2016-01-26T09:29:08Z" finished-at="2016-01-26T09:30:05Z">
+  <suite name="Default suite" duration-ms="8764" started-at="2016-01-26T12:36:37Z" finished-at="2016-01-26T12:36:46Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortal.testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@256b8a7a]" name="testExternalInvoice" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestInvoiceHeaders.testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="testInvoiceHeaders" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1368" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1432" class="tests.TestInvoiceHeaders"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="56718" started-at="2016-01-26T09:29:08Z" finished-at="2016-01-26T09:30:05Z">
-      <class name="tests.TestExtInvSupPortal">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@256b8a7a]" name="setup" is-config="true" duration-ms="251" started-at="2016-01-26T11:29:08Z" finished-at="2016-01-26T11:29:08Z">
+    <test name="Default test" duration-ms="8764" started-at="2016-01-26T12:36:37Z" finished-at="2016-01-26T12:36:46Z">
+      <class name="tests.TestInvoiceHeaders">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="setup" is-config="true" duration-ms="7819" started-at="2016-01-26T14:36:37Z" finished-at="2016-01-26T14:36:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:tests.TestExtInvSupPortal@256b8a7a]" name="beforeGroups" is-config="true" duration-ms="1" started-at="2016-01-26T11:29:08Z" finished-at="2016-01-26T11:29:08Z">
+        <test-method status="PASS" signature="testInvoiceHeaders()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="testInvoiceHeaders" duration-ms="248" started-at="2016-01-26T14:36:45Z" finished-at="2016-01-26T14:36:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeGroups -->
-        <test-method status="PASS" signature="testExternalInvoice()[pri:0, instance:tests.TestExtInvSupPortal@256b8a7a]" name="testExternalInvoice" duration-ms="56458" started-at="2016-01-26T11:29:08Z" finished-at="2016-01-26T11:30:05Z">
+        </test-method> <!-- testInvoiceHeaders -->
+        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1368" duration-ms="219" started-at="2016-01-26T14:36:45Z" finished-at="2016-01-26T14:36:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testExternalInvoice -->
-      </class> <!-- tests.TestExtInvSupPortal -->
+        </test-method> <!-- test_1368 -->
+        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1413_1427" duration-ms="223" started-at="2016-01-26T14:36:45Z" finished-at="2016-01-26T14:36:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1413_1427 -->
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@4b520cac]" name="test_1432" duration-ms="242" started-at="2016-01-26T14:36:46Z" finished-at="2016-01-26T14:36:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1432 -->
+      </class> <!-- tests.TestInvoiceHeaders -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

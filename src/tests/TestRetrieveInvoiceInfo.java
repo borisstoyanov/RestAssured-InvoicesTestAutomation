@@ -122,9 +122,10 @@ public class TestRetrieveInvoiceInfo {
 			.post(retrInfoReq.endpoint);
 		
 		resp.then().statusCode(200);
-		Assert.assertTrue(resp.asString().contains("<ns0:ItemDescription>A description - A full description</ns0:ItemDescription>")
-				, "Item Description is not available in the response");
-		Assert.assertFalse(resp.asString().contains("SupplierDescription"), "Supplier Description is not displayed in the response");
+		Assert.assertFalse(resp.asString().contains("<ns0:ItemDescription>")
+				, "Item Description is  available in the response");
+		Assert.assertFalse(resp.asString().contains("SupplierDescription")
+				, "Supplier Description is displayed in the response");
 	}
 	
 	@Test(groups = { "2.4.1.0" })

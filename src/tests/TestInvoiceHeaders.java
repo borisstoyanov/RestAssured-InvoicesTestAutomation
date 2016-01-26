@@ -41,26 +41,7 @@ public class TestInvoiceHeaders extends WebServiceTest{
 		
 		
 	}
-		
-	@Test(groups = { "2.4.1.0"})
-	public void testInvoiceHeaders(){
-		Response resp = given().request()
-			.contentType(request.contentType).body(request.done())
-		
-		.when()
-			.post(request.endpoint);
-		
-		resp.then()
-			.body(hasToString(containsString("<ns2:TotalRegistries>1</ns2:TotalRegistries>")))
-			.body(hasToString(containsString(request.getInvoiceNumber())));
-		
-		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>1</ns2:TotalRegistries>")
-				, "Response does not contain one record");	
-		Assert.assertTrue(resp.asString().contains(request.getInvoiceNumber())
-				, "Response does not contain InvoiceNumber");
-	}
 
-	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1368(){
 		

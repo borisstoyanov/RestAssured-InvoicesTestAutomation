@@ -107,7 +107,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	
 	@Test(groups = { "2.4.1.0" })
-	public void test_1466(){
+	public void test_1466_1532(){
 		
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.setDescription("A description").setFullDescription("A full description").done();
@@ -197,9 +197,29 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
 				, "ErrorMessage is not presented");
 	}
-	
-	
-	
+		
+	@Test(groups = { "2.4.1.0" })
+	public void test_1615(){
+		//Type 'SomeInvalidFlag'
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.setPeriodOfCost("").setItemDate("").done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+
+		
+		Assert.assertTrue(resp.getStatusCode() == 200);		
+
+		Assert.assertTrue(resp.asString().contains("<code>0</code>")
+				, "ErrorCode did not match");
+		Assert.assertTrue(resp.asString().contains("<responseMessage>Success</responseMessage>")
+				, "ErrorMessage did not match");
+			
+	}
+		
 	private void checkFileExtension(String invoiceID, String fileExtension) {
 		String query = "select * from invoice_attachment where invoice_id = "+ invoiceID +""; 
 		ResultSet rs = DatabaseUtil.executeQuery(query);

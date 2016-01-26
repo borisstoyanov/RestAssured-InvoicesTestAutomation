@@ -231,7 +231,6 @@ public class TestExtInvSupPortal extends WebServiceTest{
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
 		resp = getInvoiceInfo(invoiceID);
-		String asstr = resp.asString();
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>A description - A full description</ns0:Description>"));
 		

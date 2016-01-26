@@ -22,34 +22,33 @@
       </run>
     </groups>
     <classes>
+      <class name="tests.TestRetrieveInvoiceInfo">
+        <methods>
+          <include name="test_1492"/>
+          <include name="beforeGroups"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveInvoiceInfo -->
       <class name="tests.TestExtInvSupPortal">
         <methods>
+          <include name="test_1506_3"/>
           <include name="beforeGroups"/>
-          <include name="test_1466"/>
         </methods>
       </class> <!-- tests.TestExtInvSupPortal -->
-      <class name="tests.TestInvoiceHeaders">
-        <methods>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestInvoiceHeaders -->
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
         <methods>
           <include name="beforeGroups"/>
-          <include name="test_1509"/>
         </methods>
       </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
-      <class name="tests.TestRetrieveInvoiceInfo">
-        <methods>
-          <include name="beforeGroups"/>
-          <include name="test_1492"/>
-        </methods>
-      </class> <!-- tests.TestRetrieveInvoiceInfo -->
       <class name="tests.TestRetrieveMeasurementsUnits">
         <methods>
           <include name="beforeGroups"/>
         </methods>
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestInvoiceHeaders">
+        <methods>
+          <include name="beforeGroups"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders -->
     </classes>
   </test> <!-- 2.4.1.0(failed) -->
 </suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->

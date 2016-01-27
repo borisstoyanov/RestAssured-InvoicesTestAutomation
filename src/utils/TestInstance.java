@@ -30,10 +30,10 @@ public class TestInstance {
 			serverName = "http://bpmdev116.vistajet.local:8001";
 			break;
 		case "QA":
-			serverName = "http://ukdcgvsapqa.vistajet.local:8001";
+			serverName = "http://bpmuat115.vistajet.local:8201";
 			break;
 		case "qa":
-			serverName = "http://ukdcgvsapqa.vistajet.local:8001";
+			serverName = "http://bpmuat115.vistajet.local:8201";
 			break;
 
 		default:

@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10655" started-at="2016-01-26T15:23:28Z" finished-at="2016-01-26T15:23:39Z">
+  <suite name="Default suite" duration-ms="37273" started-at="2016-01-27T13:12:10Z" finished-at="2016-01-27T13:12:47Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@923288b]" name="test_1492" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestExtInvSupPortal.test_1615()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1615" class="tests.TestExtInvSupPortal"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="10655" started-at="2016-01-26T15:23:28Z" finished-at="2016-01-26T15:23:39Z">
-      <class name="tests.TestRetrieveInvoiceInfo">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@923288b]" name="setup" is-config="true" duration-ms="269" started-at="2016-01-26T17:23:28Z" finished-at="2016-01-26T17:23:29Z">
+    <test name="Default test" duration-ms="37273" started-at="2016-01-27T13:12:10Z" finished-at="2016-01-27T13:12:47Z">
+      <class name="tests.TestExtInvSupPortal">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="setup" is-config="true" duration-ms="248" started-at="2016-01-27T15:12:10Z" finished-at="2016-01-27T15:12:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@923288b]" name="test_1492" duration-ms="10374" started-at="2016-01-26T17:23:29Z" finished-at="2016-01-26T17:23:39Z">
+        <test-method status="PASS" signature="test_1615()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1615" duration-ms="37015" started-at="2016-01-27T15:12:10Z" finished-at="2016-01-27T15:12:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_1492 -->
-      </class> <!-- tests.TestRetrieveInvoiceInfo -->
+        </test-method> <!-- test_1615 -->
+      </class> <!-- tests.TestExtInvSupPortal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -24,9 +24,10 @@ public class DatabaseUtil {
 		// Create a connection to the database
 		Map<String, String> serverName = TestInstance.getDBConString();
 
-		String url = "jdbc:oracle:thin:@//" + serverName.get("connString");
+		String url =  "jdbc:oracle:thin:@//" + serverName.get("connString");
+//		String url = "jdbc:oracle:thin:@//" + serverName.get("connString");
 		String username = serverName.get("dbUsername");
-		String password = serverName.get("dbPass");
+		String password = serverName.get("dbPass"); 
 
 		try {
 			connection = DriverManager.getConnection(url, username, password);

@@ -8,7 +8,7 @@
       </run>
     </groups>
     <classes>
-      <class name="tests.TestExtInvSupPortal"/>
+      <class name="tests.TestExtInvSupPortalDef"/>
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
       <class name="tests.TestInvoiceHeaders"/>
       <class name="tests.TestRetrieveInvoiceInfo"/>
@@ -22,33 +22,37 @@
       </run>
     </groups>
     <classes>
-      <class name="tests.TestRetrieveInvoiceInfo">
-        <methods>
-          <include name="test_1492"/>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestRetrieveInvoiceInfo -->
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="test_1506_3"/>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
-      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
-        <methods>
-          <include name="beforeGroups"/>
-        </methods>
-      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
       <class name="tests.TestRetrieveMeasurementsUnits">
         <methods>
-          <include name="beforeGroups"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestRetrieveInvoiceInfo">
+        <methods>
+          <include name="setup"/>
+          <include name="test_1463"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveInvoiceInfo -->
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
+        <methods>
+          <include name="setup"/>
+          <include name="test_1448_1436"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
       <class name="tests.TestInvoiceHeaders">
         <methods>
-          <include name="beforeGroups"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tests.TestInvoiceHeaders -->
+      <class name="tests.TestExtInvSupPortalDef">
+        <methods>
+          <include name="Atest_1499"/>
+          <include name="Atest_1503"/>
+          <include name="Atest_1339"/>
+          <include name="setup"/>
+          <include name="Atest_1549"/>
+        </methods>
+      </class> <!-- tests.TestExtInvSupPortalDef -->
     </classes>
   </test> <!-- 2.4.1.0(failed) -->
 </suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->

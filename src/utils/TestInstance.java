@@ -72,12 +72,12 @@ public class TestInstance {
 			conDetails.put("dbPass", "VJINVOICES");
 			break;
 		case "QA":
-			conDetails.put("connString", "192.168.201.94:1521:orclqa");
+			conDetails.put("connString", "192.168.201.94:1521/orclqa");
 			conDetails.put("dbUsername", "VJINVOICES");
 			conDetails.put("dbPass", "VJINVOICES");
 			break;
 		case "qa":
-			conDetails.put("connString", "192.168.201.94:1521:orclqa");
+			conDetails.put("connString", "192.168.201.94:1521/orclqa");
 			conDetails.put("dbUsername", "VJINVOICES");
 			conDetails.put("dbPass", "VJINVOICES");
 			break;

@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8098" started-at="2016-01-27T19:13:53Z" finished-at="2016-01-27T19:14:01Z">
+  <suite name="Default suite" duration-ms="1784" started-at="2016-01-27T20:09:00Z" finished-at="2016-01-27T20:09:02Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortal.test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1506_13" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1408()[pri:0, instance:tests.TestExtInvSupPortal@61809f0f]" name="test_1408" class="tests.TestExtInvSupPortal"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="8098" started-at="2016-01-27T19:13:53Z" finished-at="2016-01-27T19:14:01Z">
+    <test name="Default test" duration-ms="1784" started-at="2016-01-27T20:09:00Z" finished-at="2016-01-27T20:09:02Z">
       <class name="tests.TestExtInvSupPortal">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="setup" is-config="true" duration-ms="270" started-at="2016-01-27T21:13:53Z" finished-at="2016-01-27T21:13:54Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@61809f0f]" name="setup" is-config="true" duration-ms="253" started-at="2016-01-27T22:09:00Z" finished-at="2016-01-27T22:09:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1506_13" duration-ms="7815" started-at="2016-01-27T21:13:54Z" finished-at="2016-01-27T21:14:01Z">
+        <test-method status="PASS" signature="test_1408()[pri:0, instance:tests.TestExtInvSupPortal@61809f0f]" name="test_1408" duration-ms="1522" started-at="2016-01-27T22:09:00Z" finished-at="2016-01-27T22:09:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_1506_13 -->
+        </test-method> <!-- test_1408 -->
       </class> <!-- tests.TestExtInvSupPortal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

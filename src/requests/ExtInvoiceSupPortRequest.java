@@ -3,18 +3,21 @@ package requests;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.jayway.restassured.response.Header;
+
 import utils.Util;
 
 public class ExtInvoiceSupPortRequest {
 	public Map<String, String> header = new HashMap<String, String>();
-	
+	public Header h;
 	public String endpoint = "";
 	
 	public String contentType  = "";
 	
 	public ExtInvoiceSupPortRequest(){
-		
+		h = new Header("Content-Type","text/xml; charset=UTF-8");
 	    header.put("SOAPAction", "/com/vistajet/invoicemanagmenet/model/common/retrieveInvoicesHeader");
+	    header.put("Content-Type","text/xml; charset=UTF-8");
 	    
 	    endpoint = "/soa-infra/services/default/InvoiceApproval/SupplierPortalApprovalProcess.service";	
 	    

@@ -74,7 +74,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		.when().post(request.endpoint);
 		
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
-				, "ErrorCode did not matched.");
+				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + req);
 		Assert.assertTrue(resp.asString().contains("The provided workOrderId is not valid")
 				, "ErrorMessage did not matched.");
 		

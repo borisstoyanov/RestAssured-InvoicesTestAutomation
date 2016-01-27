@@ -7,6 +7,7 @@ import static org.hamcrest.Matchers.hasXPath;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.omg.Messaging.SyncScopeHelper;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
@@ -34,18 +35,30 @@ public class TestExtInvSupPortalDef {
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 		
-		//Execute an external invoice supplier portal request
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
+		
 		Response resp = given().request()
-				.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-				.contentType(request.contentType).body(req)
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
+		
+		//Execute an external invoice supplier portal request
+//		request = new ExtInvoiceSupPortRequest();
+//		String req = request.done();
+//		Response resp = given().request()
+//				.header(request.h).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+//				.body(req)
+//				
+//				.when().post(request.endpoint);
+//				
+//				Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+//				Assert.assertTrue(resp.asString().contains("Success"), resp.asString());		
 				
-				.when().post(request.endpoint);
-				
-				resp.then().statusCode(200).
-					body(hasXPath("//code", containsString("0"))).
-					body(hasXPath("//responseMessage", containsString("Success")));
 	}
 
 	private String getInvoiceID(ExtInvoiceSupPortRequest req){

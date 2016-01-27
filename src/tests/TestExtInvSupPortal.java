@@ -44,7 +44,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		.when()
 			.post(retrReq.endpoint);
 
-		Assert.assertTrue(resp.getStatusCode() == 200);		
+		Assert.assertTrue(resp.getStatusCode() == 200, "Status Code was not 200, it was: " + resp.getStatusCode());	
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		return invoiceID;
 		
@@ -211,7 +211,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		.when().post(request.endpoint);
 
 		
-		Assert.assertTrue(resp.getStatusCode() == 200);		
+		Assert.assertTrue(resp.getStatusCode() == 200, "Status Code was not 200, it was: " + resp.getStatusCode());		
 
 		Assert.assertTrue(resp.asString().contains("<code>0</code>")
 				, "ErrorCode did not match");

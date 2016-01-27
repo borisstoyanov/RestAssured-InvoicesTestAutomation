@@ -286,7 +286,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 			
 		Assert.assertFalse(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")
-				, "Response contains records");	}
+				, "Response contains records.");	}
 	
 	
 	@Test(groups = { "2.4.1.0" }) 

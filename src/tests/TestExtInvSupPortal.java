@@ -226,7 +226,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		try {
 			rs.next();
 			String q = rs.getString("DESCRIPTION");
-			Assert.assertTrue(q.contains(fileExtension), "File Extension did not match");
+			Assert.assertTrue(q.contains(fileExtension), "File Extension did not match.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new SkipException("SQL Exception");

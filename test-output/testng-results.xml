@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19977" started-at="2016-01-27T14:12:06Z" finished-at="2016-01-27T14:12:26Z">
+  <suite name="Default suite" duration-ms="8098" started-at="2016-01-27T19:13:53Z" finished-at="2016-01-27T19:14:01Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortalDef.Atest_1549()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1549" class="tests.TestExtInvSupPortalDef"/>
+        <method signature="TestExtInvSupPortal.test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1506_13" class="tests.TestExtInvSupPortal"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="19977" started-at="2016-01-27T14:12:06Z" finished-at="2016-01-27T14:12:26Z">
-      <class name="tests.TestExtInvSupPortalDef">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="setup" is-config="true" duration-ms="10401" started-at="2016-01-27T16:12:06Z" finished-at="2016-01-27T16:12:16Z">
+    <test name="Default test" duration-ms="8098" started-at="2016-01-27T19:13:53Z" finished-at="2016-01-27T19:14:01Z">
+      <class name="tests.TestExtInvSupPortal">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="setup" is-config="true" duration-ms="270" started-at="2016-01-27T21:13:53Z" finished-at="2016-01-27T21:13:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Atest_1549()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1549" duration-ms="9561" started-at="2016-01-27T16:12:16Z" finished-at="2016-01-27T16:12:26Z">
+        <test-method status="PASS" signature="test_1506_13()[pri:0, instance:tests.TestExtInvSupPortal@b77c306]" name="test_1506_13" duration-ms="7815" started-at="2016-01-27T21:13:54Z" finished-at="2016-01-27T21:14:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Atest_1549 -->
-      </class> <!-- tests.TestExtInvSupPortalDef -->
+        </test-method> <!-- test_1506_13 -->
+      </class> <!-- tests.TestExtInvSupPortal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

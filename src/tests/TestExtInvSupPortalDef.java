@@ -88,7 +88,7 @@ public class TestExtInvSupPortalDef {
 	}
 
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1339(){
+	public void test_1339(){
 		
 		//Check if fields are created in the DB
 		String query = "SELECT creator_name, invoice_creator FROM INVOICE";
@@ -110,7 +110,7 @@ public class TestExtInvSupPortalDef {
 	}
 	
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1455(){
+	public void test_1455(){
 				
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -124,7 +124,7 @@ public class TestExtInvSupPortalDef {
 	}
 	
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1458(){
+	public void test_1458(){
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -137,7 +137,7 @@ public class TestExtInvSupPortalDef {
 				, "Author did not matched");
 	}
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1483(){
+	public void test_1483(){
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -153,7 +153,7 @@ public class TestExtInvSupPortalDef {
 	}
 	
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1498(){
+	public void test_1498(){
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -171,7 +171,7 @@ public class TestExtInvSupPortalDef {
 	}
 	
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1499(){
+	public void test_1499(){
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -211,7 +211,7 @@ public class TestExtInvSupPortalDef {
 	}
 	
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1549(){
+	public void test_1549(){
 				
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -242,7 +242,7 @@ public class TestExtInvSupPortalDef {
 	}
 
 	@Test(groups = { "2.4.1.0" })
-	public void Atest_1503(){
+	public void test_1503(){
 		String invoiceID = getInvoiceID(request);
 		
 		checkFileExtension(invoiceID, ".pdf");

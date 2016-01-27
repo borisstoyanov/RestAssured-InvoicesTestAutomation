@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestExtInvSupPortalDef">
         <methods>
-          <include name="Atest_1339"/>
+          <include name="Atest_1549"/>
         </methods>
       </class> <!-- tests.TestExtInvSupPortalDef -->
     </classes>

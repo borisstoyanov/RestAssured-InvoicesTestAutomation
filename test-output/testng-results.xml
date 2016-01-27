@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52254" started-at="2016-01-27T13:30:45Z" finished-at="2016-01-27T13:31:37Z">
+  <suite name="Default suite" duration-ms="19977" started-at="2016-01-27T14:12:06Z" finished-at="2016-01-27T14:12:26Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortalDef.Atest_1339()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1339" class="tests.TestExtInvSupPortalDef"/>
+        <method signature="TestExtInvSupPortalDef.Atest_1549()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1549" class="tests.TestExtInvSupPortalDef"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="52254" started-at="2016-01-27T13:30:45Z" finished-at="2016-01-27T13:31:37Z">
+    <test name="Default test" duration-ms="19977" started-at="2016-01-27T14:12:06Z" finished-at="2016-01-27T14:12:26Z">
       <class name="tests.TestExtInvSupPortalDef">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="setup" is-config="true" duration-ms="15627" started-at="2016-01-27T15:30:45Z" finished-at="2016-01-27T15:31:00Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="setup" is-config="true" duration-ms="10401" started-at="2016-01-27T16:12:06Z" finished-at="2016-01-27T16:12:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Atest_1339()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1339" duration-ms="36614" started-at="2016-01-27T15:31:00Z" finished-at="2016-01-27T15:31:37Z">
+        <test-method status="PASS" signature="Atest_1549()[pri:0, instance:tests.TestExtInvSupPortalDef@1d55d69b]" name="Atest_1549" duration-ms="9561" started-at="2016-01-27T16:12:16Z" finished-at="2016-01-27T16:12:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Atest_1339 -->
+        </test-method> <!-- Atest_1549 -->
       </class> <!-- tests.TestExtInvSupPortalDef -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

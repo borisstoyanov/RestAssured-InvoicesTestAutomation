@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -22,7 +22,7 @@ public class TestInvoiceHeaders extends WebServiceTest{
 
 	RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 	
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 		

@@ -7,8 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.SkipException;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -28,17 +30,26 @@ import utils.WebServiceTest;
 public class TestExtInvSupPortal extends WebServiceTest{
 
 	ExtInvoiceSupPortRequest request;
+	Response resp;
+	String req;
 	
-
-	
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
+	}
+	
+	@AfterMethod(alwaysRun = true)
+	public void tearDown(ITestResult result) {
+	   if (result.getStatus() == ITestResult.FAILURE) {
+	      System.out.println("BaseURI is: " + RestAssured.baseURI);
+	      System.out.println("Request is: " + req);
+	      System.out.println("Response is: " + resp.asString());
+	   }        
 	}
 
 	private String getInvoiceID(ExtInvoiceSupPortRequest req){
 		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
-		Response resp = given().request()
+		resp = given().request()
 			.contentType(retrReq.contentType).body(retrReq.setInvoiceNumber(req.getInvoiceNumber()).done())
 			
 		.when()
@@ -53,7 +64,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	private Response getInvoiceInfo(String invoiceID) {
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
 		
-		Response resp = given().request()
+		resp = given().request()
 				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
 				
 		.when()
@@ -65,18 +76,21 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1408(){
 		
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setWorkOrderId("some invalid work Order").done();
+		req = request.done();
 		
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
 		
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
-				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + req);
-		Assert.assertTrue(resp.asString().contains("The provided workOrderId is not valid")
+				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + "Request is: " + req + 
+				"\nURL is: " + RestAssured.baseURI);
+		Assert.assertTrue(resp.asString().contains("Invalid WorkOrderId")
 				, "ErrorMessage did not matched.");
+		
+		
 		
 	}
 	
@@ -86,9 +100,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1442(){
 		
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setInvoiceCurrency("$").done();
+		req = request.setInvoiceCurrency("$").done();
 		
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
@@ -110,10 +124,10 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1466_1532(){
 		
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setDescription("A description").setFullDescription("A full description").done();
+		req = request.setDescription("A description").setFullDescription("A full description").done();
 		
 		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
@@ -156,9 +170,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1479(){
 		//Type 'SomeInvalidFlag'
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setDocumentTypeFlag("SomeInvalidFlag").done();
+		req = request.setDocumentTypeFlag("SomeInvalidFlag").done();
 		
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
@@ -202,9 +216,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1615(){
 		//Type 'SomeInvalidFlag'
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setPeriodOfCost("").setItemDate("").done();
+		req = request.setPeriodOfCost("").setItemDate("").done();
 		
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
@@ -235,10 +249,10 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 	private  String createInvoiceWithFileExtension(String fileType) {
 		request = new ExtInvoiceSupPortRequest();
-		String req = request.setFileType(fileType).done();
+		req = request.setFileType(fileType).done();
 		
 		//Create invoice with default supplierCreatorID 
-		Response resp = given().request()
+		resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		

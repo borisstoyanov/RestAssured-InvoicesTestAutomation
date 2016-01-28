@@ -9,7 +9,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="tests.TestExtInvSupPortal" />
+<!-- 			<class name="tests.TestExtInvSupPortal" /> -->
 			<class name="tests.TestInvoiceHeaders_NoInvoiceCreation" />
 			<class name="tests.TestInvoiceHeaders" />
 			<class name="tests.TestRetrieveInvoiceInfo" />

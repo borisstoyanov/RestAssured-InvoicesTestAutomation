@@ -269,7 +269,7 @@ public class ExtInvoiceSupPortRequest {
 	 */
 	private String lineItemNumber = "0";
 	private String description = "WATER SERVICE";
-	private String currency = "$";
+	private String currency = "USD";
 	private String signIndicator = "D";
 	private String lineItemNetAmount = "500";
 	private String lineItemVatExemptionFlag = "0";

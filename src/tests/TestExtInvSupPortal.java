@@ -326,7 +326,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		checkFileExtension(invoiceID, ".msg");
 	}
 	
-	@Test(groups = { "2.4.1.1" })
+	@Test(groups = { "2.4.1.0" })
 	public void test_1339(){
 	
 		request = new ExtInvoiceSupPortRequest();
@@ -364,12 +364,24 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1455(){
-				
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
+		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		Response resp = getInvoiceInfo(invoiceID);
+		resp = getInvoiceInfo(invoiceID);
 
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>" + request.getSupplierCreatorID() + "</ns0:SupplierCreatorId>")
@@ -379,11 +391,24 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1458(){
 		
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
+		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
 				
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		Response resp = getInvoiceInfo(invoiceID);
+		resp = getInvoiceInfo(invoiceID);
 
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:Username>" + request.getAuthor() + "</ns0:Username>")
@@ -391,12 +416,24 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	}
 	@Test(groups = { "2.4.1.0" })
 	public void test_1483(){
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
 		
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		Response resp = getInvoiceInfo(invoiceID);
+		resp = getInvoiceInfo(invoiceID);
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:UploadedBy>" + request.getAuthor() + "</ns0:UploadedBy>")
@@ -407,12 +444,24 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1498(){
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
 		
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		Response resp = getInvoiceInfo(invoiceID);
+		resp = getInvoiceInfo(invoiceID);
 		
 		String periodOfCost = Util.getValueFromResponse(resp.asString(), "ns0:ItemDate");
 		
@@ -425,6 +474,18 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1499(){
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
@@ -465,13 +526,24 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1549(){
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
 		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 				
 		//RetrieveInvoiceRequest of the same invoice number and get invoiceID
 		String invoiceID = getInvoiceID(request);
 		
 		//RetrieveInvoiceInfoRequest with invoiceID from RetrieveHeaderResponse and check if comment section is concatenated
-		Response resp = getInvoiceInfo(invoiceID);
+		resp = getInvoiceInfo(invoiceID);
 	
 		String query = "select * from einvoice_description_mapping"
 				+ " where LINE_ITEM_DESCRIPTION = '" + request.getDescription() + "'"

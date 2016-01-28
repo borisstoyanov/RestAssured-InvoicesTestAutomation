@@ -17,7 +17,6 @@ import requests.CancelInvoiceRequest;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
 import utils.DatabaseUtil;
-import utils.PropertyReader;
 import utils.TestInstance;
 import utils.Util;
 import utils.WebServiceTest;
@@ -396,7 +395,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"), "Invoice contains Status 'Under Approval'");
 	}
 	
-	@Test(groups = { "2.4.1.1" })
+	@Test(groups = { "2.4.1.0" })
 	public void test_1408(){
 		if(RestAssured.baseURI.equals("http://bpmuat115.vistajet.local:8201")){
 			throw new SkipException("This test is not passing on QA for some reason");

@@ -20,8 +20,9 @@ import requests.RetrieveInvoiceInfoSPRequest;
 import utils.DatabaseUtil;
 import utils.TestInstance;
 import utils.Util;
+import utils.WebServiceTest;
 
-public class TestRetrieveInvoiceInfo {
+public class TestRetrieveInvoiceInfo extends WebServiceTest{
 
 	RetrieveInvoiceInfoRequest retrInvInfoReq;
 	ExtInvoiceSupPortRequest createInvoiceReq;

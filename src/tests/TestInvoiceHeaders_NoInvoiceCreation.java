@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -24,7 +24,7 @@ import utils.WebServiceTest;
 public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	RetrieveInvoiceHeaderRequest request;
 	
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName(); 
 	}
@@ -395,4 +395,23 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Under Approval</ns0:InvoiceStatus>"), "Invoice contains Status 'Under Approval'");
 	}
 	
+	@Test(groups = { "2.4.1.1" })
+	public void test_1408(){
+		
+		ExtInvoiceSupPortRequest request = new ExtInvoiceSupPortRequest();
+		String req = request.setWorkOrderId("Invalid").done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
+				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + "Request is: " + req + 
+				"\nURL is: " + RestAssured.baseURI);
+		Assert.assertTrue(resp.asString().contains("Invalid WorkOrderId")
+				, "ErrorMessage did not matched.");
+						
+	}
 }

@@ -13,8 +13,9 @@ import enums.Pass;
 import enums.Users;
 import requests.RetrieveMeasurementsUnitsRequest;
 import utils.TestInstance;
+import utils.WebServiceTest;
 
-public class TestRetrieveMeasurementsUnits {
+public class TestRetrieveMeasurementsUnits extends WebServiceTest{
 	RetrieveMeasurementsUnitsRequest request;
 
 	@BeforeMethod(alwaysRun = true)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tests that create cache so other tests won't fail" allow-return-values="true" verbose="1">
+	<test name="Warm-up tests"  >
+		<groups>
+			<run>
+				<include name="warmUp" />
+			</run>
+		</groups>
+		<classes>
+			<class name="tests.WarmUpTests" />
+		</classes>
+	</test>
+</suite>

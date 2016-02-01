@@ -342,6 +342,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		checkFileExtension(invoiceID, ".msg");
 	}
 	
+	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1339(){
 		

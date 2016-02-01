@@ -399,18 +399,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1408(){
-		if(RestAssured.baseURI.equals("http://bpmuat115.vistajet.local:8201")){
-			//throw new SkipException("This test is not passing on QA for some reason");
-		/*
-		 * Add time investigating this failure 
-		 * 
-		 * Boris - 27.01.2015 - 6h
-		 * Boris - 28.01.2015 - 8h
-		 * Boyko - 28.01.2015 - 2h
-		 */
-		
-		}
-		
+								
 		ExtInvoiceSupPortRequest request = new ExtInvoiceSupPortRequest();
 		String req = request.setWorkOrderId("Invalid").done();
 		
@@ -419,10 +408,26 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
-		String s = resp.asString();
+		
+		
+		if(resp.asString().contains("Waiting for response has timed out")){
+			throw new SkipException("Response Timeout \nJIRA Item BPMINVOICE-1636 needs to be fixed");
+
+			/*
+			 * Add time investigating this failure 
+			 * 
+			 * Boris - 27.01.2016 - 6h
+			 * Boris - 28.01.2016 - 8h
+			 * Boris - 01.02.2016 - 8h
+			 * Boyko - 28.01.2016 - 2h
+			 * Ceco  - 01.02.2016 - 6h
+			 */
+		}
+		Assert.assertTrue(resp.statusCode() == 200, "Status is: " + resp.getStatusCode());
+
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
 				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + "Request is: " + req + 
-				"\nURL is: " + RestAssured.baseURI);
+				"\nURL is: " + RestAssured.baseURI + "\n InvoiceID is: " + request.getInvoiceNumber());
 		Assert.assertTrue(resp.asString().contains("Invalid WorkOrderId")
 				, "ErrorMessage did not matched.");
 						

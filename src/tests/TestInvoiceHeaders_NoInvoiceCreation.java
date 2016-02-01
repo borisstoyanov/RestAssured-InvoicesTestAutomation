@@ -22,7 +22,7 @@ import utils.Util;
 import utils.WebServiceTest;
 
 public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
-	RetrieveInvoiceHeaderRequest request;
+	
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setup(){
@@ -31,7 +31,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 
 	@Test(groups = { "2.4.1.0"})
 	public void test_1411(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.setInvoiceStatus("Enter Details").done())
 		
@@ -60,7 +60,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1424(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.setInvoiceStatus("Settled").done())
 		
@@ -78,7 +78,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	}
 	@Test(groups = { "2.4.1.0" })
 	public void test_1432(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.setDocumentType("KR").done())
 		
@@ -93,7 +93,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1433(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setInvoiceStatus("Settled").setEntityID("0200").setVendorID("0000100430")
 				.setEntityID2("0200").setVendorID2("0000100222")
 				.setEntityID3("0200").setVendorID3("0000101406")
@@ -121,7 +121,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1446(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.setInvoiceStatus("SomeNonExistingStatus").done())
 		
@@ -136,7 +136,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1448_1436(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setEntityID("0200").setVendorID("0000100430").done();
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -207,7 +207,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1449(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setInvoiceNumber("").done();
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -224,6 +224,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1456(){
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
+
 		String req = request.setStartDate(Util.getDateMinusYear(1)).setEndDate(Util.getDate()).done();
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -241,7 +243,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1456_2(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setEndDate(Util.getDate()).done();
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -258,7 +260,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1456_3(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setStartDate(Util.getDateMinusYear(1)).done();
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -275,7 +277,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1484(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setDocumentType("KG").setDocumentType2("KR").setDocumentType3("CI").done(); 
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
@@ -291,7 +293,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" }) 
 	public void test_1489(){
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.done();
 
 		Response resp = given().request()
@@ -372,7 +374,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		Assert.assertTrue(respAsString.contains("cancelInvoiceResponse"));
 
 		
-		request = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 		String req = request.setInvoiceStatus("Cancelled")
 				.done();
 		
@@ -398,7 +400,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1408(){
 		if(RestAssured.baseURI.equals("http://bpmuat115.vistajet.local:8201")){
-			throw new SkipException("This test is not passing on QA for some reason");
+			//throw new SkipException("This test is not passing on QA for some reason");
 		/*
 		 * Add time investigating this failure 
 		 * 
@@ -417,7 +419,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
-		
+		String s = resp.asString();
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
 				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + "Request is: " + req + 
 				"\nURL is: " + RestAssured.baseURI);

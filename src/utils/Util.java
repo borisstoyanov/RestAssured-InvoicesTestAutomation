@@ -33,15 +33,20 @@ public class Util {
 	
 	public static String getDate() {
 		TimeZone tz = TimeZone.getTimeZone("UTC");
-		DateFormat df = new SimpleDateFormat("YYYY-MM-DD'T'HH:MM:ss");
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:MM:ss");
+		String date = getDateTime().toDate().toString();
+		
+		String dateWithFormat = df.format(getDateTime().toDate());
+		
 		df.setTimeZone(tz);
 		String nowAsISO = df.format(getDateTime().toDate());
+//		String nowAsISO = "2016-02-01T08:02:11";
 		return nowAsISO;
 	}
 
 	public static String getDateMinusYear(int minusYears) {
 		TimeZone tz = TimeZone.getTimeZone("UTC");
-		DateFormat df = new SimpleDateFormat("YYYY-MM-DD'T'HH:MM:ss");
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:MM:ss");
 		df.setTimeZone(tz);
 		String nowAsISO = df.format(getDateTime().minusYears(minusYears).toDate());
 		return nowAsISO;

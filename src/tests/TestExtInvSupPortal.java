@@ -29,30 +29,28 @@ import utils.WebServiceTest;
 
 public class TestExtInvSupPortal extends WebServiceTest{
 
-	ExtInvoiceSupPortRequest request;
-	Response resp;
-	String req = "";
+	
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setup(){
 		RestAssured.baseURI = TestInstance.getServerName();
 	}
 	
-	@AfterMethod(alwaysRun = true)
-	public void tearDown(ITestResult result) {
-	   if (result.getStatus() == ITestResult.FAILURE) {
-	      System.out.println("BaseURI is: " + RestAssured.baseURI);
-	      System.out.println("Request is: " + req);
-			try {
-				System.out.println("Response is: " + resp.asString());
-			} catch (NullPointerException e) {
-			}
-		}
-	}
+//	@AfterMethod(alwaysRun = true)
+//	public void tearDown(ITestResult result) {
+//	   if (result.getStatus() == ITestResult.FAILURE) {
+//	      System.out.println("BaseURI is: " + RestAssured.baseURI);
+//	      System.out.println("Request is: " + req);
+//			try {
+//				System.out.println("Response is: " + resp.asString());
+//			} catch (NullPointerException e) {
+//			}
+//		}
+//	}
 
 	private String getInvoiceID(ExtInvoiceSupPortRequest req){
 		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
-		resp = given().request()
+		Response resp = given().request()
 			.contentType(retrReq.contentType).body(retrReq.setInvoiceNumber(req.getInvoiceNumber()).done())
 			
 		.when()
@@ -67,7 +65,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	private Response getInvoiceInfo(String invoiceID) {
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
 		
-		resp = given().request()
+		Response resp = given().request()
 				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
 				
 		.when()
@@ -78,6 +76,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1442(){
+		ExtInvoiceSupPortRequest request;
+		Response resp;
+		String req = "";
 		
 		request = new ExtInvoiceSupPortRequest();
 		req = request.setInvoiceCurrency("$").done();
@@ -101,6 +102,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1466_1532(){
+		ExtInvoiceSupPortRequest request;
+		Response resp;
+		String req = "";
 		
 		request = new ExtInvoiceSupPortRequest();
 		req = request.setDescription("A description").setFullDescription("A full description").done();
@@ -147,6 +151,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1479(){
+		ExtInvoiceSupPortRequest request;
+		Response resp;
+		String req = "";
 		//Type 'SomeInvalidFlag'
 		request = new ExtInvoiceSupPortRequest();
 		req = request.setDocumentTypeFlag("SomeInvalidFlag").done();
@@ -193,6 +200,9 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 	@Test(groups = { "2.4.1.0" })
 	public void test_1615(){
+		ExtInvoiceSupPortRequest request;
+		Response resp;
+		String req = "";
 		//Type 'SomeInvalidFlag'
 		request = new ExtInvoiceSupPortRequest();
 		req = request.setPeriodOfCost("").setItemDate("").done();
@@ -214,11 +224,12 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	}
 		
 	private void checkFileExtension(String invoiceID, String fileExtension) {
-		String query = "select * from invoice_attachment where invoice_id = "+ invoiceID +""; 
+		String query = "select * from invoice_attachment where invoice_id = "+ invoiceID +" order by creation_date desc"; 
 		ResultSet rs = DatabaseUtil.executeQuery(query);
 		try {
-			rs.next();
+//			rs.next();
 			String q = rs.getString("DESCRIPTION");
+			System.out.println("INVOICEID = " + invoiceID + " Current Extension = " + fileExtension + ", DB extension = " + q);
 			Assert.assertTrue(q.contains(fileExtension), "File Extension did not match.");
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -227,16 +238,19 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	}
 		
 	private  String createInvoiceWithFileExtension(String fileType) {
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
-		req = request.setFileType(fileType).done();
+		String req = request.setFileType(fileType).done();
 		
 		//Create invoice with default supplierCreatorID 
-		resp = given().request()
+		Response resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
 	
+		String r = resp.asString();
 		resp.then().statusCode(200).
 			body(hasXPath("//code", containsString("0"))).
 			body(hasXPath("//responseMessage", containsString("Success")));
@@ -332,7 +346,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	public void test_1339(){
 		
 		if(RestAssured.baseURI.equals("http://bpmuat115.vistajet.local:8201")){
-			throw new SkipException("This test is not passing on QA for some reason");
+			//throw new SkipException("This test is not passing on QA for some reason");
 		/*
 		 * Add time investigating this failure 
 		 * 
@@ -342,7 +356,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		}
 		
-		
+		ExtInvoiceSupPortRequest request;
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -378,6 +392,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1455(){
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -404,7 +420,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1458(){
-		
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -430,6 +447,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	}
 	@Test(groups = { "2.4.1.0" })
 	public void test_1483(){
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -458,6 +477,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1498(){
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -480,7 +501,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String periodOfCost = Util.getValueFromResponse(resp.asString(), "ns0:ItemDate");
 		
 		periodOfCost = Util.formatDate(periodOfCost, "MM/yyyy");
-		
+		String asstr = resp.asString();
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		Assert.assertTrue(resp.asString().contains("<ns0:PeriodOfCost>" + periodOfCost + "</ns0:PeriodOfCost>")
 				, "Response does not match Period of Cost");
@@ -488,6 +509,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1499(){
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -540,6 +563,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1549(){
+		ExtInvoiceSupPortRequest request;
+
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
 		
@@ -583,6 +608,22 @@ public class TestExtInvSupPortal extends WebServiceTest{
 
 	@Test(groups = { "2.4.1.0" })
 	public void test_1503(){
+		ExtInvoiceSupPortRequest request;
+
+		request = new ExtInvoiceSupPortRequest();
+		String req = request.done();
+		
+		Response resp = given().request()
+		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		
+		.contentType(request.contentType).body(req)
+		
+		.when().post(request.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());
+		
+		
 		String invoiceID = getInvoiceID(request);
 		
 		checkFileExtension(invoiceID, ".pdf");

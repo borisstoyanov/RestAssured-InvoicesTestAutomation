@@ -23,14 +23,13 @@ import utils.Util;
 import utils.WebServiceTest;
 
 public class TestRetrieveInvoiceInfo extends WebServiceTest{
-
 	RetrieveInvoiceInfoRequest retrInvInfoReq;
-	ExtInvoiceSupPortRequest createInvoiceReq;
-	RetrieveInvoiceHeaderRequest retrInvHeaderReq;
+
 	
-	private String createInvoice(){
+	
+	private String createInvoice(ExtInvoiceSupPortRequest createInvoiceReq,	RetrieveInvoiceHeaderRequest retrInvHeaderReq){
 		
-		createInvoiceReq = new ExtInvoiceSupPortRequest();
+		
 		Response resp = given().request()
 		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.done())
@@ -42,7 +41,6 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 			body(hasXPath("//responseMessage", containsString("Success")));
 		
 		
-		retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
 		resp = given().request()
 			.contentType(retrInvHeaderReq.contentType).body(retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done())
 			
@@ -56,6 +54,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setup(){
+		
 		RestAssured.baseURI = TestInstance.getServerName(); 
 		retrInvInfoReq = new RetrieveInvoiceInfoRequest();
 		
@@ -63,8 +62,10 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1485(){
-		
-		String invoiceID = createInvoice();
+		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
+		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
+
+		String invoiceID = createInvoice(createInvoiceReq, retrInvHeaderReq);
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
 		
@@ -92,7 +93,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1492(){
 		
-		createInvoiceReq = new ExtInvoiceSupPortRequest();
+		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
 		Response resp = given().request()
 		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
@@ -104,7 +105,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 			body(hasXPath("//responseMessage", containsString("Success")));
 		
 		
-		retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
 		resp = given().request()
 			.contentType(retrInvHeaderReq.contentType).body(retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done())
 			
@@ -132,7 +133,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1467(){
 		
-		createInvoiceReq = new ExtInvoiceSupPortRequest();
+		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
 		Response resp = given().request()
 		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
@@ -144,7 +145,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 			body(hasXPath("//responseMessage", containsString("Success")));
 		
 		
-		retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
+		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
 		resp = given().request()
 			.contentType(retrInvHeaderReq.contentType).body(retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done())
 			
@@ -170,7 +171,11 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1463(){
-		String invoiceID = createInvoice();
+		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
+		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
+
+		String invoiceID = createInvoice(createInvoiceReq, retrInvHeaderReq);
+		
 		DatabaseUtil.insertComment(invoiceID, "TestAutomationComment");
 		
 		//Check not visible through RetrieveInvoiceInfoSP

@@ -62,7 +62,7 @@ public class WarmUpTests {
 	
 	
 	@Test(groups = { "warmUp" })
-	public void createCache(){
+	public void createCache() throws InterruptedException{
 								
 		ExtInvoiceSupPortRequest request = new ExtInvoiceSupPortRequest();
 		String req = request.setWorkOrderId("Invalid").done();
@@ -75,6 +75,7 @@ public class WarmUpTests {
 		
 		
 		if(resp.asString().contains("Waiting for response has timed out")){
+			warmupTest();
 			throw new SkipException("Response Timeout \nJIRA Item BPMINVOICE-1636 needs to be fixed");
 
 			/*

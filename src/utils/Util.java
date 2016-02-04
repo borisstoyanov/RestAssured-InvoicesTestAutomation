@@ -10,17 +10,8 @@ import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.joda.time.DateTime;
-import org.testng.ITestResult;
 
 public class Util {
-
-	public static void after(ITestResult result) {
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTimeInMillis(result.getEndMillis());
-		//WebServiceTest.executionDate = dateFormat.format(calendar.getTime());
-		//WebServiceTest.verificationErrors = result.getThrowable();
-	}
 
 	public static String getRandomID() {
 

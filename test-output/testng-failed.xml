@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestRetrieveMeasurementsUnits">
         <methods>
-          <include name="test3"/>
+          <include name="checkRetrieveMeasurementsUnits"/>
         </methods>
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
     </classes>

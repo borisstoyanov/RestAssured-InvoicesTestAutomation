@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 01 16:52:38 EET 2016</td>
+<td>Started on:</td><td>Wed Feb 03 13:33:38 EET 2016</td>
 </tr>
-<tr><td>Total time:</td><td>102 seconds (102829 ms)</td>
+<tr><td>Total time:</td><td>95 seconds (95310 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,31 +67,20 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.WarmUpTests.warmupTest()'><b>warmupTest</b><br>Test class: tests.WarmUpTests</td>
-<td></td>
-<td>15</td>
-<td>tests.WarmUpTests@1a91dd8c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.WarmUpTests.test_1408()'><b>test_1408</b><br>Test class: tests.WarmUpTests</td>
-<td><div><pre>org.testng.SkipException: Response Timeout 
-JIRA Item BPMINVOICE-1636 needs to be fixed
-	at tests.WarmUpTests.test_1408(WarmUpTests.java:78)
+<td title='tests.TestExtInvSupPortal.test_1466_1532()'><b>test_1466_1532</b><br>Test class: tests.TestExtInvSupPortal</td>
+<td><div><pre>java.lang.AssertionError: ItemDescription did not matched expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at tests.TestExtInvSupPortal.test_1466_1532(TestExtInvSupPortal.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -116,10 +105,12 @@ JIRA Item BPMINVOICE-1636 needs to be fixed
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace731638099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace731638099'><pre>org.testng.SkipException: Response Timeout 
-JIRA Item BPMINVOICE-1636 needs to be fixed
-	at tests.WarmUpTests.test_1408(WarmUpTests.java:78)
+</pre></div><a href='#' onClick='toggleBox("stack-trace598812991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace598812991'><pre>java.lang.AssertionError: ItemDescription did not matched expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at tests.TestExtInvSupPortal.test_1466_1532(TestExtInvSupPortal.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -145,8 +136,8 @@ JIRA Item BPMINVOICE-1636 needs to be fixed
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 </pre></div></td>
-<td>87</td>
-<td>tests.WarmUpTests@1a91dd8c</td></tr>
+<td>95</td>
+<td>tests.TestExtInvSupPortal@9dba6e2</td></tr>
 </table><p>
 </body>
 </html>

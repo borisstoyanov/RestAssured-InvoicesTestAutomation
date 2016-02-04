@@ -8,15 +8,19 @@ public class WebServiceTest {
 
 	}
 	
-	protected static String executionDate;
-	protected static String testInstance;
+	protected String executionDate;
+	protected String testInstance;
 	
-	protected static String build;
-	protected static Throwable verificationErrors;
+	protected String build;
+	protected Throwable verificationErrors;
 	protected String testName;
 	protected ITestResult result;
-	protected static String bug_id;
-	protected static String testID;
+	protected String bug_id;
+	protected String testID;
+	
+	protected static String req = "";
+	protected String response;
+	
 	
 	
 }

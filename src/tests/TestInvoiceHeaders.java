@@ -1,7 +1,6 @@
 package tests;
 import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
@@ -52,7 +51,7 @@ public class TestInvoiceHeaders extends WebServiceTest{
 		
 		.when()
 			.post(request.endpoint);
-		String as = resp.asString();
+		//String as = resp.asString();
 		
 		Assert.assertTrue(resp.asString().contains("<ns0:InvoiceCreationType>SPortal Invoice</ns0:InvoiceCreationType>")
 				, "Response does not contain CreationType");		

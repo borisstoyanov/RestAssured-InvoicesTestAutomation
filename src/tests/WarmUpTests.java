@@ -25,7 +25,8 @@ public class WarmUpTests {
 	}
 
 	@Test(groups = "warmUp")
-	public void warmupTest(){
+	public void executeNormalTest() throws InterruptedException{
+		System.out.println("warmUp");
 		ExtInvoiceSupPortRequest request;
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
@@ -37,6 +38,12 @@ public class WarmUpTests {
 		
 		.when().post(request.endpoint);
 		
+		if(resp.asString().contains("Waiting for response has timed out")){
+			createCache();
+			executeNormalTest();
+			throw new SkipException("Response Timeout \nJIRA Item BPMINVOICE-1636 needs to be fixed");
+
+		}
 		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
 		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
@@ -61,41 +68,113 @@ public class WarmUpTests {
 	}
 	
 	
+	
 	@Test(groups = { "warmUp" })
 	public void createCache() throws InterruptedException{
-								
-		ExtInvoiceSupPortRequest request = new ExtInvoiceSupPortRequest();
-		String req = request.setWorkOrderId("Invalid").done();
+		System.out.println("createCache");
+		
+		createInvoiceReq();	
+		createInvalidWorkOrderID();
+		invalidCurrency();				
+		documentFlag();
+	}
+
+	private void documentFlag() throws InterruptedException {
+		System.out.println("documentFlag");
+		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		String req;
+		createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		req = createInvoiceRequest.setDocumentTypeFlag("SomeInvalidFlag").done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
-		.contentType(request.contentType).body(req)
+		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(createInvoiceRequest.contentType).body(req)
 		
-		.when().post(request.endpoint);
+		.when().post(createInvoiceRequest.endpoint);
+
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_017")
+				, "ErrorCode is not presented");
+		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
+				, "ErrorMessage is not presented");
+		if(resp.asString().contains("Waiting for response has timed out")){
+			createCache();
+			throw new SkipException("Skipping test");
+
+		}		
+	}
+
+	private void invalidCurrency() throws InterruptedException {
+		System.out.println("invalidCurrency");
+		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		String req;
+		createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		req = createInvoiceRequest.setInvoiceCurrency("$").done();
+		
+		Response resp = given().request()
+		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(createInvoiceRequest.contentType).body(req)
+		
+		.when().post(createInvoiceRequest.endpoint);
+
+		resp.then().statusCode(200);
+
+		if(resp.asString().contains("Waiting for response has timed out")){
+			createCache();
+			throw new SkipException("Skipping test");
+
+		}
+		
+		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_016")
+					, "ErrorCode did not matched.");
+		Assert.assertTrue(resp.asString().contains("Invalid Currency")
+				, "ErrorMessage did not matched.");
+				
+	}
+
+	private void createInvoiceReq() throws InterruptedException {
+		System.out.println("Create Invoice Request");
+		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		Response resp = given().request()
+		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(createInvoiceRequest.contentType)
+		
+			.body(createInvoiceRequest.done())
+		
+		.when().post(createInvoiceRequest.endpoint);
+		
+		if(resp.asString().contains("Waiting for response has timed out")){
+			createCache();
+			throw new SkipException("Skipping test");
+
+		}
+		Assert.assertTrue(resp.statusCode() == 200, "Status is: " + resp.getStatusCode());
+				
+	}
+
+	private void createInvalidWorkOrderID() throws InterruptedException {
+		System.out.println("createInvalidWorkOrderID ");
+		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
+		String req = createInvoiceRequest.setWorkOrderId("Invalid").done();
+		
+		Response resp = given().request()
+		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.contentType(createInvoiceRequest.contentType).body(req)
+		
+		.when().post(createInvoiceRequest.endpoint);
 		
 		
 		if(resp.asString().contains("Waiting for response has timed out")){
-			warmupTest();
-			throw new SkipException("Response Timeout \nJIRA Item BPMINVOICE-1636 needs to be fixed");
+			createCache();
+			throw new SkipException("Skipping test");
 
-			/*
-			 * Add time investigating this failure 
-			 * 
-			 * Boris - 27.01.2016 - 6h
-			 * Boris - 28.01.2016 - 8h
-			 * Boris - 01.02.2016 - 8h
-			 * Boyko - 28.01.2016 - 2h
-			 * Ceco  - 01.02.2016 - 6h
-			 */
 		}
 		Assert.assertTrue(resp.statusCode() == 200, "Status is: " + resp.getStatusCode());
 
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_011")
 				, "ErrorCode did not matched. \n" + resp.asString() + "\n" + "Request is: " + req + 
-				"\nURL is: " + RestAssured.baseURI + "\n InvoiceID is: " + request.getInvoiceNumber());
+				"\nURL is: " + RestAssured.baseURI + "\n InvoiceID is: " + createInvoiceRequest.getInvoiceNumber());
 		Assert.assertTrue(resp.asString().contains("Invalid WorkOrderId")
 				, "ErrorMessage did not matched.");
-						
+				
 	}
-	
 }

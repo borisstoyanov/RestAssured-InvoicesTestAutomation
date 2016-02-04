@@ -1,6 +1,10 @@
 package requests;
 
-public class RetrieveMeasurementsUnitsRequest {
+import static com.jayway.restassured.RestAssured.given;
+
+import com.jayway.restassured.RestAssured;
+
+public class RetrieveMeasurementsUnitsRequest extends RestAssured {
 
 	public RetrieveMeasurementsUnitsRequest(){
 	    contentType = "text/xml; charset=UTF-8;";

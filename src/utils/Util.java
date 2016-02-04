@@ -18,8 +18,8 @@ public class Util {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(result.getEndMillis());
-		WebServiceTest.executionDate = dateFormat.format(calendar.getTime());
-		WebServiceTest.verificationErrors = result.getThrowable();
+		//WebServiceTest.executionDate = dateFormat.format(calendar.getTime());
+		//WebServiceTest.verificationErrors = result.getThrowable();
 	}
 
 	public static String getRandomID() {
@@ -34,13 +34,8 @@ public class Util {
 	public static String getDate() {
 		TimeZone tz = TimeZone.getTimeZone("UTC");
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:MM:ss");
-		String date = getDateTime().toDate().toString();
-		
-		String dateWithFormat = df.format(getDateTime().toDate());
-		
 		df.setTimeZone(tz);
 		String nowAsISO = df.format(getDateTime().toDate());
-//		String nowAsISO = "2016-02-01T08:02:11";
 		return nowAsISO;
 	}
 

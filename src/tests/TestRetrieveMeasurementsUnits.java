@@ -14,8 +14,6 @@ import org.testng.annotations.Test;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 
-import enums.Pass;
-import enums.Users;
 import requests.RetrieveMeasurementsUnitsRequest;
 import utils.TestInstance;
 import utils.Util;
@@ -30,7 +28,7 @@ public class TestRetrieveMeasurementsUnits {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		String time = String.valueOf(tr.getEndMillis() - tr.getStartMillis());
+		String time = String.valueOf((tr.getEndMillis() - tr.getStartMillis())/1000.0);
 		IClass cls = tr.getTestClass();
 		ITestNGMethod method = tr.getMethod();
 		System.out.println("For class: " + cls + 
@@ -57,11 +55,11 @@ public class TestRetrieveMeasurementsUnits {
 	}
 
 	@Test(groups = { "2.4.1.0" })
-	public void checkRetrieveMeasurementsUnits() {
+	public void checkRetrieveMeasurementsUnits() throws InterruptedException {
 		RetrieveMeasurementsUnitsRequest request = new RetrieveMeasurementsUnitsRequest();
 		String req = request.done();
 		setRequest(req);
-		Response resp = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		Response resp = given().request()
 				.contentType(request.contentType).body(req)
 
 				.when().post(request.endpoint);

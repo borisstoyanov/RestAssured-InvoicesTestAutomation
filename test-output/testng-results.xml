@@ -1,405 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="42" passed="42">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="DevTesting of 2.4.1.0 features  " duration-ms="50123" started-at="2016-02-04T09:25:51Z" finished-at="2016-02-04T09:26:42Z">
+  <suite name="Default suite" duration-ms="265" started-at="2016-02-04T13:18:02Z" finished-at="2016-02-04T13:18:02Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1339" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1442()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1442" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1455()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1455" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1458()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1458" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1466_1532()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1466_1532" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1479()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1479" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1483()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1483" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1498()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1498" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1499()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1499" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1503()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1503" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_1" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_2" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_3" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_4" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_5" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_6" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_7" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_8" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1549()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1549" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestExtInvSupPortal.test_1615()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1615" class="tests.TestExtInvSupPortal"/>
-        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1368" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1432" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1463" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1467" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1485" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1492" class="tests.TestRetrieveInvoiceInfo"/>
-        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@b20be93]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1408()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1408" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1411" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1424" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1432" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1433" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1446" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1448_1436" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1449" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456_2" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456_3" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1484" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1489" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
-        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1509" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestRetrieveMeasurementsUnits.test3()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5c77399e]" name="test3" class="tests.TestRetrieveMeasurementsUnits"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="2.4.1.0 chunk1" duration-ms="29961" started-at="2016-02-04T09:25:51Z" finished-at="2016-02-04T09:26:21Z">
-      <class name="tests.TestExtInvSupPortal">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="269" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="268" started-at="2016-02-04T11:25:51Z" finished-at="2016-02-04T11:25:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1498()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1498" duration-ms="13782" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1498 -->
-        <test-method status="PASS" signature="test_1442()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1442" duration-ms="2015" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:25:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1442 -->
-        <test-method status="PASS" signature="test_1483()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1483" duration-ms="13040" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1483 -->
-        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1339" duration-ms="11881" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1339 -->
-        <test-method status="PASS" signature="test_1479()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1479" duration-ms="4636" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:25:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1479 -->
-        <test-method status="PASS" signature="test_1455()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1455" duration-ms="14172" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1455 -->
-        <test-method status="PASS" signature="test_1466_1532()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1466_1532" duration-ms="8286" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1466_1532 -->
-        <test-method status="PASS" signature="test_1458()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1458" duration-ms="11822" started-at="2016-02-04T11:25:52Z" finished-at="2016-02-04T11:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1458 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="0" started-at="2016-02-04T11:25:54Z" finished-at="2016-02-04T11:25:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1499()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1499" duration-ms="11271" started-at="2016-02-04T11:25:54Z" finished-at="2016-02-04T11:26:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1499 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:25:56Z" finished-at="2016-02-04T11:25:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1503()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1503" duration-ms="9461" started-at="2016-02-04T11:25:56Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1503 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="0" started-at="2016-02-04T11:26:00Z" finished-at="2016-02-04T11:26:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_1" duration-ms="9551" started-at="2016-02-04T11:26:00Z" finished-at="2016-02-04T11:26:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_1 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:04Z" finished-at="2016-02-04T11:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_2" duration-ms="10901" started-at="2016-02-04T11:26:04Z" finished-at="2016-02-04T11:26:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_2 -->
-        <test-method status="PASS" signature="test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_3" duration-ms="10391" started-at="2016-02-04T11:26:04Z" finished-at="2016-02-04T11:26:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_3 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="0" started-at="2016-02-04T11:26:04Z" finished-at="2016-02-04T11:26:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:05Z" finished-at="2016-02-04T11:26:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_4" duration-ms="11595" started-at="2016-02-04T11:26:05Z" finished-at="2016-02-04T11:26:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_4 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:05Z" finished-at="2016-02-04T11:26:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_5" duration-ms="12101" started-at="2016-02-04T11:26:05Z" finished-at="2016-02-04T11:26:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_5 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_6" duration-ms="10861" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_6 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_7" duration-ms="10538" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_7 -->
-        <test-method status="PASS" signature="test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1506_8" duration-ms="11278" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1506_8 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="0" started-at="2016-02-04T11:26:06Z" finished-at="2016-02-04T11:26:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:10Z" finished-at="2016-02-04T11:26:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1549()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1549" duration-ms="11388" started-at="2016-02-04T11:26:10Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1549 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:14Z" finished-at="2016-02-04T11:26:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1615()[pri:0, instance:tests.TestExtInvSupPortal@11d13e]" name="test_1615" duration-ms="7401" started-at="2016-02-04T11:26:14Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1615 -->
-      </class> <!-- tests.TestExtInvSupPortal -->
-    </test> <!-- 2.4.1.0 chunk1 -->
-    <test name="2.4.1.0 chunk2" duration-ms="11346" started-at="2016-02-04T09:26:21Z" finished-at="2016-02-04T09:26:33Z">
+    <test name="Default test" duration-ms="265" started-at="2016-02-04T13:18:02Z" finished-at="2016-02-04T13:18:02Z">
       <class name="tests.TestRetrieveMeasurementsUnits">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@b20be93]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:21Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5c77399e]" name="setup" is-config="true" duration-ms="254" started-at="2016-02-04T15:18:02Z" finished-at="2016-02-04T15:18:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@b20be93]" name="checkRetrieveMeasurementsUnits" duration-ms="343" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:22Z">
+        <test-method status="PASS" signature="test3()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5c77399e]" name="test3" duration-ms="2" started-at="2016-02-04T15:18:02Z" finished-at="2016-02-04T15:18:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkRetrieveMeasurementsUnits -->
+        </test-method> <!-- test3 -->
+        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveMeasurementsUnits@5c77399e]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-04T15:18:02Z" finished-at="2016-02-04T15:18:02Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[wrong number of arguments]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: wrong number of arguments
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:232)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
-      <class name="tests.TestInvoiceHeaders">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="setup" is-config="true" duration-ms="10512" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="setup" is-config="true" duration-ms="10839" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="setup" is-config="true" duration-ms="9963" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1432" duration-ms="630" started-at="2016-02-04T11:26:31Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1432 -->
-        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1413_1427" duration-ms="517" started-at="2016-02-04T11:26:32Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1413_1427 -->
-        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@12bfaa9a]" name="test_1368" duration-ms="498" started-at="2016-02-04T11:26:32Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1368 -->
-      </class> <!-- tests.TestInvoiceHeaders -->
-      <class name="tests.TestRetrieveInvoiceInfo">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="setup" is-config="true" duration-ms="3" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="setup" is-config="true" duration-ms="2" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1485" duration-ms="11046" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1485 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="setup" is-config="true" duration-ms="1" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1463" duration-ms="11313" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1463 -->
-        <test-method status="PASS" signature="test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1467" duration-ms="10510" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1467 -->
-        <test-method status="PASS" signature="test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@5d0369f2]" name="test_1492" duration-ms="10989" started-at="2016-02-04T11:26:21Z" finished-at="2016-02-04T11:26:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1492 -->
-      </class> <!-- tests.TestRetrieveInvoiceInfo -->
-    </test> <!-- 2.4.1.0 chunk2 -->
-    <test name="2.4.1.0 chunk3" duration-ms="8774" started-at="2016-02-04T09:26:33Z" finished-at="2016-02-04T09:26:42Z">
-      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="19" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="2" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="16" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="6" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456_2" duration-ms="808" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1456_2 -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="6" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="42" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="34" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="7" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="34" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="20" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="28" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="39" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="33" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="setup" is-config="true" duration-ms="26" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1408()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1408" duration-ms="1190" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1408 -->
-        <test-method status="PASS" signature="test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1411" duration-ms="823" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1411 -->
-        <test-method status="PASS" signature="test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1449" duration-ms="685" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1449 -->
-        <test-method status="PASS" signature="test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456_3" duration-ms="825" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1456_3 -->
-        <test-method status="PASS" signature="test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1509" duration-ms="8018" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1509 -->
-        <test-method status="PASS" signature="test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1489" duration-ms="8735" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1489 -->
-        <test-method status="PASS" signature="test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1448_1436" duration-ms="1496" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1448_1436 -->
-        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1432" duration-ms="811" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1432 -->
-        <test-method status="PASS" signature="test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1424" duration-ms="1261" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1424 -->
-        <test-method status="PASS" signature="test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1484" duration-ms="1400" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1484 -->
-        <test-method status="PASS" signature="test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1433" duration-ms="1204" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1433 -->
-        <test-method status="PASS" signature="test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1456" duration-ms="1398" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1456 -->
-        <test-method status="PASS" signature="test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@3ba701c9]" name="test_1446" duration-ms="499" started-at="2016-02-04T11:26:33Z" finished-at="2016-02-04T11:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1446 -->
-      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
-    </test> <!-- 2.4.1.0 chunk3 -->
-  </suite> <!-- DevTesting of 2.4.1.0 features   -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

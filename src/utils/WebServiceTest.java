@@ -18,7 +18,7 @@ public class WebServiceTest {
 	protected String bug_id;
 	protected String testID;
 	
-	protected static String req = "";
+	public String req = "";
 	protected String response;
 	
 	

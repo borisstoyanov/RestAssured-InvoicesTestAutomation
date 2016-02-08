@@ -25,7 +25,6 @@ public class DatabaseUtil {
 		Map<String, String> serverName = TestInstance.getDBConString();
 
 		String url =  "jdbc:oracle:thin:@//" + serverName.get("connString");
-//		String url = "jdbc:oracle:thin:@//" + serverName.get("connString");
 		String username = serverName.get("dbUsername");
 		String password = serverName.get("dbPass"); 
 

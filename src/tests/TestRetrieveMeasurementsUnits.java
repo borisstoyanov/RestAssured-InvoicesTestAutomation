@@ -29,19 +29,7 @@ public class TestRetrieveMeasurementsUnits {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		String time = String.valueOf((tr.getEndMillis() - tr.getStartMillis())/1000.0);
-		IClass cls = tr.getTestClass();
-		ITestNGMethod method = tr.getMethod();
-		System.out.println("For class: " + cls + 
-				" \nFor test: " + method + 
-				" \nReq is: " + tr.getAttribute("request") +
-				" \nExecutionTime is: " + time + 
-				" \nDate is: " + Util.getDate() + 
-				" \nTestID is: " + Util.getRandomID() +
-				" \nResponse is: " + tr.getAttribute("resp") +
-				" \n");
-		
-		StoreResults.getConnection();
+		StoreResults.insertResults(tr);
 
 	}
 

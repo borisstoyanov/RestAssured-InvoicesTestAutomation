@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.StringReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,7 +10,13 @@ import java.util.TimeZone;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.print.Doc;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.joda.time.DateTime;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 
 public class Util {
 
@@ -83,4 +90,20 @@ public class Util {
 		return new Integer(ThreadLocalRandom.current().nextInt(100000, 9999999 + 1)).toString();
 	}
 
+	public static Document textToXML(String xmlString){
+		Document document = null;
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  
+	    DocumentBuilder builder;  
+	    try  
+	    {  
+	        builder = factory.newDocumentBuilder();  
+	        document = builder.parse( new InputSource( new StringReader( xmlString ) ) );  
+	    } catch (Exception e) {  
+	        e.printStackTrace();  
+	    } 
+	    
+	    return document;
+	}
+	
+	
 }

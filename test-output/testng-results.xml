@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58913" started-at="2016-02-08T10:12:22Z" finished-at="2016-02-08T10:13:21Z">
+  <suite name="Default suite" duration-ms="1165" started-at="2016-02-08T14:46:05Z" finished-at="2016-02-08T14:46:06Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@65b60b98]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
+        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="58913" started-at="2016-02-08T10:12:22Z" finished-at="2016-02-08T10:13:21Z">
+    <test name="Default test" duration-ms="1165" started-at="2016-02-08T14:46:05Z" finished-at="2016-02-08T14:46:06Z">
       <class name="tests.TestRetrieveMeasurementsUnits">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@65b60b98]" name="setup" is-config="true" duration-ms="284" started-at="2016-02-08T12:12:22Z" finished-at="2016-02-08T12:12:22Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="setup" is-config="true" duration-ms="254" started-at="2016-02-08T16:46:05Z" finished-at="2016-02-08T16:46:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@65b60b98]" name="checkRetrieveMeasurementsUnits" duration-ms="2484" started-at="2016-02-08T12:12:22Z" finished-at="2016-02-08T12:12:25Z">
+        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="checkRetrieveMeasurementsUnits" duration-ms="900" started-at="2016-02-08T16:46:05Z" finished-at="2016-02-08T16:46:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRetrieveMeasurementsUnits -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveMeasurementsUnits@65b60b98]" name="tearDown" is-config="true" duration-ms="56133" started-at="2016-02-08T12:12:25Z" finished-at="2016-02-08T12:13:21Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="tearDown" is-config="true" duration-ms="2" started-at="2016-02-08T16:46:06Z" finished-at="2016-02-08T16:46:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkRetrieveMeasurementsUnits status=SUCCESS method=TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@65b60b98] output={null}]]]>
+                <![CDATA[[TestResult name=checkRetrieveMeasurementsUnits status=SUCCESS method=TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38] output={null}]]]>
               </value>
             </param>
           </params>

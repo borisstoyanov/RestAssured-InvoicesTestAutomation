@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [DevTesting of 2.4.1.0 features]" parallel="tests" allow-return-values="true">
-  <test thread-count="16" name="2.4.1.0 chunk1" parallel="methods">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DevTesting of 2.4.1.0 features]" allow-return-values="true">
+  <test thread-count="8" name="2.4.1.0 chunk1" parallel="methods">
     <groups>
       <run>
         <include name="2.4.1.0"/>
@@ -33,6 +33,102 @@
       <class name="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
     </classes>
   </test> <!-- 2.4.1.0 chunk3 -->
+  <test name="2.4.1.0 chunk1(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="2.4.1.0"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.TestRetrieveInvoiceInfo">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveInvoiceInfo -->
+      <class name="tests.TestInvoiceHeaders">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders -->
+      <class name="tests.TestRetrieveMeasurementsUnits">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
+      <class name="tests.TestExtInvSupPortal">
+        <methods>
+          <include name="test_1499"/>
+          <include name="test_1339"/>
+          <include name="test_1466_1532"/>
+          <include name="test_1506_8"/>
+          <include name="test_1479"/>
+          <include name="test_1506_6"/>
+          <include name="test_1506_5"/>
+          <include name="test_1503"/>
+          <include name="test_1615"/>
+          <include name="test_1549"/>
+          <include name="test_1506_7"/>
+          <include name="test_1455"/>
+          <include name="test_1506_2"/>
+          <include name="test_1506_1"/>
+          <include name="test_1458"/>
+          <include name="test_1483"/>
+          <include name="test_1506_3"/>
+          <include name="setup"/>
+          <include name="test_1498"/>
+          <include name="test_1506_4"/>
+        </methods>
+      </class> <!-- tests.TestExtInvSupPortal -->
+    </classes>
+  </test> <!-- 2.4.1.0 chunk1(failed) -->
+  <test name="2.4.1.0 chunk2(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="2.4.1.0"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.TestRetrieveInvoiceInfo">
+        <methods>
+          <include name="test_1492"/>
+          <include name="test_1485"/>
+          <include name="test_1467"/>
+          <include name="setup"/>
+          <include name="test_1463"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveInvoiceInfo -->
+      <class name="tests.TestInvoiceHeaders">
+        <methods>
+          <include name="setup"/>
+          <include name="test_1413_1427"/>
+          <include name="test_1432"/>
+          <include name="test_1368"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders -->
+      <class name="tests.TestRetrieveMeasurementsUnits">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestExtInvSupPortal">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestExtInvSupPortal -->
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
+    </classes>
+  </test> <!-- 2.4.1.0 chunk2(failed) -->
   <test name="2.4.1.0 chunk3(failed)" parallel="methods">
     <groups>
       <run>
@@ -40,32 +136,34 @@
       </run>
     </groups>
     <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
-      <class name="tests.TestInvoiceHeaders">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.TestInvoiceHeaders -->
-      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
-        <methods>
-          <include name="test_1408"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
       <class name="tests.TestRetrieveInvoiceInfo">
         <methods>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.TestRetrieveInvoiceInfo -->
-      <class name="tests.TestRetrieveMeasurementsUnits">
+      <class name="tests.TestInvoiceHeaders">
         <methods>
           <include name="setup"/>
         </methods>
+      </class> <!-- tests.TestInvoiceHeaders -->
+      <class name="tests.TestRetrieveMeasurementsUnits">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
       </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestExtInvSupPortal">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestExtInvSupPortal -->
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
+        <methods>
+          <include name="setup"/>
+          <include name="test_1509"/>
+          <include name="test_1489"/>
+        </methods>
+      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
     </classes>
   </test> <!-- 2.4.1.0 chunk3(failed) -->
 </suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->

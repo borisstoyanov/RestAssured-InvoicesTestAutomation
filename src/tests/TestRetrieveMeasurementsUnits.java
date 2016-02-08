@@ -54,7 +54,7 @@ public class TestRetrieveMeasurementsUnits {
 		result.setAttribute("request", request);
 	}
 
-	@Test(groups = { "2.4.1.0" })
+	//@Test(groups = { "2.4.1.0" })
 	public void checkRetrieveMeasurementsUnits() throws InterruptedException {
 		RetrieveMeasurementsUnitsRequest request = new RetrieveMeasurementsUnitsRequest();
 		String req = request.done();

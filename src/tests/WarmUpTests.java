@@ -45,7 +45,7 @@ public class WarmUpTests {
 
 		}
 		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
-		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
+		Assert.assertTrue(resp.asString().contains("Success"), resp.asString() + "\n" + RestAssured.baseURI);	
 		
 		
 		//Check if fields are created in the DB

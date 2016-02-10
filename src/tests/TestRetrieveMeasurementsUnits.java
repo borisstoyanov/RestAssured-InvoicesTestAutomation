@@ -49,16 +49,16 @@ public class TestRetrieveMeasurementsUnits {
 	public void checkRetrieveMeasurementsUnits() throws InterruptedException {
 		RetrieveMeasurementsUnitsRequest request = new RetrieveMeasurementsUnitsRequest();
 		String req = request.done();
-		setRequest(req);
 		Response resp = given().request()
 				.contentType(request.contentType).body(req)
 
 				.when().post(request.endpoint);
+		setRequest(req);
 		setResponse(resp.asString());
 		Assert.assertTrue(resp.asString().contains("<ns0:Code>W</ns0:Code>"), "Response does not contain Code");
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>Week</ns0:Description>"),
 				"Response does not contain Description");
-		Assert.assertTrue(resp.asString().contains("<ns0:Code>HT</ns0:Code>"), "Response does not contain Code");
+		Assert.assertTrue(resp.asString().contains("<ns0:Code>HT</ns0:Code>"), "Response does not contain Code.");
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>30 minutes</ns0:Description>"),
 				"Response does not contain Description");
 

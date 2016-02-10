@@ -5,6 +5,9 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,6 +21,7 @@ import requests.RetrieveInvoiceHeaderRequest;
 import requests.RetrieveInvoiceInfoRequest;
 import requests.RetrieveInvoiceInfoSPRequest;
 import utils.DatabaseUtil;
+import utils.StoreResults;
 import utils.TestInstance;
 import utils.Util;
 import utils.WebServiceTest;
@@ -25,7 +29,24 @@ import utils.WebServiceTest;
 public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	RetrieveInvoiceInfoRequest retrInvInfoReq;
 
+	@AfterMethod(alwaysRun = true)
+	public void tearDown(ITestResult tr) {
+		StoreResults.insertResults(tr);
+
+	}
+
+	public void setResponse(String response) {
+
+		ITestResult result = Reporter.getCurrentTestResult();
+		result.setAttribute("resp", response);
+	}
 	
+	public void setRequest(String request) {
+
+		ITestResult result = Reporter.getCurrentTestResult();
+		result.setAttribute("request", request);
+	}
+
 	
 	private String createInvoice(ExtInvoiceSupPortRequest createInvoiceReq,	RetrieveInvoiceHeaderRequest retrInvHeaderReq){
 		
@@ -46,7 +67,10 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 			
 		.when()
 			.post(retrInvHeaderReq.endpoint);
-
+		
+		setRequest(req);
+		setResponse(resp.asString());
+		
 		Assert.assertTrue(resp.getStatusCode() == 200);		
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		return invoiceID;
@@ -74,6 +98,8 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 				
 		.when()
 			.post(retrInfoReq.endpoint);
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		Assert.assertTrue(resp.asString().contains("<ns0:Unit>" + createInvoiceReq.getUnit() + "</ns0:Unit>"));
 		Assert.assertTrue(resp.asString().contains("<ns0:Quantity>" + createInvoiceReq.getQuantity() + "</ns0:Quantity>"));
@@ -103,7 +129,8 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		resp.then().
 			body(hasXPath("//code", containsString("0"))).
 			body(hasXPath("//responseMessage", containsString("Success")));
-		
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
 		resp = given().request()

@@ -113,14 +113,14 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		ExtInvoiceSupPortRequest request;
 		request = new ExtInvoiceSupPortRequest();
 		String req = request.done();
-		
+		System.out.println(RestAssured.baseURI + request.endpoint);
 		Response resp = given().request()
 		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
-		
+	
 		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
 		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		

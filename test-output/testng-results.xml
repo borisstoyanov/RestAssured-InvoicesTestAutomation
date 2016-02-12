@@ -2,34 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1165" started-at="2016-02-08T14:46:05Z" finished-at="2016-02-08T14:46:06Z">
+  <suite name="Default suite" duration-ms="16445" started-at="2016-02-12T10:45:21Z" finished-at="2016-02-12T10:45:38Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
+        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="test_1339" class="tests.TestExtInvSupPortal"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="1165" started-at="2016-02-08T14:46:05Z" finished-at="2016-02-08T14:46:06Z">
-      <class name="tests.TestRetrieveMeasurementsUnits">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="setup" is-config="true" duration-ms="254" started-at="2016-02-08T16:46:05Z" finished-at="2016-02-08T16:46:05Z">
+    <test name="Default test" duration-ms="16445" started-at="2016-02-12T10:45:21Z" finished-at="2016-02-12T10:45:38Z">
+      <class name="tests.TestExtInvSupPortal">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="setup" is-config="true" duration-ms="279" started-at="2016-02-12T12:45:21Z" finished-at="2016-02-12T12:45:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="checkRetrieveMeasurementsUnits" duration-ms="900" started-at="2016-02-08T16:46:05Z" finished-at="2016-02-08T16:46:06Z">
+        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="test_1339" duration-ms="16150" started-at="2016-02-12T12:45:22Z" finished-at="2016-02-12T12:45:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkRetrieveMeasurementsUnits -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38]" name="tearDown" is-config="true" duration-ms="2" started-at="2016-02-08T16:46:06Z" finished-at="2016-02-08T16:46:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkRetrieveMeasurementsUnits status=SUCCESS method=TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@21ca2b38] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+        </test-method> <!-- test_1339 -->
+      </class> <!-- tests.TestExtInvSupPortal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

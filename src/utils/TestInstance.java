@@ -17,6 +17,12 @@ public class TestInstance {
 		String serverName = prop.getProperty("customProp");
 
 		switch (serverName) {
+		case "UAT-HA":
+			serverName = "http://bpmuat.vistajet.local";
+			break;
+		case "uat-ha":
+			serverName = "http://bpmuat.vistajet.local";
+			break;
 		case "UAT":
 			serverName = "http://bpmuat115.vistajet.local:8001";
 			break;
@@ -51,6 +57,16 @@ public class TestInstance {
 		
 		
 		switch (testEnv) {
+		case "UAT-HA":
+			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/ORCLUAT");
+			conDetails.put("dbUsername", "VJINVOICES");
+			conDetails.put("dbPass", "VJINVOICES");
+			break;
+		case "uat-ha":
+			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/ORCLUAT");
+			conDetails.put("dbUsername", "VJINVOICES");
+			conDetails.put("dbPass", "VJINVOICES");
+			break;		
 		case "UAT":
 			conDetails.put("connString", "192.168.201.94:1521/orcl");
 			conDetails.put("dbUsername", "vjinvoices");

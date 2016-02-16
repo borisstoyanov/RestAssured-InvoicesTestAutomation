@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestInvoiceHeaders">
         <methods>
-          <include name="test_1656"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tests.TestInvoiceHeaders -->
     </classes>

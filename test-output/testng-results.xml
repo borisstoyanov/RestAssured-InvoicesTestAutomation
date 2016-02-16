@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8755" started-at="2016-02-16T11:19:20Z" finished-at="2016-02-16T11:19:28Z">
+  <suite name="DevTesting of 2.4.1.0 features" duration-ms="41078" started-at="2016-02-16T12:14:36Z" finished-at="2016-02-16T12:15:17Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="test_1656" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1368" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1432" class="tests.TestInvoiceHeaders"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="8755" started-at="2016-02-16T11:19:20Z" finished-at="2016-02-16T11:19:28Z">
+    <test name="2.4.1.0 chunk2" duration-ms="41078" started-at="2016-02-16T12:14:36Z" finished-at="2016-02-16T12:15:17Z">
       <class name="tests.TestInvoiceHeaders">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="setup" is-config="true" duration-ms="4124" started-at="2016-02-16T13:19:20Z" finished-at="2016-02-16T13:19:24Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="setup" is-config="true" duration-ms="39541" started-at="2016-02-16T14:14:36Z" finished-at="2016-02-16T14:15:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1656()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="test_1656" duration-ms="4613" started-at="2016-02-16T13:19:24Z" finished-at="2016-02-16T13:19:28Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="setup" is-config="true" duration-ms="39541" started-at="2016-02-16T14:14:36Z" finished-at="2016-02-16T14:15:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_1656 -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="setup" is-config="true" duration-ms="39541" started-at="2016-02-16T14:14:36Z" finished-at="2016-02-16T14:15:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1413_1427" duration-ms="1515" started-at="2016-02-16T14:15:16Z" finished-at="2016-02-16T14:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1413_1427 -->
+        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1368" duration-ms="1518" started-at="2016-02-16T14:15:16Z" finished-at="2016-02-16T14:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1368 -->
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@39b5e7a0]" name="test_1432" duration-ms="1515" started-at="2016-02-16T14:15:16Z" finished-at="2016-02-16T14:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1432 -->
       </class> <!-- tests.TestInvoiceHeaders -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- 2.4.1.0 chunk2 -->
+  </suite> <!-- DevTesting of 2.4.1.0 features -->
 </testng-results>

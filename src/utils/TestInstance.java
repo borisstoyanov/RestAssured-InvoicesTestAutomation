@@ -58,12 +58,12 @@ public class TestInstance {
 		
 		switch (testEnv) {
 		case "UAT-HA":
-			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/ORCLUAT");
+			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/VJUAT");
 			conDetails.put("dbUsername", "VJINVOICES");
 			conDetails.put("dbPass", "VJINVOICES");
 			break;
 		case "uat-ha":
-			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/ORCLUAT");
+			conDetails.put("connString", "UKDCORACLEUAT-SCAN:1521/VJUAT");
 			conDetails.put("dbUsername", "VJINVOICES");
 			conDetails.put("dbPass", "VJINVOICES");
 			break;		

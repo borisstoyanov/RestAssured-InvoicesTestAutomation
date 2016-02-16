@@ -314,7 +314,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		ExtInvoiceSupPortRequest crInv = new ExtInvoiceSupPortRequest();
 		String createInvoiceReq = crInv.setInvoiceDate(incrementedDate).done();
 		
-		Response creteInvoiceResponse = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		Response creteInvoiceResponse = given().request().auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
+
 			.contentType(crInv.contentType).body(createInvoiceReq)
 				
 			.when()
@@ -350,7 +351,8 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		ExtInvoiceSupPortRequest crInv = new ExtInvoiceSupPortRequest();
 		String createInvoiceReq = crInv.done();
 		
-		Response creteInvoiceResponse = given().request().auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		Response creteInvoiceResponse = given().request().auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
+
 			.contentType(crInv.contentType).body(createInvoiceReq)
 				
 			.when()
@@ -404,7 +406,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		String req = request.setWorkOrderId("Invalid").done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);

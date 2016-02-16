@@ -1,7 +1,9 @@
 package enums;
 
 public enum Users {
-	ADMINISTRATOR(""), DIMITROV("dimitrov");
+	ADMINISTRATOR(""),
+	TESTAPUK_USER("testapuk"),
+	DIMITROV("dimitrov");
 
 	private String username;
 

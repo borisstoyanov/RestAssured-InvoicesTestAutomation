@@ -1,7 +1,9 @@
 package enums;
 
 public enum Pass {
-	ADMINISTRATOR_PASSWORD(""), DIMITROV("Tainaparola1");
+	ADMINISTRATOR_PASSWORD(""),
+	TESTAPUK_PASS("Welcome1"),
+	DIMITROV("Tainaparola1");
 
 	private String password;
 

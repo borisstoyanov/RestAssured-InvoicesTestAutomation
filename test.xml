@@ -12,7 +12,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="tests.TestRetrieveMeasurementsUnits" />
+			<class name="tests.TestInvoiceHeaders" />
 		</classes>
 	</test>
 

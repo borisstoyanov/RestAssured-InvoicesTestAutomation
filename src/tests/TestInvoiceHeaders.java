@@ -15,20 +15,21 @@ import enums.Users;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
 import utils.TestInstance;
-import utils.WebServiceTest;
 
-public class TestInvoiceHeaders extends WebServiceTest{
-
+public class TestInvoiceHeaders{
+	
+	RetrieveInvoiceHeaderRequest request;
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setup(){
-		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
+		request= new RetrieveInvoiceHeaderRequest();
 
 		RestAssured.baseURI = TestInstance.getServerName();
 		
 		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
 		given().request()
-		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.headers(createInvoiceRequest.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
+
 		.contentType(createInvoiceRequest.contentType)
 		
 			.body(createInvoiceRequest.done())
@@ -44,14 +45,12 @@ public class TestInvoiceHeaders extends WebServiceTest{
 
 	@Test(groups = { "2.4.1.0" })
 	public void test_1368(){
-		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
-
+		
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.done())
 		
 		.when()
 			.post(request.endpoint);
-		//String as = resp.asString();
 		
 		Assert.assertTrue(resp.asString().contains("<ns0:InvoiceCreationType>SPortal Invoice</ns0:InvoiceCreationType>")
 				, "Response does not contain CreationType");		
@@ -63,7 +62,6 @@ public class TestInvoiceHeaders extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1413_1427(){
-		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.done())
@@ -77,7 +75,6 @@ public class TestInvoiceHeaders extends WebServiceTest{
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1432(){
-		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
 
 		Response resp = given().request()
 			.contentType(request.contentType).body(request.setDocumentType("KR").done())

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="DevTesting of 2.4.1.0 features" allow-return-values="true">
+<suite name="DevTesting of 2.4.1.0 features" allow-return-values="true" parallel="tests" thread-count="2">
 <!-- <suite name="DevTesting of 2.4.1.0 features" allow-return-values="true"> -->
 
 <!-- 	<test name="2.4.1.0 chunk1" > -->

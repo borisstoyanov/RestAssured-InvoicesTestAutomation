@@ -3,8 +3,6 @@ package tests;
 import static com.jayway.restassured.RestAssured.given;
 
 import org.testng.Assert;
-import org.testng.IClass;
-import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -15,9 +13,7 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 
 import requests.RetrieveMeasurementsUnitsRequest;
-import utils.StoreResults;
 import utils.TestInstance;
-import utils.Util;
 
 public class TestRetrieveMeasurementsUnits {
 
@@ -29,7 +25,7 @@ public class TestRetrieveMeasurementsUnits {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		StoreResults.insertResults(tr);
+		//StoreResults.insertResults(tr);
 
 	}
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Tests that create cache so other tests won&#039;t fail]" allow-return-values="true">
+  <test name="Warm-up tests">
+    <groups>
+      <run>
+        <include name="warmUp"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.WarmUpTests"/>
+    </classes>
+  </test> <!-- Warm-up tests -->
+  <test name="Warm-up tests(failed)">
+    <groups>
+      <run>
+        <include name="warmUp"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.WarmUpTests">
+        <methods>
+          <include name="setup"/>
+          <include name="createCache"/>
+          <include name="executeNormalTest"/>
+        </methods>
+      </class> <!-- tests.WarmUpTests -->
+    </classes>
+  </test> <!-- Warm-up tests(failed) -->
+</suite> <!-- Failed suite [Tests that create cache so other tests won't fail] -->

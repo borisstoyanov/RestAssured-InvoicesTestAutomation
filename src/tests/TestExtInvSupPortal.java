@@ -94,7 +94,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		//Create invoice with default supplierCreatorID 
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -115,13 +115,13 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		System.out.println(RestAssured.baseURI + request.endpoint);
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
 	
-		Assert.assertTrue(resp.getStatusCode() == 200, resp.asString() + "\n" + req);		
+		Assert.assertTrue(resp.getStatusCode() == 200, "Request is: " + req + "\nResponse is: " + resp.asString() );		
 		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
 		
@@ -154,7 +154,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		req = request.setInvoiceCurrency("$").done();
 		
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -178,7 +178,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -206,7 +206,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -237,7 +237,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		
 		//Create invoice with default supplierCreatorID 
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -285,7 +285,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		req = request.setDocumentTypeFlag("SomeInvalidFlag").done();
 		
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -299,7 +299,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		req = request.setDocumentTypeFlag("E").done();
 		
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -313,7 +313,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		req = request.setDocumentTypeFlag("#").done();
 		
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);
@@ -332,7 +332,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -362,7 +362,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -394,7 +394,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -448,7 +448,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -521,7 +521,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -559,7 +559,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	}
 
 	@Test(groups = { "2.4.1.0" })
-	public void test_1615(){
+	public void test_1620(){
 		ExtInvoiceSupPortRequest request;
 		Response resp;
 		String req = "";
@@ -568,7 +568,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		req = request.setPeriodOfCost("").setItemDate("").done();
 		
 		resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(request.contentType).body(req)
 		
 		.when().post(request.endpoint);

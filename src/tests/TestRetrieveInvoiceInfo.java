@@ -21,7 +21,6 @@ import requests.RetrieveInvoiceHeaderRequest;
 import requests.RetrieveInvoiceInfoRequest;
 import requests.RetrieveInvoiceInfoSPRequest;
 import utils.DatabaseUtil;
-import utils.StoreResults;
 import utils.TestInstance;
 import utils.Util;
 import utils.WebServiceTest;
@@ -31,7 +30,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		StoreResults.insertResults(tr);
+		//StoreResults.insertResults(tr);
 
 	}
 
@@ -52,7 +51,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		
 		Response resp = given().request()
-		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.headers(createInvoiceReq.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.done())
 		
 		.when().post(createInvoiceReq.endpoint);
@@ -121,7 +120,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
 		Response resp = given().request()
-		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.headers(createInvoiceReq.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
 		
 		.when().post(createInvoiceReq.endpoint);
@@ -162,7 +161,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
 		Response resp = given().request()
-		.headers(createInvoiceReq.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+		.headers(createInvoiceReq.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
 		
 		.when().post(createInvoiceReq.endpoint);

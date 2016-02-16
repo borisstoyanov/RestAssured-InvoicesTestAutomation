@@ -32,7 +32,7 @@ public class WarmUpTests {
 		String req = request.done();
 		
 		Response resp = given().request()
-		.headers(request.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(request.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		
 		.contentType(request.contentType).body(req)
 		
@@ -87,7 +87,7 @@ public class WarmUpTests {
 		req = createInvoiceRequest.setDocumentTypeFlag("SomeInvalidFlag").done();
 		
 		Response resp = given().request()
-		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(createInvoiceRequest.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceRequest.contentType).body(req)
 		
 		.when().post(createInvoiceRequest.endpoint);
@@ -111,7 +111,7 @@ public class WarmUpTests {
 		req = createInvoiceRequest.setInvoiceCurrency("$").done();
 		
 		Response resp = given().request()
-		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(createInvoiceRequest.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceRequest.contentType).body(req)
 		
 		.when().post(createInvoiceRequest.endpoint);
@@ -135,7 +135,7 @@ public class WarmUpTests {
 		System.out.println("Create Invoice Request");
 		ExtInvoiceSupPortRequest createInvoiceRequest = new ExtInvoiceSupPortRequest();
 		Response resp = given().request()
-		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(createInvoiceRequest.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceRequest.contentType)
 		
 			.body(createInvoiceRequest.done())
@@ -157,7 +157,7 @@ public class WarmUpTests {
 		String req = createInvoiceRequest.setWorkOrderId("Invalid").done();
 		
 		Response resp = given().request()
-		.headers(createInvoiceRequest.header).auth().basic(Users.DIMITROV.getUsername(), Pass.DIMITROV.getPassword())
+				.headers(createInvoiceRequest.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
 		.contentType(createInvoiceRequest.contentType).body(req)
 		
 		.when().post(createInvoiceRequest.endpoint);

@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16445" started-at="2016-02-12T10:45:21Z" finished-at="2016-02-12T10:45:38Z">
+  <suite name="Default suite" duration-ms="8755" started-at="2016-02-16T11:19:20Z" finished-at="2016-02-16T11:19:28Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="test_1339" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="test_1656" class="tests.TestInvoiceHeaders"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="16445" started-at="2016-02-12T10:45:21Z" finished-at="2016-02-12T10:45:38Z">
-      <class name="tests.TestExtInvSupPortal">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="setup" is-config="true" duration-ms="279" started-at="2016-02-12T12:45:21Z" finished-at="2016-02-12T12:45:22Z">
+    <test name="Default test" duration-ms="8755" started-at="2016-02-16T11:19:20Z" finished-at="2016-02-16T11:19:28Z">
+      <class name="tests.TestInvoiceHeaders">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="setup" is-config="true" duration-ms="4124" started-at="2016-02-16T13:19:20Z" finished-at="2016-02-16T13:19:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@6354fe9c]" name="test_1339" duration-ms="16150" started-at="2016-02-12T12:45:22Z" finished-at="2016-02-12T12:45:38Z">
+        <test-method status="PASS" signature="test_1656()[pri:0, instance:tests.TestInvoiceHeaders@24d1a022]" name="test_1656" duration-ms="4613" started-at="2016-02-16T13:19:24Z" finished-at="2016-02-16T13:19:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_1339 -->
-      </class> <!-- tests.TestExtInvSupPortal -->
+        </test-method> <!-- test_1656 -->
+      </class> <!-- tests.TestInvoiceHeaders -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

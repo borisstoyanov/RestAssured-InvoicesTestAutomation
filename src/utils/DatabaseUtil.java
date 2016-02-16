@@ -30,6 +30,7 @@ public class DatabaseUtil {
 
 		try {
 			connection = DriverManager.getConnection(url, username, password);
+			//System.out.println(url + username + password);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

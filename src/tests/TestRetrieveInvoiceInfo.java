@@ -228,5 +228,9 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 	}
 	
-	
+	@Test(groups = { "2.4.1.0" })
+	public void test_1670(){
+		//TODO 
+	}
+
 }

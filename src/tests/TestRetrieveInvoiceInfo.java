@@ -246,18 +246,29 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
 		Assert.assertFalse(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>"), "SapClearingDate has null");
+
 		
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		
-		RetrieveInvoiceInfoSPRequest req = new RetrieveInvoiceInfoSPRequest();
+		RetrieveInvoiceInfoSPRequest retrieveInvoiceInfoSPReq = new RetrieveInvoiceInfoSPRequest();
 		
 		resp = given().request()
-				.contentType(req.contentType).body(req.setInvoiceID(invoiceID).done())
+				.contentType(retrieveInvoiceInfoSPReq.contentType).body(retrieveInvoiceInfoSPReq.setInvoiceID(invoiceID).done())
 				
 				.when()
-					.post(req.endpoint);
+					.post(retrieveInvoiceInfoSPReq.endpoint);
+		Assert.assertTrue(resp.getStatusCode() == 200);			
+		Assert.assertTrue(resp.asString().contains("Settled"), "Status Settled is not displayed");
 		
-		System.out.println(resp.asString());
+		RetrieveInvoiceInfoRequest retrieveInvInfoReq = new RetrieveInvoiceInfoRequest();
+		resp = given().request()
+				.contentType(retrieveInvInfoReq.contentType).body(retrieveInvInfoReq.setInvoiceID(invoiceID).done())
+				.when().post(retrieveInvInfoReq.endpoint);
+		
+		Assert.assertTrue(resp.getStatusCode() == 200);			
+		Assert.assertFalse(resp.asString().contains("Settled"), "Status Settled is displayed");
+		
+		
 				
 	}
 	

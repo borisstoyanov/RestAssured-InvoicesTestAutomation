@@ -67,10 +67,39 @@ public class DatabaseUtil {
 	/*
 	 * 	Executes a query and returns a ResultSet
 	 */
+	public static String executeQuery(String query, String columnName) {
+		Connection connection = conn();
+		String result = null;
+		ResultSet rs = null;
+		try {
+
+			java.sql.Statement stmt = connection.createStatement();
+			rs = stmt.executeQuery(query);
+
+			while (rs.next()) {
+				result =  rs.getString(columnName);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+				rs.close();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+
+		return result;
+	}
+	
+	
 	public static ResultSet executeQuery(String query) {
 		Connection connection = conn();
-
-		ResultSet rs;
+		ResultSet rs = null;
 		try {
 
 			java.sql.Statement stmt = connection.createStatement();
@@ -79,15 +108,21 @@ public class DatabaseUtil {
 			while (rs.next()) {
 				return rs;
 			}
-			
-			connection.close();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				connection.close();
+				rs.close();
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 
 
-		return null;
+		return rs;
 	}
 
 	public static void insertComment(String invoiceID, String comment) {

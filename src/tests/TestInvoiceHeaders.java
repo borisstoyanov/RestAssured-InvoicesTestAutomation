@@ -3,6 +3,9 @@ import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasXPath;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,7 +17,9 @@ import enums.Pass;
 import enums.Users;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
+import utils.DatabaseUtil;
 import utils.TestInstance;
+import utils.Util;
 
 public class TestInvoiceHeaders{
 	
@@ -87,4 +92,19 @@ public class TestInvoiceHeaders{
 
 	}
 
+	@Test( groups = { "2.4.1.0"})
+	public void test_1656(){
+		
+		Response resp = given().request()
+				.contentType(request.contentType).body(request.done())
+				
+				
+				.when().post(request.endpoint);
+		
+		System.out.println(resp.asString());
+		
+		Assert.assertTrue(resp.statusCode() == 200);
+		Assert.assertTrue(resp.asString().contains("VendorName"));
+			
+	}
 }

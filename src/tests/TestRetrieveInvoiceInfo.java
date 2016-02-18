@@ -7,6 +7,7 @@ import static org.hamcrest.Matchers.hasXPath;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -227,10 +228,39 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		Assert.assertTrue(resp.asString().contains("TestAutomationComment"), "Comment is not visible");
 		
 	}
-	
+
 	@Test(groups = { "2.4.1.0" })
 	public void test_1670(){
-		//TODO 
+		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
+		Response resp = given().request()
+			.contentType(request.contentType).body(request.setInvoiceStatus("Settled").done())
+		
+		.when()
+			.post(request.endpoint);
+		
+		if(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>")){
+			throw new SkipException ("Skipping Test: Test is skipped because there is no invoices with Settled status");
+		}
+		
+		System.out.println(resp.asString());
+		Assert.assertTrue(resp.getStatusCode() == 200);			
+
+		Assert.assertFalse(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>"), "SapClearingDate has null");
+		
+		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
+		
+		RetrieveInvoiceInfoSPRequest req = new RetrieveInvoiceInfoSPRequest();
+		
+		resp = given().request()
+				.contentType(req.contentType).body(req.setInvoiceID(invoiceID).done())
+				
+				.when()
+					.post(req.endpoint);
+		
+		System.out.println(resp.asString());
+				
 	}
+	
+	
 
 }

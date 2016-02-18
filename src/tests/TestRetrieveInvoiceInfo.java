@@ -267,11 +267,6 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 		Assert.assertFalse(resp.asString().contains("Settled"), "Status Settled is displayed");
-		
-		
-				
+						
 	}
-	
-	
-
 }

@@ -48,8 +48,8 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	}
 
 	
-	private String createInvoice(ExtInvoiceSupPortRequest createInvoiceReq,	RetrieveInvoiceHeaderRequest retrInvHeaderReq){
-		
+	private String createInvoice(ExtInvoiceSupPortRequest createInvoiceReq){
+		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
 		
 		Response resp = given().request()
 		.headers(createInvoiceReq.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
@@ -87,9 +87,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1485(){
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
-		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
-
-		String invoiceID = createInvoice(createInvoiceReq, retrInvHeaderReq);
+		String invoiceID = createInvoice(createInvoiceReq);
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
 		
@@ -199,9 +197,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1463(){
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
-		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();
-
-		String invoiceID = createInvoice(createInvoiceReq, retrInvHeaderReq);
+		String invoiceID = createInvoice(createInvoiceReq);
 		
 		DatabaseUtil.insertComment(invoiceID, "TestAutomationComment");
 		
@@ -268,5 +264,26 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 		Assert.assertFalse(resp.asString().contains("Settled"), "Status Settled is displayed");
 						
+	}
+	
+	@Test(groups = { "2.4.1.0" })
+	public void test_1660(){
+		
+		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
+		String invoiceID = createInvoice(createInvoiceReq);
+		
+		RetrieveInvoiceInfoSPRequest infoSPReq = new RetrieveInvoiceInfoSPRequest();
+		
+		Response resp = given().request()
+				.contentType(infoSPReq.contentType).body(infoSPReq.setInvoiceID(invoiceID).done())
+			
+			.when()
+				.post(infoSPReq.endpoint);
+		Assert.assertTrue(resp.statusCode() == 200);
+		Assert.assertTrue(resp.asString().contains("<ns0:Description>Attachment1.pdf</ns0:Description>"));
+		Assert.assertTrue(resp.asString().contains("<ns0:Description>InvoicePDF</ns0:Description>"));
+		
+		
+		
 	}
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestRetrieveInvoiceInfo">
         <methods>
-          <include name="test_1670"/>
+          <include name="test_1660"/>
         </methods>
       </class> <!-- tests.TestRetrieveInvoiceInfo -->
     </classes>

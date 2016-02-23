@@ -91,40 +91,9 @@ public class DatabaseUtil {
 				e.printStackTrace();
 			}
 		}
-
-
 		return result;
 	}
 	
-	
-	public static ResultSet executeQuery(String query) {
-		Connection connection = conn();
-		ResultSet rs = null;
-		try {
-
-			java.sql.Statement stmt = connection.createStatement();
-			rs = stmt.executeQuery(query);
-
-			while (rs.next()) {
-				return rs;
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				connection.close();
-				rs.close();
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-
-
-		return rs;
-	}
-
 	public static void insertComment(String invoiceID, String comment) {
 		Connection connection = conn();
 		String query = "INSERT INTO INVOICE_COMMENT (invoice_comment_id,invoice_id,username,display_name,date_time,comment_text,SOURCE)"

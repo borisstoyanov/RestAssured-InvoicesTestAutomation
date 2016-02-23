@@ -22,6 +22,7 @@ import requests.RetrieveInvoiceHeaderRequest;
 import requests.RetrieveInvoiceInfoRequest;
 import requests.RetrieveInvoiceInfoSPRequest;
 import utils.DatabaseUtil;
+import utils.StoreResults;
 import utils.TestInstance;
 import utils.Util;
 import utils.WebServiceTest;
@@ -31,17 +32,18 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		//StoreResults.insertResults(tr);
+		tr.setAttribute("test_instance", RestAssured.baseURI);
+		StoreResults.insertResults(tr);
 
 	}
 
-	public void setResponse(String response) {
+	private void setResponse(String response) {
 
 		ITestResult result = Reporter.getCurrentTestResult();
 		result.setAttribute("resp", response);
 	}
 	
-	public void setRequest(String request) {
+	private void setRequest(String request) {
 
 		ITestResult result = Reporter.getCurrentTestResult();
 		result.setAttribute("request", request);
@@ -80,6 +82,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	public void setup(){
 		
 		RestAssured.baseURI = TestInstance.getServerName(); 
+		
 		retrInvInfoReq = new RetrieveInvoiceInfoRequest();
 		
 	}
@@ -141,12 +144,14 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
-		
+		req = retrInfoReq.setInvoiceID(invoiceID).done();
 		resp = given().request()
-				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
+				.contentType(retrInfoReq.contentType).body(req)
 				
 		.when()
 			.post(retrInfoReq.endpoint);
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		resp.then().statusCode(200);
 		Assert.assertFalse(resp.asString().contains("<ns0:ItemDescription>")
@@ -181,12 +186,14 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
-		
+		req  = retrInfoReq.setInvoiceID(invoiceID).done();
 		resp = given().request()
-				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
+				.contentType(retrInfoReq.contentType).body(req)
 				
 		.when()
 			.post(retrInfoReq.endpoint);
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		resp.then().statusCode(200);
 		Assert.assertFalse(resp.asString().contains("line"), "RetrieveInvoiceInfo service should return Line Items which have amount > 0");
@@ -198,6 +205,8 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	public void test_1463(){
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
 		String invoiceID = createInvoice(createInvoiceReq);
+		
+		
 		
 		DatabaseUtil.insertComment(invoiceID, "TestAutomationComment");
 		
@@ -214,11 +223,15 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		//Check visible through RetrieveInvoiceInfo
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
+		req = retrInfoReq.setInvoiceID(invoiceID).done();
+		setRequest(req);
+		
 		resp = given().request()
-				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
-				
+				.contentType(retrInfoReq.contentType).body(req)
 		.when()
 			.post(retrInfoReq.endpoint);
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		resp.then().statusCode(200);
 		Assert.assertTrue(resp.asString().contains("TestAutomationComment"), "Comment is not visible");
@@ -257,9 +270,13 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		Assert.assertTrue(resp.asString().contains("Settled"), "Status Settled is not displayed");
 		
 		RetrieveInvoiceInfoRequest retrieveInvInfoReq = new RetrieveInvoiceInfoRequest();
+		req = retrieveInvInfoReq.setInvoiceID(invoiceID).done();
 		resp = given().request()
-				.contentType(retrieveInvInfoReq.contentType).body(retrieveInvInfoReq.setInvoiceID(invoiceID).done())
+				.contentType(retrieveInvInfoReq.contentType).body(req)
 				.when().post(retrieveInvInfoReq.endpoint);
+		
+		setRequest(req);
+		setResponse(resp.asString());
 		
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 		Assert.assertFalse(resp.asString().contains("Settled"), "Status Settled is displayed");
@@ -273,17 +290,19 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		String invoiceID = createInvoice(createInvoiceReq);
 		
 		RetrieveInvoiceInfoSPRequest infoSPReq = new RetrieveInvoiceInfoSPRequest();
+		String req = infoSPReq.setInvoiceID(invoiceID).done();
+		setRequest(req); 
 		
 		Response resp = given().request()
-				.contentType(infoSPReq.contentType).body(infoSPReq.setInvoiceID(invoiceID).done())
+				.contentType(infoSPReq.contentType).body(req)
 			
 			.when()
 				.post(infoSPReq.endpoint);
+		setResponse(resp.asString());
+
 		Assert.assertTrue(resp.statusCode() == 200);
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>Attachment1.pdf</ns0:Description>"));
 		Assert.assertTrue(resp.asString().contains("<ns0:Description>InvoicePDF</ns0:Description>"));
-		
-		
-		
+				
 	}
 }

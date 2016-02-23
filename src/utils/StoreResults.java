@@ -35,7 +35,8 @@ public class StoreResults {
 		PropertyReader prop  = new PropertyReader();
 		
 		String isStoring = prop.getProperty("storeResults");
-		if (isStoring.equals("1")){
+		
+		if (isStoring.equals("yes")){
 			Connection conn = getConnection();
 
 			String testId = Util.getRandomID();
@@ -45,6 +46,7 @@ public class StoreResults {
 			String testDate = Util.getDate();
 			String req = tr.getAttribute("request").toString();
 			String resp =  tr.getAttribute("resp").toString();
+			String testInstance = tr.getAttribute("test_instance").toString();
 
 			String query = "INSERT INTO test_results ("
 					+ " test_id ,"
@@ -53,19 +55,19 @@ public class StoreResults {
 					+ " request,"
 					+ " response,"
 					+ " test_class,"
-					+ " test_name)"
-					
+					+ " test_name,"
+					+ " test_instance)"
 					
 					+"VALUES"
-	 
-					
+	 					
 					+ "('"+testId + "', '"
 					+ testDate + "', '"
 					+ executionTime + "', '"
 					+ req + "', '"
 					+ resp + "', '"
 					+ testClass + "', '"
-					+ testMethod + "')";
+					+ testMethod + "', '"
+					+ testInstance + "')";
 
 			try { 
 				Statement stmt = conn.createStatement();
@@ -78,10 +80,6 @@ public class StoreResults {
 			if(!tr.isSuccess()){
 				System.out.println("TestID is: " + testId);
 			}
-
 		}
-		
-		
 	}
-
 }

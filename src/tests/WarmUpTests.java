@@ -50,7 +50,7 @@ public class WarmUpTests {
 		
 		//Check if fields are created in the DB
 		String query = "SELECT creator_name, invoice_creator FROM INVOICE";
-		if(DatabaseUtil.executeQuery(query).equals(null)){
+		if(DatabaseUtil.executeQuery(query, "creator_name").equals(null)){
 			Assert.fail("Test Failed: creator_name, invoice_creator are not available in INVOICE table.");
 		}
 		

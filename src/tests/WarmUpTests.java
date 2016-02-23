@@ -118,7 +118,7 @@ public class WarmUpTests {
 				, "ErrorCode is not presented");
 		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag.")
 				, "ErrorMessage is not presented");
-		if(resp.asString().contains("Waiting for response has timed out")){
+		if(resp.asString().contains("Waiting for response has timed out.")){
 			createCache();
 			throw new SkipException("Skipping test.");
 

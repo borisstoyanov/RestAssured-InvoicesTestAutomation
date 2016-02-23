@@ -38,17 +38,18 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		StoreResults.insertResults(tr);
 
 	}
-
-	private void setResponse(String response) {
-
-		ITestResult result = Reporter.getCurrentTestResult();
-		result.setAttribute("resp", response);
-	}
 	
-	private void setRequest(String request) {
-
+	protected void setRequest(String request) {
 		ITestResult result = Reporter.getCurrentTestResult();
-		result.setAttribute("request", request);
+		req = request;
+		result.setAttribute("request", req);
+	}
+
+	protected void setResponse(String response){
+		ITestResult result = Reporter.getCurrentTestResult();
+		this.response = response;
+		result.setAttribute("resp", this.response);
+		
 	}
 
 	private String getInvoiceID(ExtInvoiceSupPortRequest req){
@@ -87,7 +88,7 @@ public class TestExtInvSupPortal extends WebServiceTest{
 			String rs = DatabaseUtil.executeQuery(query, "DESCRIPTION");
 			
 			System.out.println("INVOICEID = " + invoiceID + " Current Extension = " + fileExtension + ", DB extension = " + rs);
-			Assert.assertTrue(rs.contains(fileExtension), "File Extension did not match.");
+				Assert.assertTrue(rs.contains(fileExtension), "File Extension did not match.");
 					
 		}
 
@@ -129,12 +130,6 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		Assert.assertTrue(resp.getStatusCode() == 200, "Request is: " + req + "\nResponse is: " + resp.asString() );		
 		Assert.assertTrue(resp.asString().contains("Success"), resp.asString());	
 		
-		
-		//Check if fields are created in the DB
-		String query = "SELECT creator_name, invoice_creator FROM INVOICE";
-		if(DatabaseUtil.executeQuery(query, "CREATOR_NAME").equals(null)){
-			Assert.fail("Test Failed: creator_name, invoice_creator are not available in INVOICE table.");
-		}
 		
 		//Execute retrieve invoice headers request 
 		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
@@ -205,8 +200,8 @@ public class TestExtInvSupPortal extends WebServiceTest{
 		resp = getInvoiceInfo(invoiceID);
 		setResponse(resp.asString());
 		
-		Assert.assertTrue(resp.getStatusCode() == 200);		
-		Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>" + request.getSupplierCreatorID() + "</ns0:SupplierCreatorId>")
+		Assert.assertTrue(resp.getStatusCode() == 200);	
+		Assert.assertTrue(resp.asString().contains("<ns0:Username>" + request.getSupplierCreatorID() + "</ns0:Username>")
 				, "SupplierCreatorID did not matched.");
 	}
 

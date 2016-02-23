@@ -77,12 +77,14 @@ public class DatabaseUtil {
 			rs = stmt.executeQuery(query);
 
 			while (rs.next()) {
-				result =  rs.getString(columnName);
+				return rs.getString(columnName);
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
+		} catch (NullPointerException e){
+			return null;
+		}finally {
 			try {
 				connection.close();
 				rs.close();

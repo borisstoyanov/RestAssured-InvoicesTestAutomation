@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [DevTesting of 2.4.1.0 features]" parallel="tests" allow-return-values="true">
+  <test thread-count="8" name="2.4.1.0 chunk1" parallel="methods">
+    <groups>
+      <run>
+        <include name="2.4.1.0"/>
+      </run>
+    </groups>
     <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="test_1503"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
+      <class name="tests.TestExtInvSupPortal"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- 2.4.1.0 chunk1 -->
+  <test thread-count="8" name="2.4.1.0 chunk2" parallel="methods">
+    <groups>
+      <run>
+        <include name="2.4.1.0"/>
+      </run>
+    </groups>
     <classes>
-      <class name="tests.TestExtInvSupPortal">
-        <methods>
-          <include name="test_1503"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.TestExtInvSupPortal -->
+      <class name="tests.TestRetrieveInvoiceInfo"/>
+      <class name="tests.TestRetrieveMeasurementsUnits"/>
+      <class name="tests.TestInvoiceHeaders"/>
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- 2.4.1.0 chunk2 -->
+  <test thread-count="16" name="2.4.1.0 chunk3" parallel="methods">
+    <groups>
+      <run>
+        <include name="2.4.1.0"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+    </classes>
+  </test> <!-- 2.4.1.0 chunk3 -->
+</suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->

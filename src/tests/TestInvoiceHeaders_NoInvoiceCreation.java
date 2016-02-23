@@ -4,7 +4,10 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -17,12 +20,32 @@ import requests.CancelInvoiceRequest;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
 import utils.DatabaseUtil;
+import utils.StoreResults;
 import utils.TestInstance;
 import utils.Util;
 import utils.WebServiceTest;
 
 public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	
+	@AfterMethod(alwaysRun = true)
+	public void tearDown(ITestResult tr) {
+		tr.setAttribute("test_instance", RestAssured.baseURI);
+		StoreResults.insertResults(tr);
+
+	}
+
+	protected void setRequest(String request) {
+		ITestResult result = Reporter.getCurrentTestResult();
+		req = request;
+		result.setAttribute("request", req);
+	}
+
+	protected void setResponse(String response){
+		ITestResult result = Reporter.getCurrentTestResult();
+		this.response = response;
+		result.setAttribute("resp", this.response);
+		
+	}
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setup(){
@@ -94,11 +117,11 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1433(){
 		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
-		String req = request.setInvoiceStatus("Settled").setEntityID("0200").setVendorID("0000100430")
+		req = request.setInvoiceStatus("Settled").setEntityID("0200").setVendorID("0000100430")
 				.setEntityID2("0200").setVendorID2("0000100222")
 				.setEntityID3("0200").setVendorID3("0000101406")
 				.done();
-		
+		setRequest(req);
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)
 		
@@ -110,7 +133,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		}
 		
 		String respAsString = resp.asString();
-
+		setResponse(respAsString);
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 
 		Assert.assertFalse(respAsString.contains("<ns0:InvoiceStatus>Approved</ns0:InvoiceStatus>"), "Response contains 'Approved'");
@@ -122,12 +145,14 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1446(){
 		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
+		req = request.setInvoiceStatus("SomeNonExistingStatus").done();
+		setRequest(req);
 		Response resp = given().request()
-			.contentType(request.contentType).body(request.setInvoiceStatus("SomeNonExistingStatus").done())
+			.contentType(request.contentType).body(req)
 		
 		.when()
 			.post(request.endpoint);
-		
+		setResponse(resp.asString());
 		Assert.assertTrue(resp.getStatusCode() == 200);			
 			
 		Assert.assertTrue(resp.asString().contains("<ns2:TotalRegistries>0</ns2:TotalRegistries>"), "Response contains records");
@@ -414,16 +439,6 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 		
 		if(resp.asString().contains("Waiting for response has timed out")){
 			throw new SkipException("Response Timeout \nJIRA Item BPMINVOICE-1636 needs to be fixed");
-
-			/*
-			 * Add time investigating this failure 
-			 * 
-			 * Boris - 27.01.2016 - 6h
-			 * Boris - 28.01.2016 - 8h
-			 * Boris - 01.02.2016 - 8h
-			 * Boyko - 28.01.2016 - 2h
-			 * Ceco  - 01.02.2016 - 6h
-			 */
 		}
 		Assert.assertTrue(resp.statusCode() == 200, "Status is: " + resp.getStatusCode());
 

@@ -32,6 +32,9 @@ public class StoreResults {
 
 	public static void insertResults(ITestResult tr) {
 
+		String req = "";
+		String resp = "";
+		
 		PropertyReader prop  = new PropertyReader();
 		
 		String isStoring = prop.getProperty("storeResults");
@@ -44,8 +47,12 @@ public class StoreResults {
 			String testMethod = tr.getMethod().toString();
 			String executionTime = String.valueOf((tr.getEndMillis() - tr.getStartMillis())/1000.0);
 			String testDate = Util.getDate();
-			String req = tr.getAttribute("request").toString();
-			String resp =  tr.getAttribute("resp").toString();
+			if(tr.getAttribute("request")!= null){
+				req = tr.getAttribute("request").toString();
+			}
+			if(tr.getAttribute("resp")!= null){
+				resp =  tr.getAttribute("resp").toString();
+			}
 			String testInstance = tr.getAttribute("test_instance").toString();
 
 			String query = "INSERT INTO test_results ("
@@ -72,11 +79,14 @@ public class StoreResults {
 			try { 
 				Statement stmt = conn.createStatement();
 				stmt.executeUpdate(query);
+				stmt.close();
+				conn.close();
 							
 			} catch (SQLException e) {
 				System.out.println("There was an exception during storing results! ");
 				e.printStackTrace();
 			}
+			
 			if(!tr.isSuccess()){
 				System.out.println("TestID is: " + testId);
 			}

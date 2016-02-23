@@ -14,7 +14,6 @@ import enums.Pass;
 import enums.Users;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
-import utils.DatabaseUtil;
 import utils.TestInstance;
 
 public class WarmUpTests {
@@ -48,12 +47,6 @@ public class WarmUpTests {
 		Assert.assertTrue(resp.asString().contains("Success"), resp.asString() + "\n" + RestAssured.baseURI);	
 		
 		
-		//Check if fields are created in the DB
-		String query = "SELECT creator_name, invoice_creator FROM INVOICE";
-		if(DatabaseUtil.executeQuery(query, "creator_name").equals(null)){
-			Assert.fail("Test Failed: creator_name, invoice_creator are not available in INVOICE table.");
-		}
-		
 		//Execute retrieve invoice headers request 
 		RetrieveInvoiceHeaderRequest retrReq = new RetrieveInvoiceHeaderRequest();
 		resp = given().request()
@@ -61,10 +54,11 @@ public class WarmUpTests {
 			
 			.when()
 				.post(retrReq.endpoint);
+		System.out.println(resp.asString());
 
 			Assert.assertTrue(resp.getStatusCode() == 200);		
 			Assert.assertTrue(resp.asString().contains("<ns0:SupplierCreatorId>" + request.getSupplierCreatorID() + "</ns0:SupplierCreatorId>")
-					, "SupplierCreatorID did not matched");
+					, "SupplierCreatorID did not matched.");
 	}
 	
 	

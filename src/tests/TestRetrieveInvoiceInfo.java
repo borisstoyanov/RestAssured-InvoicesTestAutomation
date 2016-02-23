@@ -36,19 +36,19 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		StoreResults.insertResults(tr);
 
 	}
-
-	private void setResponse(String response) {
-
-		ITestResult result = Reporter.getCurrentTestResult();
-		result.setAttribute("resp", response);
-	}
 	
-	private void setRequest(String request) {
-
+	protected void setRequest(String request) {
 		ITestResult result = Reporter.getCurrentTestResult();
-		result.setAttribute("request", request);
+		req = request;
+		result.setAttribute("request", req);
 	}
 
+	protected void setResponse(String response){
+		ITestResult result = Reporter.getCurrentTestResult();
+		this.response = response;
+		result.setAttribute("resp", this.response);
+		
+	}
 	
 	private String createInvoice(ExtInvoiceSupPortRequest createInvoiceReq){
 		RetrieveInvoiceHeaderRequest retrInvHeaderReq = new RetrieveInvoiceHeaderRequest();

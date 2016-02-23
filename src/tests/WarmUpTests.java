@@ -144,7 +144,7 @@ public class WarmUpTests {
 
 		if(resp.asString().contains("Waiting for response has timed out.")){
 			createCache();
-			throw new SkipException("Skipping test");
+			throw new SkipException("Skipping test.");
 
 		}
 		

@@ -39,14 +39,12 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	
 	protected void setRequest(String request) {
 		ITestResult result = Reporter.getCurrentTestResult();
-		req = request;
-		result.setAttribute("request", req);
+		result.setAttribute("request", request);
 	}
 
 	protected void setResponse(String response){
 		ITestResult result = Reporter.getCurrentTestResult();
-		this.response = response;
-		result.setAttribute("resp", this.response);
+		result.setAttribute("resp", response);
 		
 	}
 	
@@ -63,9 +61,9 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 			body(hasXPath("//code", containsString("0"))).
 			body(hasXPath("//responseMessage", containsString("Success")));
 		
-		
+		String req = retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done();
 		resp = given().request()
-			.contentType(retrInvHeaderReq.contentType).body(retrInvHeaderReq.setInvoiceNumber(createInvoiceReq.getInvoiceNumber()).done())
+			.contentType(retrInvHeaderReq.contentType).body(req)
 			
 		.when()
 			.post(retrInvHeaderReq.endpoint);
@@ -93,9 +91,9 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		String invoiceID = createInvoice(createInvoiceReq);
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
-		
+		String req = retrInfoReq.setInvoiceID(invoiceID).done();
 		Response resp = given().request()
-				.contentType(retrInfoReq.contentType).body(retrInfoReq.setInvoiceID(invoiceID).done())
+				.contentType(retrInfoReq.contentType).body(req)
 				
 		.when()
 			.post(retrInfoReq.endpoint);
@@ -121,9 +119,10 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 	public void test_1492(){
 		
 		ExtInvoiceSupPortRequest createInvoiceReq = new ExtInvoiceSupPortRequest();
+		String req = createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done();
 		Response resp = given().request()
 		.headers(createInvoiceReq.header).auth().basic(Users.TESTAPUK_USER.getUsername(), Pass.TESTAPUK_PASS.getPassword())
-		.contentType(createInvoiceReq.contentType).body(createInvoiceReq.setLineItemNetAmount("0").setLineItemTotalAmount("0").setLineItemVatAmount("0").done())
+		.contentType(createInvoiceReq.contentType).body(req)
 		
 		.when().post(createInvoiceReq.endpoint);
 		
@@ -186,7 +185,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		String invoiceID = Util.getValueFromResponse(resp.asString(), "ns0:InvoiceId");
 		
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
-		req  = retrInfoReq.setInvoiceID(invoiceID).done();
+		String req  = retrInfoReq.setInvoiceID(invoiceID).done();
 		resp = given().request()
 				.contentType(retrInfoReq.contentType).body(req)
 				
@@ -223,7 +222,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		
 		//Check visible through RetrieveInvoiceInfo
 		RetrieveInvoiceInfoRequest retrInfoReq = new RetrieveInvoiceInfoRequest();
-		req = retrInfoReq.setInvoiceID(invoiceID).done();
+		String req = retrInfoReq.setInvoiceID(invoiceID).done();
 		setRequest(req);
 		
 		resp = given().request()
@@ -270,7 +269,7 @@ public class TestRetrieveInvoiceInfo extends WebServiceTest{
 		Assert.assertTrue(resp.asString().contains("Settled"), "Status Settled is not displayed");
 		
 		RetrieveInvoiceInfoRequest retrieveInvInfoReq = new RetrieveInvoiceInfoRequest();
-		req = retrieveInvInfoReq.setInvoiceID(invoiceID).done();
+		String req = retrieveInvInfoReq.setInvoiceID(invoiceID).done();
 		resp = given().request()
 				.contentType(retrieveInvInfoReq.contentType).body(req)
 				.when().post(retrieveInvInfoReq.endpoint);

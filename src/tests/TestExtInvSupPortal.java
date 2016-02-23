@@ -41,14 +41,12 @@ public class TestExtInvSupPortal extends WebServiceTest{
 	
 	protected void setRequest(String request) {
 		ITestResult result = Reporter.getCurrentTestResult();
-		req = request;
-		result.setAttribute("request", req);
+		result.setAttribute("request", request);
 	}
 
 	protected void setResponse(String response){
 		ITestResult result = Reporter.getCurrentTestResult();
-		this.response = response;
-		result.setAttribute("resp", this.response);
+		result.setAttribute("resp", response);
 		
 	}
 

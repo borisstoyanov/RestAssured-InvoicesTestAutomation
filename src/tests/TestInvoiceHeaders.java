@@ -4,7 +4,10 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasXPath;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -14,13 +17,14 @@ import enums.Pass;
 import enums.Users;
 import requests.ExtInvoiceSupPortRequest;
 import requests.RetrieveInvoiceHeaderRequest;
+import utils.StoreResults;
 import utils.TestInstance;
 
 public class TestInvoiceHeaders{
 	
 	RetrieveInvoiceHeaderRequest request;
 	
-	@BeforeMethod(alwaysRun = true)
+	@BeforeClass(alwaysRun = true)
 	public void setup(){
 		request= new RetrieveInvoiceHeaderRequest();
 
@@ -39,18 +43,36 @@ public class TestInvoiceHeaders{
 			body(hasXPath("//responseMessage", containsString("Success")));
 		
 		request.setInvoiceNumber(createInvoiceRequest.getInvoiceNumber());
-		
-		
 	}
 
+	@AfterMethod(alwaysRun = true)
+	public void tearDown(ITestResult tr) {
+		tr.setAttribute("test_instance", RestAssured.baseURI);
+		StoreResults.insertResults(tr);
+
+	}
+
+	protected void setRequest(String request) {
+		ITestResult result = Reporter.getCurrentTestResult();
+		result.setAttribute("request", request);
+	}
+
+	protected void setResponse(String response){
+		ITestResult result = Reporter.getCurrentTestResult();
+		result.setAttribute("resp", response);
+		
+	}
+	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1368(){
-		
+		String req = request.done();
+		setRequest(req);
 		Response resp = given().request()
-			.contentType(request.contentType).body(request.done())
+			.contentType(request.contentType).body(req)
 		
 		.when()
 			.post(request.endpoint);
+		setResponse(resp.asString());
 		
 		Assert.assertTrue(resp.asString().contains("<ns0:InvoiceCreationType>SPortal Invoice</ns0:InvoiceCreationType>")
 				, "Response does not contain CreationType");		
@@ -63,24 +85,31 @@ public class TestInvoiceHeaders{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1413_1427(){
 
+		String req = request.done();
+		setRequest(req);
+
 		Response resp = given().request()
-			.contentType(request.contentType).body(request.done())
+			.contentType(request.contentType).body(req)
 		
 		.when()
 			.post(request.endpoint);
-		
+		setResponse(resp.asString());
+
 		Assert.assertTrue(resp.asString().contains("<ns0:SapClearingDate xsi:nil=\"true\"/>")
 				, "Response does not contain one SapClearingDate");
 	}
 	
 	@Test(groups = { "2.4.1.0" })
 	public void test_1432(){
+		String req = request.setDocumentType("KR").done();
+		setRequest(req);
 
 		Response resp = given().request()
-			.contentType(request.contentType).body(request.setDocumentType("KR").done())
+			.contentType(request.contentType).body(req)
 		
 		.when()
 			.post(request.endpoint);
+		setResponse(resp.asString());
 
 		Assert.assertTrue(resp.asString().contains("<ns0:DocumentType>KR</ns0:DocumentType>")
 				, "Response does not contain KR as DocType");
@@ -89,15 +118,16 @@ public class TestInvoiceHeaders{
 
 	@Test( groups = { "2.4.1.0"})
 	public void test_1656(){
-		
+		String req = request.done();
+		setRequest(req);
+
 		Response resp = given().request()
-				.contentType(request.contentType).body(request.done())
+				.contentType(request.contentType).body(req)
 				
 				
 				.when().post(request.endpoint);
-		
-		System.out.println(resp.asString());
-		
+		setResponse(resp.asString());
+
 		Assert.assertTrue(resp.statusCode() == 200);
 		Assert.assertTrue(resp.asString().contains("VendorName"));
 			

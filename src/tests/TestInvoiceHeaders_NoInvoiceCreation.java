@@ -36,14 +36,12 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 
 	protected void setRequest(String request) {
 		ITestResult result = Reporter.getCurrentTestResult();
-		req = request;
-		result.setAttribute("request", req);
+		result.setAttribute("request", request);
 	}
 
 	protected void setResponse(String response){
 		ITestResult result = Reporter.getCurrentTestResult();
-		this.response = response;
-		result.setAttribute("resp", this.response);
+		result.setAttribute("resp", response);
 		
 	}
 	
@@ -117,7 +115,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1433(){
 		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
-		req = request.setInvoiceStatus("Settled").setEntityID("0200").setVendorID("0000100430")
+		String req = request.setInvoiceStatus("Settled").setEntityID("0200").setVendorID("0000100430")
 				.setEntityID2("0200").setVendorID2("0000100222")
 				.setEntityID3("0200").setVendorID3("0000101406")
 				.done();
@@ -145,7 +143,7 @@ public class TestInvoiceHeaders_NoInvoiceCreation extends WebServiceTest{
 	@Test(groups = { "2.4.1.0" })
 	public void test_1446(){
 		RetrieveInvoiceHeaderRequest request = new RetrieveInvoiceHeaderRequest();
-		req = request.setInvoiceStatus("SomeNonExistingStatus").done();
+		String req = request.setInvoiceStatus("SomeNonExistingStatus").done();
 		setRequest(req);
 		Response resp = given().request()
 			.contentType(request.contentType).body(req)

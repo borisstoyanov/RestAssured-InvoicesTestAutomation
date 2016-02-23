@@ -13,6 +13,7 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 
 import requests.RetrieveMeasurementsUnitsRequest;
+import utils.StoreResults;
 import utils.TestInstance;
 
 public class TestRetrieveMeasurementsUnits {
@@ -25,10 +26,10 @@ public class TestRetrieveMeasurementsUnits {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult tr) {
-		//StoreResults.insertResults(tr);
-
+		tr.setAttribute("test_instance", RestAssured.baseURI);
+		StoreResults.insertResults(tr);
 	}
-
+	
 	public void setResponse(String response) {
 
 		ITestResult result = Reporter.getCurrentTestResult();

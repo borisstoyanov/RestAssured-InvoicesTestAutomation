@@ -116,7 +116,7 @@ public class WarmUpTests {
 
 		Assert.assertTrue(resp.asString().contains("ERROR_INPUT_017")
 				, "ErrorCode is not presented");
-		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag")
+		Assert.assertTrue(resp.asString().contains("Invalid DocumentTypeFlag.")
 				, "ErrorMessage is not presented");
 		if(resp.asString().contains("Waiting for response has timed out")){
 			createCache();

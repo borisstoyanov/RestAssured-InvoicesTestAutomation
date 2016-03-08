@@ -1,76 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="45" passed="45">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6929" started-at="2016-02-23T13:42:08Z" finished-at="2016-02-23T13:42:15Z">
+  <suite name="DevTesting of 2.4.1.0 features" duration-ms="32343" started-at="2016-03-08T12:26:47Z" finished-at="2016-03-08T12:27:20Z">
     <groups>
       <group name="2.4.1.0">
-        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1368" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1432" class="tests.TestInvoiceHeaders"/>
-        <method signature="TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1656" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1339" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1442()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1442" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1455()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1455" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1458()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1458" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1466_1532()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1466_1532" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1479()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1479" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1483()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1483" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1498()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1498" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1499()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1499" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1503()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1503" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_1" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_2" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_3" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_4" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_5" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_6" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_7" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_8" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1549()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1549" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestExtInvSupPortal.test_1620()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1620" class="tests.TestExtInvSupPortal"/>
+        <method signature="TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1368" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1413_1427" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1432" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1656" class="tests.TestInvoiceHeaders"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1463" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1467" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1485" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1492" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1660()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1660" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveInvoiceInfo.test_1670()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1670" class="tests.TestRetrieveInvoiceInfo"/>
+        <method signature="TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4290da40]" name="checkRetrieveMeasurementsUnits" class="tests.TestRetrieveMeasurementsUnits"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1408()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1408" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1411" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1424" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1432" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1433" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1446" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1448_1436" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1449" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456_2" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456_3" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1484" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1489" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
+        <method signature="TestInvoiceHeaders_NoInvoiceCreation.test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1509" class="tests.TestInvoiceHeaders_NoInvoiceCreation"/>
       </group> <!-- 2.4.1.0 -->
     </groups>
-    <test name="Default test" duration-ms="6929" started-at="2016-02-23T13:42:08Z" finished-at="2016-02-23T13:42:15Z">
-      <class name="tests.TestInvoiceHeaders">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="setup" is-config="true" duration-ms="5088" started-at="2016-02-23T15:42:08Z" finished-at="2016-02-23T15:42:13Z">
+    <test name="2.4.1.0 chunk2" duration-ms="13620" started-at="2016-03-08T12:26:47Z" finished-at="2016-03-08T12:27:01Z">
+      <class name="tests.TestRetrieveMeasurementsUnits">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4290da40]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1368" duration-ms="518" started-at="2016-02-23T15:42:13Z" finished-at="2016-02-23T15:42:14Z">
+        <test-method status="PASS" signature="checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4290da40]" name="checkRetrieveMeasurementsUnits" duration-ms="1173" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRetrieveMeasurementsUnits -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4290da40]" name="tearDown" is-config="true" duration-ms="113" started-at="2016-03-08T14:26:49Z" finished-at="2016-03-08T14:26:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkRetrieveMeasurementsUnits status=SUCCESS method=TestRetrieveMeasurementsUnits.checkRetrieveMeasurementsUnits()[pri:0, instance:tests.TestRetrieveMeasurementsUnits@4290da40] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestRetrieveMeasurementsUnits -->
+      <class name="tests.TestInvoiceHeaders">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="setup" is-config="true" duration-ms="12900" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:27:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1368()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1368" duration-ms="656" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1368 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="tearDown" is-config="true" duration-ms="101" started-at="2016-02-23T15:42:14Z" finished-at="2016-02-23T15:42:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test_1368 status=SUCCESS method=TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@696564b8] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1413_1427" duration-ms="436" started-at="2016-02-23T15:42:14Z" finished-at="2016-02-23T15:42:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1413_1427 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="tearDown" is-config="true" duration-ms="45" started-at="2016-02-23T15:42:14Z" finished-at="2016-02-23T15:42:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test_1413_1427 status=SUCCESS method=TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@696564b8] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1432" duration-ms="340" started-at="2016-02-23T15:42:14Z" finished-at="2016-02-23T15:42:15Z">
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1432" duration-ms="335" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_1432 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="tearDown" is-config="true" duration-ms="31" started-at="2016-02-23T15:42:15Z" finished-at="2016-02-23T15:42:15Z">
+        <test-method status="PASS" signature="test_1656()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1656" duration-ms="703" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1656 -->
+        <test-method status="PASS" signature="test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="test_1413_1427" duration-ms="676" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1413_1427 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="tearDown" is-config="true" duration-ms="23" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1432 status=SUCCESS method=TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@696564b8] output={null}]]]>
+                <![CDATA[[TestResult name=test_1432 status=SUCCESS method=TestInvoiceHeaders.test_1432()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test_1656()[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="test_1656" duration-ms="316" started-at="2016-02-23T15:42:15Z" finished-at="2016-02-23T15:42:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_1656 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@696564b8]" name="tearDown" is-config="true" duration-ms="22" started-at="2016-02-23T15:42:15Z" finished-at="2016-02-23T15:42:15Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="tearDown" is-config="true" duration-ms="15" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1656 status=SUCCESS method=TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@696564b8] output={null}]]]>
+                <![CDATA[[TestResult name=test_1368 status=SUCCESS method=TestInvoiceHeaders.test_1368()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="tearDown" is-config="true" duration-ms="15" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1413_1427 status=SUCCESS method=TestInvoiceHeaders.test_1413_1427()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1656 status=SUCCESS method=TestInvoiceHeaders.test_1656()[pri:0, instance:tests.TestInvoiceHeaders@33e8c1e4] output={null}]]]>
               </value>
             </param>
           </params>
@@ -78,6 +140,776 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.TestInvoiceHeaders -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tests.TestRetrieveInvoiceInfo">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="setup" is-config="true" duration-ms="269" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1492" duration-ms="8899" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1492 -->
+        <test-method status="PASS" signature="test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1463" duration-ms="12609" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:27:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1463 -->
+        <test-method status="PASS" signature="test_1670()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1670" duration-ms="5196" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1670 -->
+        <test-method status="PASS" signature="test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1485" duration-ms="10780" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1485 -->
+        <test-method status="PASS" signature="test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1467" duration-ms="9739" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1467 -->
+        <test-method status="PASS" signature="test_1660()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="test_1660" duration-ms="11234" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1660 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="48" started-at="2016-03-08T14:26:53Z" finished-at="2016-03-08T14:26:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1670 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1670()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="18" started-at="2016-03-08T14:26:56Z" finished-at="2016-03-08T14:26:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1492 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1492()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="34" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1467 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1467()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="36" started-at="2016-03-08T14:26:58Z" finished-at="2016-03-08T14:26:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1485 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1485()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="39" started-at="2016-03-08T14:26:59Z" finished-at="2016-03-08T14:26:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1660 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1660()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e]" name="tearDown" is-config="true" duration-ms="42" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1463 status=SUCCESS method=TestRetrieveInvoiceInfo.test_1463()[pri:0, instance:tests.TestRetrieveInvoiceInfo@15502c5e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestRetrieveInvoiceInfo -->
+    </test> <!-- 2.4.1.0 chunk2 -->
+    <test name="2.4.1.0 chunk1" duration-ms="27287" started-at="2016-03-08T12:26:47Z" finished-at="2016-03-08T12:27:15Z">
+      <class name="tests.TestExtInvSupPortal">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="253" started-at="2016-03-08T14:26:47Z" finished-at="2016-03-08T14:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1458()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1458" duration-ms="12095" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:27:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1458 -->
+        <test-method status="PASS" signature="test_1339()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1339" duration-ms="9647" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1339 -->
+        <test-method status="PASS" signature="test_1455()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1455" duration-ms="10369" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1455 -->
+        <test-method status="PASS" signature="test_1466_1532()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1466_1532" duration-ms="10925" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1466_1532 -->
+        <test-method status="PASS" signature="test_1442()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1442" duration-ms="4735" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1442 -->
+        <test-method status="PASS" signature="test_1483()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1483" duration-ms="9257" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1483 -->
+        <test-method status="PASS" signature="test_1479()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1479" duration-ms="9807" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1479 -->
+        <test-method status="PASS" signature="test_1498()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1498" duration-ms="8918" started-at="2016-03-08T14:26:48Z" finished-at="2016-03-08T14:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1498 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:26:52Z" finished-at="2016-03-08T14:26:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1442 status=SUCCESS method=TestExtInvSupPortal.test_1442()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:26:52Z" finished-at="2016-03-08T14:26:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1499()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1499" duration-ms="9217" started-at="2016-03-08T14:26:52Z" finished-at="2016-03-08T14:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1499 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="19" started-at="2016-03-08T14:26:56Z" finished-at="2016-03-08T14:26:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1498 status=SUCCESS method=TestExtInvSupPortal.test_1498()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:26:56Z" finished-at="2016-03-08T14:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1503()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1503" duration-ms="7676" started-at="2016-03-08T14:26:56Z" finished-at="2016-03-08T14:27:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1503 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="22" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1483 status=SUCCESS method=TestExtInvSupPortal.test_1483()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_1" duration-ms="7676" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_1 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="17" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1339 status=SUCCESS method=TestExtInvSupPortal.test_1339()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_2" duration-ms="10047" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:27:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_2 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="20" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1479 status=SUCCESS method=TestExtInvSupPortal.test_1479()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_3" duration-ms="7425" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_3 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:26:57Z" finished-at="2016-03-08T14:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:26:58Z" finished-at="2016-03-08T14:26:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1455 status=SUCCESS method=TestExtInvSupPortal.test_1455()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_4" duration-ms="9622" started-at="2016-03-08T14:26:58Z" finished-at="2016-03-08T14:27:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_4 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:26:58Z" finished-at="2016-03-08T14:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="31" started-at="2016-03-08T14:26:58Z" finished-at="2016-03-08T14:26:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1466_1532 status=SUCCESS method=TestExtInvSupPortal.test_1466_1532()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:26:59Z" finished-at="2016-03-08T14:26:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_5" duration-ms="7892" started-at="2016-03-08T14:26:59Z" finished-at="2016-03-08T14:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_5 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="40" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1458 status=SUCCESS method=TestExtInvSupPortal.test_1458()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_6" duration-ms="9622" started-at="2016-03-08T14:27:00Z" finished-at="2016-03-08T14:27:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_6 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="22" started-at="2016-03-08T14:27:02Z" finished-at="2016-03-08T14:27:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1499 status=SUCCESS method=TestExtInvSupPortal.test_1499()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:02Z" finished-at="2016-03-08T14:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_7" duration-ms="8760" started-at="2016-03-08T14:27:02Z" finished-at="2016-03-08T14:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_7 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="47" started-at="2016-03-08T14:27:04Z" finished-at="2016-03-08T14:27:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1503 status=SUCCESS method=TestExtInvSupPortal.test_1503()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:04Z" finished-at="2016-03-08T14:27:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1506_8" duration-ms="9321" started-at="2016-03-08T14:27:04Z" finished-at="2016-03-08T14:27:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1506_8 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_1 status=SUCCESS method=TestExtInvSupPortal.test_1506_1()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test_1549()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1549" duration-ms="10014" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1549 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_3 status=SUCCESS method=TestExtInvSupPortal.test_1506_3()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test_1620()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="test_1620" duration-ms="5556" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1620 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="setup" is-config="true" duration-ms="0" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="20" started-at="2016-03-08T14:27:06Z" finished-at="2016-03-08T14:27:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_5 status=SUCCESS method=TestExtInvSupPortal.test_1506_5()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="15" started-at="2016-03-08T14:27:07Z" finished-at="2016-03-08T14:27:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_2 status=SUCCESS method=TestExtInvSupPortal.test_1506_2()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="17" started-at="2016-03-08T14:27:08Z" finished-at="2016-03-08T14:27:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_4 status=SUCCESS method=TestExtInvSupPortal.test_1506_4()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="10" started-at="2016-03-08T14:27:09Z" finished-at="2016-03-08T14:27:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_6 status=SUCCESS method=TestExtInvSupPortal.test_1506_6()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="41" started-at="2016-03-08T14:27:10Z" finished-at="2016-03-08T14:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_7 status=SUCCESS method=TestExtInvSupPortal.test_1506_7()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="28" started-at="2016-03-08T14:27:10Z" finished-at="2016-03-08T14:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1620 status=SUCCESS method=TestExtInvSupPortal.test_1620()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:14Z" finished-at="2016-03-08T14:27:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1506_8 status=SUCCESS method=TestExtInvSupPortal.test_1506_8()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestExtInvSupPortal@642052de]" name="tearDown" is-config="true" duration-ms="46" started-at="2016-03-08T14:27:15Z" finished-at="2016-03-08T14:27:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1549 status=SUCCESS method=TestExtInvSupPortal.test_1549()[pri:0, instance:tests.TestExtInvSupPortal@642052de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestExtInvSupPortal -->
+    </test> <!-- 2.4.1.0 chunk1 -->
+    <test name="2.4.1.0 chunk3" duration-ms="18706" started-at="2016-03-08T12:27:01Z" finished-at="2016-03-08T12:27:20Z">
+      <class name="tests.TestInvoiceHeaders_NoInvoiceCreation">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="2" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="2" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1408()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1408" duration-ms="2187" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1408 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1448_1436" duration-ms="5701" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1448_1436 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="7" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="6" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1509" duration-ms="13598" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1509 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="34" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="1" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456_3" duration-ms="4033" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1456_3 -->
+        <test-method status="PASS" signature="test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1449" duration-ms="4371" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1449 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="5" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456" duration-ms="5013" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1456 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="setup" is-config="true" duration-ms="7" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1411" duration-ms="4088" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1411 -->
+        <test-method status="PASS" signature="test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1489" duration-ms="18654" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1489 -->
+        <test-method status="PASS" signature="test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1484" duration-ms="8661" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1484 -->
+        <test-method status="PASS" signature="test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1446" duration-ms="4317" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1446 -->
+        <test-method status="PASS" signature="test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1424" duration-ms="8922" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1424 -->
+        <test-method status="PASS" signature="test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1432" duration-ms="8560" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1432 -->
+        <test-method status="PASS" signature="test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1433" duration-ms="7366" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1433 -->
+        <test-method status="PASS" signature="test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="test_1456_2" duration-ms="9544" started-at="2016-03-08T14:27:01Z" finished-at="2016-03-08T14:27:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1456_2 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="37" started-at="2016-03-08T14:27:03Z" finished-at="2016-03-08T14:27:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1408 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1408()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="17" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1456_3 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1456_3()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="30" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1411 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1411()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="40" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1446 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1446()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="19" started-at="2016-03-08T14:27:05Z" finished-at="2016-03-08T14:27:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1449 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1449()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="40" started-at="2016-03-08T14:27:06Z" finished-at="2016-03-08T14:27:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1456 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1456()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="20" started-at="2016-03-08T14:27:07Z" finished-at="2016-03-08T14:27:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1448_1436 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1448_1436()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="26" started-at="2016-03-08T14:27:08Z" finished-at="2016-03-08T14:27:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1433 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1433()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="16" started-at="2016-03-08T14:27:10Z" finished-at="2016-03-08T14:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1432 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1432()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="23" started-at="2016-03-08T14:27:10Z" finished-at="2016-03-08T14:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1484 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1484()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="15" started-at="2016-03-08T14:27:10Z" finished-at="2016-03-08T14:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1424 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1424()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="27" started-at="2016-03-08T14:27:11Z" finished-at="2016-03-08T14:27:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1456_2 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1456_2()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="39" started-at="2016-03-08T14:27:15Z" finished-at="2016-03-08T14:27:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1509 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1509()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5]" name="tearDown" is-config="true" duration-ms="41" started-at="2016-03-08T14:27:20Z" finished-at="2016-03-08T14:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1489 status=SUCCESS method=TestInvoiceHeaders_NoInvoiceCreation.test_1489()[pri:0, instance:tests.TestInvoiceHeaders_NoInvoiceCreation@5bf2a8f5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestInvoiceHeaders_NoInvoiceCreation -->
+    </test> <!-- 2.4.1.0 chunk3 -->
+  </suite> <!-- DevTesting of 2.4.1.0 features -->
 </testng-results>

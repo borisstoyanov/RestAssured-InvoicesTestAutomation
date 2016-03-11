@@ -1,8 +1,5 @@
 package utils;
 
-import org.testng.ITestResult;
-import org.testng.Reporter;
-
 public class WebServiceTest {
 	
 //	public WebServiceTest(){
